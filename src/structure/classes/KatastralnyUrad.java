@@ -1,4 +1,4 @@
-package data;
+package structure.classes;
 
 import data.RBTree.Node;
 

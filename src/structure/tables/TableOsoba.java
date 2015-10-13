@@ -1,6 +1,6 @@
-package dataLogic;
+package structure.tables;
 
-import data.Osoba;
+import structure.classes.Osoba;
 import data.RBTree.Node;
 import dataLogic.abstactTable.Table;
 
@@ -9,7 +9,7 @@ import dataLogic.abstactTable.Table;
  */
 public class TableOsoba extends Table {
     public TableOsoba() {
-        super();
+        super(Osoba.class,"rodneCislo");
 
     }
 

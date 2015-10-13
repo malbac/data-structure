@@ -1,30 +1,111 @@
 package Test;
 
-import data.Osoba;
+import data.Column;
+import structure.classes.Osoba;
 import data.RBTree.Node;
+import log4j.Log4j;
+import org.apache.log4j.Logger;
 
-import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 
 /**
  * Created by Malbac on 11.10.2015.
  */
 public class Reflection {
-    public static void main (String[] args){
-        Field[] fields = Osoba.class.getDeclaredFields();
-//        for(Field f: fields){
-//            f.setAccessible(true);
-//        }
+    private static final Logger log = Logger.getLogger(Log4j.class);
 
-        for(Field f: fields){
-            f.setAccessible(true);
-            System.out.println(f + "  " + f.getType());
+    public Reflection() {
+        Osoba osoba = new Osoba("1551", "Peter_Pavol", "Bytca");
+        //getRightKeyValueForCurrentIndex(osoba, "rodneCislo");
+        if(objectIsInBaseStructure("menoPriezisko")){
+            System.out.println("true");
+        } else {
+            System.out.println("False");
         }
 
-        if (fields[0].getName().equals("rodneCislo")){
-
-            System.out.println("kss");
-        }
+        System.out.println(getKeyDataFromColumn(osoba,new Column("rodneCislo",false,false,false)));
 
     }
+
+    public static void main(String[] args) {
+
+        new Reflection();
+
+    }
+    private Object getKeyDataFromColumn(Node data,Column column) {
+        String localKey = column.getMetaKeyName();
+        Field[] fields = data.getClass().getDeclaredFields();
+        for (Field f : fields) {
+            f.setAccessible(true);
+            log.info("Values available : " + f.getName() + "  " + f.getType());
+            if (localKey.equals(f.getName())) {
+
+                log.info(localKey + " LOCAL KEY EXIST");
+                Object value = "";
+
+                try {
+                    value = f.get(data);
+
+                    log.info("VALUE to key: " + localKey + " is: " + value);
+                    log.info("Data found, break");
+                    return value;
+                } catch (IllegalAccessException e) {
+                    log.trace(localKey + " could not be assigned");
+                    e.printStackTrace();
+                }
+
+            }
+        }
+        log.fatal("No value for key " + localKey + " found");
+        return "";
+    }
+
+    private boolean objectIsInBaseStructure(Object indexOfColumn) {
+        Class baseClass = Osoba.class;
+        Field[] fields = baseClass.getDeclaredFields();
+        for (Field f : fields) {
+            f.setAccessible(true);
+            log.info("Values available : " + f.getName() + "  " + f.getType());
+
+            if (indexOfColumn.equals(f.getName())) {
+                return true;
+
+
+
+
+
+            }
+            log.fatal("Mapping error, indexOfColumn :" + indexOfColumn + " not found" );
+        } return false;
+    }
+
+    private Object getRightKeyValueForCurrentIndex(Node data, String localKey) {
+
+        Field[] fields = data.getClass().getDeclaredFields();
+        for (Field f : fields) {
+            f.setAccessible(true);
+            log.info("Values available : " + f.getName() + "  " + f.getType());
+            if (localKey.equals(f.getName())) {
+
+                log.info(localKey + " LOCAL KEY EXIST");
+                Object value = "";
+
+                try {
+                    value = f.get(data);
+
+                    log.info("VALUE to key: " + localKey + " is: " + value);
+                    log.info("Data found, break");
+                    return value;
+                } catch (IllegalAccessException e) {
+                    log.trace(localKey + " could not be assigned");
+                    e.printStackTrace();
+                }
+
+            }
+        }
+        log.fatal("No value for key " + localKey + " found");
+        return "";
+    }
+
+
 }

@@ -1,4 +1,4 @@
-package data;
+package structure.classes;
 
 /**
  * Created by Malbac on 11.10.2015.
