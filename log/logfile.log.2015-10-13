@@ -1,0 +1,826 @@
+2015-10-13 00:00:33,770   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 153 - MAIN COLUMN CREATED
+2015-10-13 00:00:33,773   INFO [main] -log4j.Log4j.objectIsInBaseStructure 117 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:00:33,776   INFO [main] -log4j.Log4j.objectIsInBaseStructure 117 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:00:33,776  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 122 - Mapping error, indexOfColumn :data.Column@1ddc4ec2 not found
+2015-10-13 00:00:33,777   INFO [main] -log4j.Log4j.objectIsInBaseStructure 117 - Values available : menoPriezvisko  class java.lang.String
+2015-10-13 00:00:33,777  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 122 - Mapping error, indexOfColumn :data.Column@1ddc4ec2 not found
+2015-10-13 00:00:33,777   INFO [main] -log4j.Log4j.objectIsInBaseStructure 117 - Values available : trvalyPobyt  class java.lang.String
+2015-10-13 00:00:33,777  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 122 - Mapping error, indexOfColumn :data.Column@1ddc4ec2 not found
+2015-10-13 00:00:33,777   INFO [main] -log4j.Log4j.objectIsInBaseStructure 117 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:00:33,778   INFO [main] -log4j.Log4j.objectIsInBaseStructure 117 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:00:33,778  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 122 - Mapping error, indexOfColumn :data.Column@1ddc4ec2 not found
+2015-10-13 00:00:33,778   INFO [main] -log4j.Log4j.objectIsInBaseStructure 117 - Values available : menoPriezvisko  class java.lang.String
+2015-10-13 00:00:33,778  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 122 - Mapping error, indexOfColumn :data.Column@1ddc4ec2 not found
+2015-10-13 00:00:33,778   INFO [main] -log4j.Log4j.objectIsInBaseStructure 117 - Values available : trvalyPobyt  class java.lang.String
+2015-10-13 00:00:33,778  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 122 - Mapping error, indexOfColumn :data.Column@1ddc4ec2 not found
+2015-10-13 00:00:33,779   INFO [main] -log4j.Log4j.objectIsInBaseStructure 117 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:00:47,871   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 153 - MAIN COLUMN CREATED
+2015-10-13 00:00:50,337   INFO [main] -log4j.Log4j.objectIsInBaseStructure 117 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:00:50,338   INFO [main] -log4j.Log4j.objectIsInBaseStructure 117 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:00:50,339  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 122 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:00:50,342   INFO [main] -log4j.Log4j.objectIsInBaseStructure 117 - Values available : menoPriezvisko  class java.lang.String
+2015-10-13 00:00:50,343  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 122 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:00:50,343   INFO [main] -log4j.Log4j.objectIsInBaseStructure 117 - Values available : trvalyPobyt  class java.lang.String
+2015-10-13 00:00:50,343  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 122 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:00:50,904   INFO [main] -log4j.Log4j.objectIsInBaseStructure 117 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:00:50,904   INFO [main] -log4j.Log4j.objectIsInBaseStructure 117 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:00:50,905  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 122 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:00:50,906   INFO [main] -log4j.Log4j.objectIsInBaseStructure 117 - Values available : menoPriezvisko  class java.lang.String
+2015-10-13 00:00:50,906  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 122 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:00:50,907   INFO [main] -log4j.Log4j.objectIsInBaseStructure 117 - Values available : trvalyPobyt  class java.lang.String
+2015-10-13 00:00:50,908  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 122 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:01:13,811   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 153 - MAIN COLUMN CREATED
+2015-10-13 00:01:53,776   INFO [main] -log4j.Log4j.objectIsInBaseStructure 117 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:02:12,433   INFO [main] -log4j.Log4j.objectIsInBaseStructure 117 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:02:12,434  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 122 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:02:12,437   INFO [main] -log4j.Log4j.objectIsInBaseStructure 117 - Values available : menoPriezvisko  class java.lang.String
+2015-10-13 00:02:12,437  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 122 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:02:12,437   INFO [main] -log4j.Log4j.objectIsInBaseStructure 117 - Values available : trvalyPobyt  class java.lang.String
+2015-10-13 00:02:12,438  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 122 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:02:55,823   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 149 - MAIN COLUMN CREATED
+2015-10-13 00:02:55,826   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:02:55,828   INFO [main] -log4j.Log4j.updateIndexIntegrity 170 - IndexTree loca key is : data.Column@1ddc4ec2
+2015-10-13 00:02:55,828   INFO [main] -log4j.Log4j.getRightKeyValueForCurrentIndex 186 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:02:55,828   INFO [main] -log4j.Log4j.getRightKeyValueForCurrentIndex 189 - rodneCislo LOCAL KEY EXIST
+2015-10-13 00:02:55,829   INFO [main] -log4j.Log4j.getRightKeyValueForCurrentIndex 195 - VALUE to key: rodneCislo is: 1111
+2015-10-13 00:02:55,829   INFO [main] -log4j.Log4j.getRightKeyValueForCurrentIndex 196 - Data found, break
+2015-10-13 00:02:55,829   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:02:55,829   INFO [main] -log4j.Log4j.updateIndexIntegrity 170 - IndexTree loca key is : data.Column@1ddc4ec2
+2015-10-13 00:02:55,829   INFO [main] -log4j.Log4j.getRightKeyValueForCurrentIndex 186 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:02:55,829   INFO [main] -log4j.Log4j.getRightKeyValueForCurrentIndex 189 - rodneCislo LOCAL KEY EXIST
+2015-10-13 00:02:55,829   INFO [main] -log4j.Log4j.getRightKeyValueForCurrentIndex 195 - VALUE to key: rodneCislo is: 1112
+2015-10-13 00:02:55,830   INFO [main] -log4j.Log4j.getRightKeyValueForCurrentIndex 196 - Data found, break
+2015-10-13 00:02:55,830   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:03:18,443   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 149 - MAIN COLUMN CREATED
+2015-10-13 00:03:38,993   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:03:40,673   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:03:40,673  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 118 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:03:40,677   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : menoPriezvisko  class java.lang.String
+2015-10-13 00:03:40,677  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 118 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:03:40,677   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : trvalyPobyt  class java.lang.String
+2015-10-13 00:03:40,677  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 118 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:03:41,658   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:03:41,658  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 118 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:03:41,658   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : menoPriezvisko  class java.lang.String
+2015-10-13 00:03:41,658  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 118 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:03:41,658   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : trvalyPobyt  class java.lang.String
+2015-10-13 00:03:41,658  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 118 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:03:42,105   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:03:42,105  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 118 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:03:42,108   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : menoPriezvisko  class java.lang.String
+2015-10-13 00:03:42,108  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 118 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:03:42,108   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : trvalyPobyt  class java.lang.String
+2015-10-13 00:03:42,108  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 118 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:03:42,540   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:03:42,540  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 118 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:03:42,540   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : menoPriezvisko  class java.lang.String
+2015-10-13 00:03:42,541  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 118 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:03:42,541   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : trvalyPobyt  class java.lang.String
+2015-10-13 00:03:42,542  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 118 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:05:17,753   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:05:17,753  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 118 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:05:17,753   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : menoPriezvisko  class java.lang.String
+2015-10-13 00:05:17,753  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 118 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:05:17,754   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : trvalyPobyt  class java.lang.String
+2015-10-13 00:05:17,754  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 118 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:05:25,625   INFO [main] -log4j.Log4j.updateIndexIntegrity 170 - IndexTree loca key is : data.Column@6be46e8f
+2015-10-13 00:05:27,232   INFO [main] -log4j.Log4j.getRightKeyValueForCurrentIndex 186 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:05:27,233   INFO [main] -log4j.Log4j.getRightKeyValueForCurrentIndex 189 - rodneCislo LOCAL KEY EXIST
+2015-10-13 00:05:27,234   INFO [main] -log4j.Log4j.getRightKeyValueForCurrentIndex 195 - VALUE to key: rodneCislo is: 1111
+2015-10-13 00:05:27,234   INFO [main] -log4j.Log4j.getRightKeyValueForCurrentIndex 196 - Data found, break
+2015-10-13 00:05:32,180   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:05:32,181  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 118 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:05:32,181   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : menoPriezvisko  class java.lang.String
+2015-10-13 00:05:32,181  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 118 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:05:32,183   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : trvalyPobyt  class java.lang.String
+2015-10-13 00:05:32,183  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 118 - Mapping error, indexOfColumn :data.Column@6be46e8f not found
+2015-10-13 00:05:34,152   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:05:34,153   INFO [main] -log4j.Log4j.updateIndexIntegrity 170 - IndexTree loca key is : data.Column@6be46e8f
+2015-10-13 00:05:34,153   INFO [main] -log4j.Log4j.getRightKeyValueForCurrentIndex 186 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:05:34,153   INFO [main] -log4j.Log4j.getRightKeyValueForCurrentIndex 189 - rodneCislo LOCAL KEY EXIST
+2015-10-13 00:05:34,154   INFO [main] -log4j.Log4j.getRightKeyValueForCurrentIndex 195 - VALUE to key: rodneCislo is: 1112
+2015-10-13 00:05:34,154   INFO [main] -log4j.Log4j.getRightKeyValueForCurrentIndex 196 - Data found, break
+2015-10-13 00:06:24,430   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 149 - MAIN COLUMN CREATED
+2015-10-13 00:06:24,434   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:06:24,436   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:06:24,437   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:06:32,509   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 149 - MAIN COLUMN CREATED
+2015-10-13 00:06:32,514   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:06:32,514   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:07:34,657   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:17:28,974   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 149 - MAIN COLUMN CREATED
+2015-10-13 00:17:28,977   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:17:28,980   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 00:17:28,980   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:13:58,732   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 149 - MAIN COLUMN CREATED
+2015-10-13 10:13:58,736   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:13:58,740   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:13:58,740   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:16:18,861   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 149 - MAIN COLUMN CREATED
+2015-10-13 10:16:18,864   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:16:18,866   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:16:18,867   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:28:35,174   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 152 - MAIN COLUMN CREATED
+2015-10-13 10:28:35,178   INFO [main] -log4j.Log4j.objectIsInBaseStructure 112 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:28:35,181   INFO [main] -log4j.Log4j.objectIsInBaseStructure 112 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:28:35,182   INFO [main] -log4j.Log4j.objectIsInBaseStructure 112 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:28:47,111   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 152 - MAIN COLUMN CREATED
+2015-10-13 10:28:47,115   INFO [main] -log4j.Log4j.objectIsInBaseStructure 112 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:28:47,116   INFO [main] -log4j.Log4j.objectIsInBaseStructure 112 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:29:26,219   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 152 - MAIN COLUMN CREATED
+2015-10-13 10:29:26,222   INFO [main] -log4j.Log4j.objectIsInBaseStructure 112 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:29:26,225   INFO [main] -log4j.Log4j.objectIsInBaseStructure 112 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:29:26,225   INFO [main] -log4j.Log4j.objectIsInBaseStructure 112 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:29:35,864   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 152 - MAIN COLUMN CREATED
+2015-10-13 10:29:43,277   INFO [main] -log4j.Log4j.objectIsInBaseStructure 112 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:30:44,288   INFO [main] -log4j.Log4j.objectIsInBaseStructure 112 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:30:54,926   INFO [main] -log4j.Log4j.objectIsInBaseStructure 112 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:30:54,953   INFO [main] -log4j.Log4j.objectIsInBaseStructure 112 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:42:42,806   INFO [main] -log4j.Log4j.objectIsInBaseStructure 68 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:42:42,810  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 78 - Mapping error, indexOfColumn :menoPriezisko not found
+2015-10-13 10:42:42,813   INFO [main] -log4j.Log4j.objectIsInBaseStructure 68 - Values available : menoPriezvisko  class java.lang.String
+2015-10-13 10:42:42,813  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 78 - Mapping error, indexOfColumn :menoPriezisko not found
+2015-10-13 10:42:42,813   INFO [main] -log4j.Log4j.objectIsInBaseStructure 68 - Values available : trvalyPobyt  class java.lang.String
+2015-10-13 10:42:42,814  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 78 - Mapping error, indexOfColumn :menoPriezisko not found
+2015-10-13 10:42:42,815   INFO [main] -log4j.Log4j.getKeyDataFromColumn 40 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:42:42,815   INFO [main] -log4j.Log4j.getKeyDataFromColumn 43 - rodneCislo LOCAL KEY EXIST
+2015-10-13 10:42:42,816   INFO [main] -log4j.Log4j.getKeyDataFromColumn 49 - VALUE to key: rodneCislo is: 1111
+2015-10-13 10:42:42,816   INFO [main] -log4j.Log4j.getKeyDataFromColumn 50 - Data found, break
+2015-10-13 10:43:17,276   INFO [main] -log4j.Log4j.objectIsInBaseStructure 68 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:43:17,280  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 78 - Mapping error, indexOfColumn :menoPriezisko not found
+2015-10-13 10:43:17,282   INFO [main] -log4j.Log4j.objectIsInBaseStructure 68 - Values available : menoPriezvisko  class java.lang.String
+2015-10-13 10:43:17,283  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 78 - Mapping error, indexOfColumn :menoPriezisko not found
+2015-10-13 10:43:17,283   INFO [main] -log4j.Log4j.objectIsInBaseStructure 68 - Values available : trvalyPobyt  class java.lang.String
+2015-10-13 10:43:17,283  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 78 - Mapping error, indexOfColumn :menoPriezisko not found
+2015-10-13 10:43:17,285   INFO [main] -log4j.Log4j.getKeyDataFromColumn 40 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:43:17,285   INFO [main] -log4j.Log4j.getKeyDataFromColumn 43 - rodneCislo LOCAL KEY EXIST
+2015-10-13 10:43:17,286   INFO [main] -log4j.Log4j.getKeyDataFromColumn 49 - VALUE to key: rodneCislo is: 1551
+2015-10-13 10:43:17,286   INFO [main] -log4j.Log4j.getKeyDataFromColumn 50 - Data found, break
+2015-10-13 10:44:02,004   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 155 - MAIN COLUMN CREATED
+2015-10-13 10:44:02,007   INFO [main] -log4j.Log4j.objectIsInBaseStructure 114 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:44:02,010   INFO [main] -log4j.Log4j.getKeyDataFromColumn 165 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:44:02,010   INFO [main] -log4j.Log4j.getKeyDataFromColumn 168 - rodneCislo LOCAL KEY EXIST
+2015-10-13 10:44:02,011   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - VALUE to key: rodneCislo is: 1111
+2015-10-13 10:44:02,011   INFO [main] -log4j.Log4j.getKeyDataFromColumn 175 - Data found, break
+2015-10-13 10:44:02,011   INFO [main] -log4j.Log4j.objectIsInBaseStructure 114 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:44:02,011   INFO [main] -log4j.Log4j.getKeyDataFromColumn 165 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:44:02,011   INFO [main] -log4j.Log4j.getKeyDataFromColumn 168 - rodneCislo LOCAL KEY EXIST
+2015-10-13 10:44:02,011   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - VALUE to key: rodneCislo is: 1112
+2015-10-13 10:44:02,011   INFO [main] -log4j.Log4j.getKeyDataFromColumn 175 - Data found, break
+2015-10-13 10:44:02,011   INFO [main] -log4j.Log4j.objectIsInBaseStructure 114 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:44:38,698   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 155 - MAIN COLUMN CREATED
+2015-10-13 10:44:49,685   INFO [main] -log4j.Log4j.objectIsInBaseStructure 114 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:44:49,686   INFO [main] -log4j.Log4j.getKeyDataFromColumn 165 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:44:49,686   INFO [main] -log4j.Log4j.getKeyDataFromColumn 168 - rodneCislo LOCAL KEY EXIST
+2015-10-13 10:44:49,691   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - VALUE to key: rodneCislo is: 1111
+2015-10-13 10:44:49,691   INFO [main] -log4j.Log4j.getKeyDataFromColumn 175 - Data found, break
+2015-10-13 10:44:49,691   INFO [main] -log4j.Log4j.objectIsInBaseStructure 114 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:44:49,691   INFO [main] -log4j.Log4j.getKeyDataFromColumn 165 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:44:49,691   INFO [main] -log4j.Log4j.getKeyDataFromColumn 168 - rodneCislo LOCAL KEY EXIST
+2015-10-13 10:44:49,691   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - VALUE to key: rodneCislo is: 1112
+2015-10-13 10:44:49,691   INFO [main] -log4j.Log4j.getKeyDataFromColumn 175 - Data found, break
+2015-10-13 10:44:55,538   INFO [main] -log4j.Log4j.objectIsInBaseStructure 114 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:45:06,799   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 155 - MAIN COLUMN CREATED
+2015-10-13 10:45:16,459   INFO [main] -log4j.Log4j.objectIsInBaseStructure 114 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:45:22,920   INFO [main] -log4j.Log4j.getKeyDataFromColumn 165 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:45:22,924   INFO [main] -log4j.Log4j.getKeyDataFromColumn 168 - rodneCislo LOCAL KEY EXIST
+2015-10-13 10:45:22,947   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - VALUE to key: rodneCislo is: 1111
+2015-10-13 10:45:22,950   INFO [main] -log4j.Log4j.getKeyDataFromColumn 175 - Data found, break
+2015-10-13 10:46:47,079   INFO [main] -log4j.Log4j.objectIsInBaseStructure 114 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:47:19,272   INFO [main] -log4j.Log4j.getKeyDataFromColumn 165 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:47:26,543   INFO [main] -log4j.Log4j.getKeyDataFromColumn 168 - rodneCislo LOCAL KEY EXIST
+2015-10-13 10:47:32,833   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - VALUE to key: rodneCislo is: 1112
+2015-10-13 10:47:33,608   INFO [main] -log4j.Log4j.getKeyDataFromColumn 175 - Data found, break
+2015-10-13 10:48:21,292   INFO [main] -log4j.Log4j.objectIsInBaseStructure 114 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:50:56,635   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 155 - MAIN COLUMN CREATED
+2015-10-13 10:50:56,638   INFO [main] -log4j.Log4j.objectIsInBaseStructure 114 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:50:56,641   INFO [main] -log4j.Log4j.getKeyDataFromColumn 165 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:50:56,641   INFO [main] -log4j.Log4j.getKeyDataFromColumn 168 - rodneCislo LOCAL KEY EXIST
+2015-10-13 10:50:56,642   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - VALUE to key: rodneCislo is: 1111
+2015-10-13 10:50:56,642   INFO [main] -log4j.Log4j.getKeyDataFromColumn 175 - Data found, break
+2015-10-13 10:50:56,642   INFO [main] -log4j.Log4j.objectIsInBaseStructure 114 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:50:56,642   INFO [main] -log4j.Log4j.getKeyDataFromColumn 165 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:50:56,643   INFO [main] -log4j.Log4j.getKeyDataFromColumn 168 - rodneCislo LOCAL KEY EXIST
+2015-10-13 10:50:56,643   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - VALUE to key: rodneCislo is: 1112
+2015-10-13 10:50:56,643   INFO [main] -log4j.Log4j.getKeyDataFromColumn 175 - Data found, break
+2015-10-13 10:50:56,643   INFO [main] -log4j.Log4j.objectIsInBaseStructure 114 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:51:46,571   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 155 - MAIN COLUMN CREATED
+2015-10-13 10:51:53,270   INFO [main] -log4j.Log4j.objectIsInBaseStructure 114 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:51:55,602   INFO [main] -log4j.Log4j.getKeyDataFromColumn 165 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:51:55,606   INFO [main] -log4j.Log4j.getKeyDataFromColumn 168 - rodneCislo LOCAL KEY EXIST
+2015-10-13 10:51:55,628   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - VALUE to key: rodneCislo is: 1111
+2015-10-13 10:51:55,631   INFO [main] -log4j.Log4j.getKeyDataFromColumn 175 - Data found, break
+2015-10-13 10:51:57,572   INFO [main] -log4j.Log4j.objectIsInBaseStructure 114 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:52:03,610   INFO [main] -log4j.Log4j.getKeyDataFromColumn 165 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:52:03,615   INFO [main] -log4j.Log4j.getKeyDataFromColumn 168 - rodneCislo LOCAL KEY EXIST
+2015-10-13 10:52:03,619   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - VALUE to key: rodneCislo is: 1112
+2015-10-13 10:52:03,622   INFO [main] -log4j.Log4j.getKeyDataFromColumn 175 - Data found, break
+2015-10-13 10:52:10,062   INFO [main] -log4j.Log4j.objectIsInBaseStructure 114 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:55:50,097   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 155 - MAIN COLUMN CREATED
+2015-10-13 10:55:50,101   INFO [main] -log4j.Log4j.objectIsInBaseStructure 114 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:55:50,104   INFO [main] -log4j.Log4j.getKeyDataFromColumn 165 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:55:50,104   INFO [main] -log4j.Log4j.getKeyDataFromColumn 168 - rodneCislo LOCAL KEY EXIST
+2015-10-13 10:55:50,104   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - VALUE to key: rodneCislo is: 1111
+2015-10-13 10:55:50,104   INFO [main] -log4j.Log4j.getKeyDataFromColumn 175 - Data found, break
+2015-10-13 10:55:50,105   INFO [main] -log4j.Log4j.objectIsInBaseStructure 114 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:55:50,105   INFO [main] -log4j.Log4j.getKeyDataFromColumn 165 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:55:50,105   INFO [main] -log4j.Log4j.getKeyDataFromColumn 168 - rodneCislo LOCAL KEY EXIST
+2015-10-13 10:55:50,105   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - VALUE to key: rodneCislo is: 1112
+2015-10-13 10:55:50,105   INFO [main] -log4j.Log4j.getKeyDataFromColumn 175 - Data found, break
+2015-10-13 10:55:50,105   INFO [main] -log4j.Log4j.objectIsInBaseStructure 114 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:56:00,468   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 155 - MAIN COLUMN CREATED
+2015-10-13 10:56:00,501   INFO [main] -log4j.Log4j.objectIsInBaseStructure 114 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:56:06,348   INFO [main] -log4j.Log4j.getKeyDataFromColumn 165 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:56:06,348   INFO [main] -log4j.Log4j.getKeyDataFromColumn 168 - rodneCislo LOCAL KEY EXIST
+2015-10-13 10:56:06,353   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - VALUE to key: rodneCislo is: 1111
+2015-10-13 10:56:06,354   INFO [main] -log4j.Log4j.getKeyDataFromColumn 175 - Data found, break
+2015-10-13 10:56:06,354   INFO [main] -log4j.Log4j.objectIsInBaseStructure 114 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:56:06,354   INFO [main] -log4j.Log4j.getKeyDataFromColumn 165 - Values available : rodneCislo  class java.lang.String
+2015-10-13 10:56:06,354   INFO [main] -log4j.Log4j.getKeyDataFromColumn 168 - rodneCislo LOCAL KEY EXIST
+2015-10-13 10:56:06,354   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - VALUE to key: rodneCislo is: 1112
+2015-10-13 10:56:06,354   INFO [main] -log4j.Log4j.getKeyDataFromColumn 175 - Data found, break
+2015-10-13 10:56:06,357   INFO [main] -log4j.Log4j.objectIsInBaseStructure 114 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:38:56,256   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 22:38:56,259   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:38:56,263   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:38:56,263   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 22:38:56,264   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 22:38:56,264   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 22:38:56,264   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:38:56,264   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:38:56,264   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 22:38:56,265   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 22:38:56,265   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 22:38:56,265   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:41:49,093   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 22:41:49,098   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:41:49,102   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:41:49,102   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 22:41:49,103   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 22:41:49,103   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 22:41:49,103   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:41:49,103   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:41:49,104   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 22:41:49,104   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 22:41:49,104   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 22:41:49,104   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:42:01,671   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 22:42:01,679   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:42:01,680   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:42:01,680   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 22:42:01,688   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 22:42:01,688   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 22:42:01,688   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:42:01,689   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:42:01,689   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 22:42:01,689   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 22:42:01,689   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 22:42:01,693   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:44:38,858   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 22:44:38,863   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:44:38,864   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:44:38,864   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 22:44:38,870   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 22:44:38,871   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 22:44:38,871   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:44:38,871   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:44:38,871   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 22:44:38,871   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 22:44:38,872   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 22:44:38,875   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:48:17,167   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 22:48:17,172   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:48:17,172   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:48:17,173   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 22:48:17,177   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 22:48:17,178   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 22:48:17,178   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:48:17,178   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:48:17,178   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 22:48:17,179   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 22:48:17,179   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 22:48:17,186   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:49:52,548   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 22:49:52,553   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:49:52,554   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:49:52,554   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 22:49:52,558   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 22:49:52,559   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 22:49:52,559   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:49:52,559   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:49:52,559   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 22:49:52,559   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 22:49:52,559   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 22:49:52,562   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:50:42,653   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 22:50:42,658   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:50:42,658   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:50:42,658   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 22:50:42,664   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 22:50:42,664   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 22:50:42,664   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:50:42,665   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:50:42,665   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 22:50:42,665   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 22:50:42,665   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 22:50:42,668   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:51:45,624   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 22:51:45,631   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:51:45,632   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:51:45,632   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 22:51:45,637   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 22:51:45,637   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 22:51:45,637   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:51:45,637   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:51:45,637   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 22:51:45,638   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 22:51:45,638   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 22:51:45,642   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:57:45,898   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 22:57:45,904   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:57:45,907   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:57:45,907   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 22:57:45,908   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 22:57:45,908   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 22:57:45,908   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:57:45,908   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:57:45,908   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 22:57:45,909   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 22:57:45,909   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 22:57:45,909   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:57:58,237   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 22:57:58,242   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:57:58,242   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:57:58,242   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 22:57:58,246   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 22:57:58,247   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 22:57:58,247   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:57:58,247   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 22:57:58,247   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 22:57:58,247   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 22:57:58,247   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 22:57:58,250   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:03:12,542   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:03:12,545   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:03:12,548   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:03:12,548   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:03:12,548   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:03:12,549   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:03:12,549   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:03:12,549   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:03:12,549   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:03:12,549   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:03:12,549   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:03:12,549   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:03:19,957   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:03:19,961   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:03:19,962   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:03:19,962   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:03:19,967   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:03:19,968   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:03:19,968   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:03:19,968   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:03:19,968   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:03:19,968   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:03:19,968   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:03:19,971   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:07:48,180   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:07:48,183   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:07:48,184   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:07:48,184   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:07:48,185   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:07:48,185   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:07:48,185   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:07:48,186   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:07:48,186   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:07:48,186   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:07:48,186   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:07:48,186   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:07:56,345   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:07:56,350   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:07:56,350   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:07:56,350   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:07:56,355   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:07:56,355   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:07:56,356   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:07:56,356   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:07:56,356   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:07:56,356   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:07:56,357   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:07:56,360   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:08:40,794   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:08:40,798   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:08:40,798   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:08:40,799   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:08:40,805   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:08:40,805   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:08:40,805   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:08:40,806   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:08:40,806   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:08:40,806   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:08:40,806   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:08:40,809   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:09:38,230   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:09:38,236   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:09:38,236   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:09:38,236   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:09:38,241   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:09:38,241   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:09:38,242   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:09:38,242   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:09:38,242   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:09:38,242   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:09:38,242   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:09:38,247   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:10:35,125   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:10:35,127   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:10:35,129   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:10:35,130   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:10:35,130   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:10:35,130   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:10:35,130   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:10:35,130   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:10:35,131   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:10:35,131   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:10:35,131   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:10:35,131   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:10:44,686   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:10:44,691   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:10:44,691   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:10:44,692   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:10:44,697   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:10:44,698   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:10:44,699   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:10:44,699   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:10:44,700   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:10:44,700   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:10:44,700   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:10:44,705   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:13:08,137   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:13:08,141   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:13:08,142   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:13:08,142   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:13:08,147   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:13:08,147   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:13:08,147   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:13:08,147   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:13:08,147   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:13:08,147   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:13:08,147   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:13:08,153   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:18:19,522   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:18:19,524   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:18:19,527   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:18:19,527   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:18:19,528   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:18:19,528   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:18:19,528   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:18:19,528   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:18:19,528   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:18:19,528   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:18:19,528   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:18:19,529   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:29:24,351   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:29:24,353   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:29:24,355   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:29:24,356   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:29:24,356   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:29:24,356   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:29:24,357   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:29:24,357   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:29:24,357   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:29:24,357   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:29:24,357   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:29:24,357   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:29:34,819   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:29:34,822   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:29:34,824   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:29:34,824   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:29:34,824   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:29:34,824   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:29:34,824   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:29:34,825   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:29:34,825   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:29:34,825   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:29:34,825   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:29:34,825   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:31:33,336   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:31:33,339   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:31:33,342   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:31:33,342   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:31:33,343   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:31:33,343   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:31:33,343   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:31:33,343   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:31:33,343   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:31:33,343   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:31:33,343   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:31:33,344   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:31:33,344   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:31:33,344   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:31:33,344   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1113
+2015-10-13 23:31:33,344   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:31:33,347   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:31:33,347   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:31:33,347   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:31:33,348   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1114
+2015-10-13 23:31:33,348   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:31:33,348   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:31:33,348   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:31:33,348   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:31:33,348   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1115
+2015-10-13 23:31:33,349   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:31:33,349   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:32:09,090   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:32:09,093   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:32:09,095   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:32:09,096   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:32:09,096   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:32:09,097   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:32:09,097   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:32:09,097   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:32:09,097   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:32:09,097   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:32:09,098   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:32:09,098   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:32:09,098   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:32:09,098   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:32:09,098   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1113
+2015-10-13 23:32:09,098   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:32:09,101   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:32:09,101   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:32:09,101   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:32:09,101   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1114
+2015-10-13 23:32:09,102   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:32:09,102   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:32:09,102   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:32:09,103   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:32:09,103   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1115
+2015-10-13 23:32:09,104   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:32:09,104   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:33:13,969   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:33:13,971   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:33:13,974   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:33:13,974   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:33:13,974   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:33:13,974   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:33:13,975   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:33:13,975   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:33:13,975   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:33:13,975   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:33:13,975   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:33:13,975   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:33:13,975   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:33:13,976   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:33:13,976   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1113
+2015-10-13 23:33:13,976   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:33:13,978   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:33:13,979   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:33:13,979   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:33:13,979   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1114
+2015-10-13 23:33:13,979   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:33:13,979   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:33:13,979   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:33:13,980   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:33:13,980   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1115
+2015-10-13 23:33:13,980   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:33:13,980   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:36:28,011   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:36:28,017   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:36:28,017   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:36:28,017   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:36:28,022   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:36:28,023   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:36:28,023   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:36:28,023   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:36:28,023   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:36:28,023   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:36:28,023   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:36:28,029   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:37:50,669   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:37:50,674   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:37:50,674   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:37:50,674   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:37:50,680   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:37:50,680   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:37:50,680   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:37:50,681   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:37:50,681   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:37:50,681   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:37:50,681   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:37:50,687   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:38:47,541   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:38:47,546   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:38:47,546   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:38:47,546   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:38:47,551   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:38:47,552   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:38:47,552   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:38:47,552   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:38:47,552   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:38:47,552   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:38:47,552   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:38:47,559   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:39:12,993   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:39:12,997   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:39:12,998   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:39:12,998   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:39:13,003   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:39:13,003   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:39:13,003   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:39:13,004   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:39:13,004   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:39:13,004   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:39:13,004   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:39:13,011   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:42:26,857   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:42:26,862   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:42:26,862   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:42:26,863   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:42:26,868   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:42:26,869   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:42:26,869   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:42:26,869   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:42:26,869   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:42:26,870   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:42:26,870   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:42:26,876   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:43:45,775   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:43:45,777   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:43:45,780   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:43:45,780   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:43:45,781   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:43:45,781   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:43:45,781   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:43:45,781   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:43:45,782   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:43:45,782   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:43:45,782   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:43:45,782   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:49:43,625   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:49:43,627   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:49:43,629   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:49:43,630   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:49:43,630   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:49:43,630   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:49:43,631   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:49:43,631   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:49:43,631   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:49:43,631   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:49:43,631   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:49:43,631   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:50:00,914   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:50:00,917   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:50:00,921   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:50:00,921   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:50:00,922   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:50:00,922   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:50:00,922   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:50:00,923   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:50:00,923   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:50:00,923   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:50:00,923   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:50:00,924   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:50:00,924   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:50:00,924   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:50:00,925   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1113
+2015-10-13 23:50:00,925   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:50:00,927   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:50:00,928   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:50:00,928   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:50:00,928   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1114
+2015-10-13 23:50:00,928   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:50:00,928   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:50:00,928   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:50:00,929   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:50:00,929   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1115
+2015-10-13 23:50:00,929   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:50:00,929   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:56:33,416   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:56:33,419   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:56:33,422   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:56:33,422   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:56:33,422   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:56:33,423   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:56:33,423   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:56:33,423   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:56:33,423   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:56:33,423   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:56:33,423   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:56:33,423   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:56:33,424   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:56:33,424   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:56:33,424   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1113
+2015-10-13 23:56:33,424   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:56:33,426   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:56:33,427   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:56:33,427   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:56:33,427   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1114
+2015-10-13 23:56:33,427   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:56:33,428   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:56:33,428   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:56:33,428   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:56:33,428   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1115
+2015-10-13 23:56:33,428   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:56:33,428   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:56:33,429   INFO [main] -log4j.Log4j.createIndexOn 84 - Creating index on column: menoPriezvisko
+2015-10-13 23:56:33,429   INFO [main] -log4j.Log4j.createIndexOn 88 - Values available for node: rodneCislo  class java.lang.String
+2015-10-13 23:56:33,430   INFO [main] -log4j.Log4j.createIndexOn 88 - Values available for node: menoPriezvisko  class java.lang.String
+2015-10-13 23:56:33,430   INFO [main] -log4j.Log4j.createIndexOn 88 - Values available for node: trvalyPobyt  class java.lang.String
+2015-10-13 23:56:33,430   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:56:33,430  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 118 - Mapping error, indexOfColumn :menoPriezvisko not found
+2015-10-13 23:56:33,430   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : menoPriezvisko  class java.lang.String
+2015-10-13 23:57:41,224   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:57:41,229   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:57:41,229   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:57:41,229   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:57:41,234   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:57:41,234   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:57:41,234   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:57:41,234   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:57:41,234   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:57:41,235   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:57:41,235   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:57:41,235   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:57:41,235   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:57:41,235   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:57:41,235   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1113
+2015-10-13 23:57:41,235   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:57:41,238   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:57:41,238   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:57:41,238   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:57:41,238   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1114
+2015-10-13 23:57:41,238   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:57:41,239   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:57:41,239   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:57:41,239   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:57:41,239   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1115
+2015-10-13 23:57:41,239   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:57:41,245   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:58:09,736   INFO [main] -log4j.Log4j.createIndexOn 84 - Creating index on column: menoPriezvisko
+2015-10-13 23:58:09,741   INFO [main] -log4j.Log4j.createIndexOn 88 - Values available for node: rodneCislo  class java.lang.String
+2015-10-13 23:58:09,745   INFO [main] -log4j.Log4j.createIndexOn 88 - Values available for node: menoPriezvisko  class java.lang.String
+2015-10-13 23:58:09,749   INFO [main] -log4j.Log4j.createIndexOn 88 - Values available for node: trvalyPobyt  class java.lang.String
+2015-10-13 23:58:12,294   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:58:12,298  FATAL [main] -log4j.Log4j.objectIsInBaseStructure 118 - Mapping error, indexOfColumn :menoPriezvisko not found
+2015-10-13 23:58:12,302   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : menoPriezvisko  class java.lang.String
+2015-10-13 23:58:21,287   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:58:21,317   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:58:21,329   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:58:21,332   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:58:21,354   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:58:21,357   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:58:21,365   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:58:21,376   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:58:21,380   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:58:21,383   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:58:21,386   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:58:21,394   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:58:21,406   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:58:21,409   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:58:21,412   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1113
+2015-10-13 23:58:21,415   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:58:21,489   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:58:21,504   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:58:21,508   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:58:21,511   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1114
+2015-10-13 23:58:21,515   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:58:21,523   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:58:21,536   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:58:21,540   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:58:21,543   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1115
+2015-10-13 23:58:21,546   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:58:21,554   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:58:30,866   INFO [main] -log4j.Log4j.createIndexOn 84 - Creating index on column: menoPriezvisko
+2015-10-13 23:58:53,469   INFO [main] -log4j.Log4j.createIndexOn 88 - Values available for node: rodneCislo  class java.lang.String
+2015-10-13 23:58:59,501   INFO [main] -log4j.Log4j.createIndexOn 88 - Values available for node: menoPriezvisko  class java.lang.String
+2015-10-13 23:59:07,268   INFO [main] -log4j.Log4j.createIndexOn 88 - Values available for node: trvalyPobyt  class java.lang.String
+2015-10-13 23:59:17,158   INFO [main] -log4j.Log4j.createMainIndexRecordIfDontExist 154 - MAIN COLUMN CREATED
+2015-10-13 23:59:17,186   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:59:17,199   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:59:17,203   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:59:17,223   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1111
+2015-10-13 23:59:17,226   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:59:17,234   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:59:17,247   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:59:17,251   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:59:17,254   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1112
+2015-10-13 23:59:17,257   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:59:17,264   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:59:17,277   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:59:17,280   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:59:17,282   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1113
+2015-10-13 23:59:17,285   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:59:17,359   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:59:17,374   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:59:17,378   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:59:17,381   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1114
+2015-10-13 23:59:17,384   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:59:17,391   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:59:17,403   INFO [main] -log4j.Log4j.getKeyDataFromColumn 164 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:59:17,407   INFO [main] -log4j.Log4j.getKeyDataFromColumn 167 - rodneCislo LOCAL KEY EXIST
+2015-10-13 23:59:17,410   INFO [main] -log4j.Log4j.getKeyDataFromColumn 173 - VALUE to key: rodneCislo is: 1115
+2015-10-13 23:59:17,413   INFO [main] -log4j.Log4j.getKeyDataFromColumn 174 - Data found, break
+2015-10-13 23:59:17,420   INFO [main] -log4j.Log4j.objectIsInBaseStructure 113 - Values available : rodneCislo  class java.lang.String
+2015-10-13 23:59:21,751   INFO [main] -log4j.Log4j.createIndexOn 84 - Creating index on column: menoPriezvisko
+2015-10-13 23:59:28,796   INFO [main] -log4j.Log4j.createIndexOn 88 - Values available for node: rodneCislo  class java.lang.String

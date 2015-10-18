@@ -10,6 +10,8 @@ public  abstract class Order {
     protected Column structure;
     protected Node currentNode;
 
+
+
     protected Column getStructure() {
         return structure;
     }
@@ -19,27 +21,17 @@ public  abstract class Order {
     }
 
     public Order(Column structure){
+        setFirst();
         this.structure = structure;
     }
 
 
-    abstract public void setFirs();
+    abstract public void setFirst();
     abstract public Node getCurrentNode();
-    abstract public void movePointerOfCurrentNodeToNext();
-    abstract public boolean weCanMoveToNextPointer();
 
-    public Object next(){
-        Object resultNode = getCurrentNode();
-        movePointerOfCurrentNodeToNext();
-        return resultNode;
-    }
+    abstract public Object next();
 
-    public boolean hasNext(){
-        if(weCanMoveToNextPointer()){
-            return true;
-        } else {
-            return false;
-        }
-    }
+    abstract public boolean hasNext();
+
 
 }

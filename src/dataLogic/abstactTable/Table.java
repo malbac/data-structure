@@ -20,18 +20,18 @@ import java.util.Set;
  */
 public abstract class Table {
     private Class baseClass;
-    Object mainIndexOn;
+    Object mainIndexMetaName;
     //private RBTree id_tree;
     private HashMap<String, Column> indexArray; //there are RBtree inside, so indexes can be added dynamicaly
     private static final Logger log = Logger.getLogger(Log4j.class);
 
-    public Table(Class baseNode, Object mainIndexOn) {
+    public Table(Class baseNode, Object mainIndexMetaName) {
         indexArray = new HashMap<String, Column>();
         this.baseClass = baseNode;
-        this.mainIndexOn = mainIndexOn;
+        this.mainIndexMetaName = mainIndexMetaName;
         createMainIndexRecordIfDontExist();
-//        if(objectIsInBaseStructure(mainIndexOn)){
-//            id_tree = new Column((String)mainIndexOn, true, true, true);
+//        if(objectIsInBaseStructure(mainIndexMetaName)){
+//            id_tree = new Column((String)mainIndexMetaName, true, true, true);
 //        } else {
 //            log.trace("MAIN INDEX NOT CREATED");
 //        }
@@ -86,13 +86,14 @@ public abstract class Table {
         for (Field f : fields) {
             f.setAccessible(true);
             log.info("Values available for node: " + f.getName() + "  " + f.getType());
-            if (columnName.getClass().getName().equals(f.getName())) {
+            if (columnName.equals(f.getName())) {
 
                 log.info(columnName + " Variable exist");
                 log.info("key can be created");
                 Column localColumn = new Column(f.getName(), false, false, false);
                 indexArray.put(f.getName(), localColumn);
                 createDataOnColumn(localColumn);
+                break;
             }
         }
 
@@ -121,9 +122,10 @@ public abstract class Table {
     }
 
     private void createDataOnColumn(Column localColumn) {
-        Order order = new LinearOrder(indexArray.get(mainIndexOn));
+        Order order = new LinearOrder(indexArray.get(mainIndexMetaName));
+
         Node localNode;
-        if (order.hasNext()) {
+        while (order.hasNext()) {
             localNode = (Node) order.next();
             localColumn.insert(getValueFromNode(localColumn.getMetaKeyName(), localNode), localNode);
         }
@@ -131,7 +133,8 @@ public abstract class Table {
 
     private Object getValueFromNode(String nameOfVariable, Node node) {
         try {
-            Field field = node.getClass().getField(nameOfVariable);
+            Field field = node.getClass().getDeclaredField(nameOfVariable);
+            field.setAccessible(true);
             Object value = "";
             value = field.get(node);
             return value;
@@ -150,7 +153,7 @@ public abstract class Table {
 
     private void createMainIndexRecordIfDontExist() {
         if (indexArray.size() == 0) {
-            indexArray.put((String) mainIndexOn, new Column((String) mainIndexOn, true, true, true));
+            indexArray.put((String) mainIndexMetaName, new Column((String) mainIndexMetaName, true, true, true));
             log.info("MAIN COLUMN CREATED");
         }
 

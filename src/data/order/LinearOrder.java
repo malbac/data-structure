@@ -8,15 +8,15 @@ import data.RBTree.Node;
  */
 public class LinearOrder extends Order {
 
+
     public LinearOrder(Column structure) {
         super(structure);
     }
 
     @Override
-    public void setFirs() {
-        setCurrentNode(super.getStructure().get(0));
+    public void setFirst() {
+        setCurrentNode(null);
     }
-
 
 
     @Override
@@ -25,13 +25,41 @@ public class LinearOrder extends Order {
     }
 
     @Override
-    public void movePointerOfCurrentNodeToNext() {
-        setCurrentNode(getStructure().get(getStructure().indexOf(getCurrentNode()) + 1));
-
+    public Object next() {
+        Object resultNode;
+        if (super.currentNode == null) {
+            resultNode = getStructure().get(0);
+        } else {
+            resultNode = getCurrentNode();
+        }
+        movePointerOfCurrentNodeToNext();
+        return resultNode;
     }
 
     @Override
+    public boolean hasNext() {
+        if(weCanMoveToNextPointer()){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    public void movePointerOfCurrentNodeToNext() {
+        if(super.currentNode==null){
+            setCurrentNode(getStructure().get(1));
+        } else {
+            setCurrentNode(getStructure().get(getStructure().indexOf(getCurrentNode()) + 1));
+        }
+
+    }
+
+
     public boolean weCanMoveToNextPointer() {
+        if (super.currentNode==null){
+            return (getStructure().size() >  1);
+        }
         return (getStructure().size() > (getStructure().indexOf(getCurrentNode())) + 1);
     }
 }

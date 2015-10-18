@@ -23,11 +23,25 @@ public class Client {
         //osobaT.insert(1, new KatastralnyUrad(1));
         osobaT.insert( new Osoba("1111","Fero","Bytca"),osobaT.getColumn("rodneCislo"));
         osobaT.insert( new Osoba("1112","Fero","Bytca"),osobaT.getColumn("rodneCislo"));
+        osobaT.insert( new Osoba("1113","Fero","Bytca"),osobaT.getColumn("rodneCislo"));
+        osobaT.insert( new Osoba("1114","Fero","Bytca"),osobaT.getColumn("rodneCislo"));
+        osobaT.insert(new Osoba("1115", "Fero", "Bytca"), osobaT.getColumn("rodneCislo"));
+
 
 
        // osobaT.createIndexOn();
         Order order = new LinearOrder(osobaT.getColumn("rodneCislo"));
-        order.setFirs();
+        order.setFirst();
+        while (order.hasNext()){
+            Osoba next = (Osoba)order.next();
+
+            System.out.println("Objekty: " + next.getMenoPriezvisko() + " ," + next.getRodneCislo());
+        }
+
+        osobaT.createIndexOn("menoPriezvisko");
+
+        order = new LinearOrder(osobaT.getColumn("menoPriezvisko"));
+        order.setFirst();
         while (order.hasNext()){
             Osoba next = (Osoba)order.next();
 
