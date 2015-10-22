@@ -1,4 +1,4 @@
-package implementation.treap.treapImplementation;
+package implementation.treap;
 
 import java.util.Random;
 
@@ -11,7 +11,7 @@ public class TNode {
     private TNode left;
     private TNode right;
 
-    int key;
+    Object key;
     int priority;
 
     public int getPriority() {
@@ -65,7 +65,7 @@ public class TNode {
 
 
 
-    public int getKey() {
+    public Object getKey() {
         if (this == null) {
             return -1;
         }

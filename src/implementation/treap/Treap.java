@@ -1,4 +1,4 @@
-package implementation.treap.treapImplementation;
+package implementation.treap;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -8,7 +8,7 @@ import java.util.TreeMap;
 /**
  * Created by Malbac on 19.10.2015.
  */
-public class TreapIm {
+public class Treap {
 
     private TNode root;
     private TNode current;
@@ -18,15 +18,39 @@ public class TreapIm {
         this.root.setParent(null);
     }
 
-    public TNode search(int key) {
+    /**
+     * A>B  >> 1
+     * A<B  >>-1
+     * A==B >> 0
+     * @param A
+     * @param B
+     * @return
+     */
+
+
+    public boolean AisBiggerThanB(Object A,Object B){
+        int a = ((Integer) A);
+        int b = ((Integer) B);
+        if(a>b)return true;
+        else return false;
+    }
+
+    public boolean AisEqualToB(Object A,Object B){
+        int a = ((Integer) A);
+        int b = ((Integer) B);
+        if(a==b)return true;
+        else return false;
+    }
+
+    public TNode search(Object key) {
         current = root;
         if (root.getKey() == key) {
            // System.out.println("Found node with key: " + key + "  priority: " + current.getPriority());
             return current;
         }
-
         while (true) {
-            if (key < current.key) {//ak je sucasny kluc vacsi ako kluc co vkladam, chod do lava
+            //if (key < current.key) {//ak je sucasny kluc vacsi ako kluc co vkladam, chod do lava
+            if (AisBiggerThanB(current.key,key)) {//ak je sucasny kluc vacsi ako kluc co vkladam, chod do lava
                 //zisti ci je v volny lavy smernik, ak ano vloz, ak nie prestav ho na aktualny
                 if (current.getLeft() != null) {
                     current = current.getLeft(); // ak nie prestav o na aktualny
@@ -41,7 +65,7 @@ public class TreapIm {
                     return null;
                 }
             }
-            if (current.key < key) {//ak je sucasny kluc mensi ako kluc co vkladam, chod do prava
+            if (AisBiggerThanB(key,current.key)) {//ak je sucasny kluc mensi ako kluc co vkladam, chod do prava
                 //zisti ci je v volny pravy smernik, ak ano vloz, ak nie prestav ho na aktualny
                 if (current.getRight() != null) {
                     current = current.getRight();
@@ -68,19 +92,19 @@ public class TreapIm {
         current = root;
         if(root==null) return false; //ak je list prazdny skonci
 
-        if (root.getKey() == key) {
+        if (AisEqualToB(root.getKey(), key)) {
            // System.out.println("Delete node with key: " + key + "  priority: " + current.getPriority());
             manageDeleteIntegrity(current);
             return true;
         }
 
         while (true) {
-            if (key < current.key) {//ak je sucasny kluc vacsi ako kluc co vkladam, chod do lava
+            if (AisBiggerThanB(current.key,key)) {//ak je sucasny kluc vacsi ako kluc co vkladam, chod do lava
                 //zisti ci je v volny lavy smernik, ak ano vloz, ak nie prestav ho na aktualny
                 if (current.getLeft() != null) {
                     current = current.getLeft(); // ak nie prestav o na aktualny
 
-                    if (current.getKey() == key) {
+                    if (AisEqualToB(current.getKey(),key)) {
                         manageDeleteIntegrity(current);
                       //  System.out.println("Delete node with key: " + key + "  priority: " + current.getPriority());
                         return true;
@@ -91,12 +115,12 @@ public class TreapIm {
                     return false;
                 }
             }
-            if (current.key < key) {//ak je sucasny kluc mensi ako kluc co hladam, chod do prava
+            if (AisBiggerThanB(key,current.key)) {//ak je sucasny kluc mensi ako kluc co hladam, chod do prava
                 //zisti ci je v volny pravy smernik, ak ano vloz, ak nie prestav ho na aktualny
                 if (current.getRight() != null) {
                     current = current.getRight();
 
-                    if (current.getKey() == key) {
+                    if (AisEqualToB(current.getKey(),key)) {
                         manageDeleteIntegrity(current);
                        // System.out.println("Delete node with key: " + key + "  priority: " + current.getPriority());
                         return true;
@@ -125,7 +149,7 @@ public class TreapIm {
 
         current = root;
         while (true) {
-            if (key < current.key) {//ak je sucasny kluc vacsi ako kluc co vkladam, chod do lava
+            if (AisBiggerThanB(current.key,key) ) {//ak je sucasny kluc vacsi ako kluc co vkladam, chod do lava
                 //zisti ci je v volny lavy smernik, ak ano vloz, ak nie prestav ho na aktualny
                 if (current.getLeft() == null) {
                     current.setLeft(new TNode(key, current));// ak ano vloz
@@ -142,7 +166,7 @@ public class TreapIm {
                     continue; // a pokracuj
                 }
             }
-            if (current.key < key) {//ak je sucasny kluc mensi ako kluc co vkladam, chod do prava
+            if (AisBiggerThanB(key,current.key)) {//ak je sucasny kluc mensi ako kluc co vkladam, chod do prava
                 //zisti ci je v volny pravy smernik, ak ano vloz, ak nie prestav ho na aktualny
                 if (current.getRight() == null) {
                     current.setRight(new TNode(key, current));// ak ano vloz
@@ -159,7 +183,7 @@ public class TreapIm {
                     continue; // a pokracuj
                 }
             }
-            if (current.key == key) {
+            if (AisEqualToB(current.key,key)) {
                 System.out.print("DANY VRCHOL UZ EXISTUJE");
                 return false;
             }
@@ -176,7 +200,7 @@ public class TreapIm {
 
         current = root;
         while (true) {
-            if (key < current.key) {//ak je sucasny kluc vacsi ako kluc co vkladam, chod do lava
+            if (AisBiggerThanB(current.key,key)) {//ak je sucasny kluc vacsi ako kluc co vkladam, chod do lava
                 //zisti ci je v volny lavy smernik, ak ano vloz, ak nie prestav ho na aktualny
                 if (current.getLeft() == null) {
                     current.setLeft(new TNode(key, current,priority));// ak ano vloz
@@ -193,7 +217,7 @@ public class TreapIm {
                     continue; // a pokracuj
                 }
             }
-            if (current.key < key) {//ak je sucasny kluc mensi ako kluc co vkladam, chod do prava
+            if (AisBiggerThanB(key,current.key)) {//ak je sucasny kluc mensi ako kluc co vkladam, chod do prava
                 //zisti ci je v volny pravy smernik, ak ano vloz, ak nie prestav ho na aktualny
                 if (current.getRight() == null) {
                     current.setRight(new TNode(key, current,priority));// ak ano vloz
@@ -210,7 +234,7 @@ public class TreapIm {
                     continue; // a pokracuj
                 }
             }
-            if (current.key == key) {
+            if (AisEqualToB(current.key,key)) {
                 System.out.print("DANY VRCHOL UZ EXISTUJE");
                 return false;
             }
@@ -230,11 +254,15 @@ public class TreapIm {
                     setRoot(current.getLeft());
                     return;
                 }
-                if (current.getParent().getKey() >= current.getKey()) {
+                //if (current.getParent().getKey() >= current.getKey()) {
+                if (AisBiggerThanB(current.getParent().getKey(),current.getKey()) ||
+                        AisEqualToB(current.getParent().getKey(), current.getKey())) {
                     current.getParent().setLeft(current.getLeft());// delete node by seting left side
                     return;
                 }
-                if (current.getParent().getKey() <= current.getKey()) {
+                //if (current.getParent().getKey() <= current.getKey()) {
+                if (AisBiggerThanB(current.getKey(),current.getParent().getKey()) ||
+                        AisEqualToB(current.getParent().getKey() , current.getKey())) {
                     current.getParent().setRight(current.getLeft());// delete node by seting right side
                     return;
                 }
@@ -246,11 +274,13 @@ public class TreapIm {
                     setRoot(current.getRight());
                     return;
                 }
-                if (current.getParent().getKey() >= current.getKey()) {
+                if (AisBiggerThanB(current.getParent().getKey(), current.getKey()) ||
+                        AisEqualToB(current.getParent().getKey(), current.getKey())) {
                     current.getParent().setLeft(current.getRight());
                     return;
                 }
-                if (current.getParent().getKey() <= current.getKey()) {
+                if (AisBiggerThanB(current.getKey(), current.getParent().getKey()) ||
+                        AisEqualToB(current.getParent().getKey(), current.getKey())) {
                     current.getParent().setRight(current.getRight());
                     return;
                 }
@@ -283,12 +313,16 @@ public class TreapIm {
                 }
                 if (current.getParent() != null) {// case there si a parent
                     //LEFT LEFT
-                    if (current.getParent().getKey() >= current.getKey()) {
+                    //if (current.getParent().getKey() >= current.getKey()) {
+                    if (AisBiggerThanB(current.getParent().getKey(), current.getKey()) ||
+                            AisEqualToB(current.getParent().getKey(), current.getKey())) {
                         current.getParent().setLeft(higherPriorityNode);
                         return;
                     }
                     //RIGHT RIGHT
-                    if (current.getParent().getKey() <= current.getKey()) {
+                    //if (current.getParent().getKey() <= current.getKey()) {
+                    if (AisBiggerThanB(current.getKey(),current.getParent().getKey()) ||
+                            AisEqualToB(current.getParent().getKey() , current.getKey())) {
                         current.getParent().setRight(higherPriorityNode);
                         return;
                     }
@@ -343,12 +377,15 @@ public class TreapIm {
             root = null;
             return;
         }
-        if (current.getParent().getKey() <= current.getKey()) {//RIGHT RIGHT
+
+        if (AisBiggerThanB(current.getKey(),current.getParent().getKey())||
+                AisEqualToB(current.getKey(),current.getParent().getKey()) ) {//RIGHT RIGHT
             current.getParent().setRight(null);
             current.setParent(null);
             return;
         }
-        if (current.getParent().getKey() > current.getKey()) {//LEFT LEFT
+
+        if (AisBiggerThanB(current.getParent().getKey(),current.getKey())) {//LEFT LEFT
             current.getParent().setLeft(null);
             current.setParent(null);
             return;
@@ -374,14 +411,14 @@ public class TreapIm {
     }
 
     private boolean isRightRight() {
-        if (current.getKey() > current.getParent().getKey()) {
+        if (AisBiggerThanB(current.getKey(),current.getParent().getKey())) {
             return true;
         }
         return false;
     }
 
     private boolean isLeftLeft() {
-        if (current.getKey() < current.getParent().getKey()) {
+        if (AisBiggerThanB(current.getParent().getKey(),current.getKey())) {
             return true;
         }
         return false;
@@ -424,10 +461,11 @@ public class TreapIm {
 
         // KROK 4 spojenie s rozpojenou vetvou, spojenie s rodicom
         if (parent != null) {
-            if (parent.getKey() <= u.getKey()) {//RIGHT RIGHT
+            if (AisBiggerThanB(u.getKey(),parent.getKey())||
+                AisEqualToB(u.getKey(),parent.getKey()) ) {//RIGHT RIGHT
                 parent.setRight(u);
             }
-            if (parent.getKey() > u.getKey()) {//LEFT LEFT
+            if (AisBiggerThanB(parent.getKey(),u.getKey())) {//LEFT LEFT
                 parent.setLeft(u);
             }
         }
@@ -473,10 +511,10 @@ public class TreapIm {
 
             // KROK 4 spojenie s rozpojenou vetvou, spojenie s rodicom
             if (parent != null) {
-                if (parent.getKey() <= u.getKey()) {//RIGHT RIGHT
+                if (AisBiggerThanB(u.getKey(),parent.getKey())||AisEqualToB(u.getKey(),parent.getKey()) ) {//RIGHT RIGHT
                     parent.setRight(u);
                 }
-                if (parent.getKey() > u.getKey()) {//LEFT LEFT
+                if (AisBiggerThanB(parent.getKey(),u.getKey())) {//LEFT LEFT
                     parent.setLeft(u);
                 }
             }
@@ -524,7 +562,7 @@ public class TreapIm {
     }
 
     private void generalTestRotationLeft() {
-        TreapIm treapIm = new TreapIm();
+        Treap treap = new Treap();
         TNode a = new TNode(1, 10);
         TNode b = new TNode(2, 20);
         TNode c = new TNode(3, 30);
@@ -532,7 +570,7 @@ public class TreapIm {
         TNode e = new TNode(5, 35);
 
         //-----------------------
-        treapIm.setRoot(a);
+        treap.setRoot(a);
         a.setRight(b);
         b.setRight(c);
         c.setRight(d);
@@ -543,7 +581,7 @@ public class TreapIm {
 
 
     private void generalTestRotationRight() {
-        TreapIm treapIm = new TreapIm();
+        Treap treap = new Treap();
         TNode a = new TNode(5, 50);
         TNode b = new TNode(4, 40);
         TNode c = new TNode(3, 30);
@@ -552,7 +590,7 @@ public class TreapIm {
 
 
         //-----------------------
-        treapIm.setRoot(a);
+        treap.setRoot(a);
         a.setLeft(b);
         b.setLeft(c);
         c.setLeft(d);
@@ -817,21 +855,21 @@ public class TreapIm {
 
 
     public static void main(String[] args) {
-        TreapIm treapIm = new TreapIm();
+        Treap treap = new Treap();
 
 //
-//        treapIm.insert(1);
-//        treapIm.insert(2);
-//        treapIm.insert(3);
-//        treapIm.insert(4);
-//        treapIm.insert(5);
-//        treapIm.insert(6);
-//        treapIm.insert(7);
-//        treapIm.insert(8);
+//        treap.insert(1);
+//        treap.insert(2);
+//        treap.insert(3);
+//        treap.insert(4);
+//        treap.insert(5);
+//        treap.insert(6);
+//        treap.insert(7);
+//        treap.insert(8);
 //
-//        levelOrderTraversal(treapIm.root);
-        //treapIm.testMethod(10, true);
-        treapIm.seriousTestMethod(10000000);
+//        levelOrderTraversal(treap.root);
+        //treap.testMethod(10, true);
+        treap.seriousTestMethod(1000000);
 
 
     }
