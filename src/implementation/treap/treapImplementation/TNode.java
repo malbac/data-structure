@@ -84,6 +84,12 @@ public class TNode {
         this.priority = createPriority();
     }
 
+    public TNode(int key, TNode parent,int priority) {
+        this.key = key;
+        this.parent = parent;
+        this.priority = priority;
+    }
+
     public TNode(int key, int priority) {
         this.key = key;
         this.priority = priority;
@@ -99,7 +105,7 @@ public class TNode {
 
     private int createPriority(){
         Random random = new Random();
-        int result = random.nextInt(100);
+        int result = random.nextInt();
         if(result>0) return result;
         else return result*-1;
     }

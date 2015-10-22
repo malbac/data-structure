@@ -2,6 +2,8 @@ package implementation.treap.treapImplementation;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Random;
+import java.util.TreeMap;
 
 /**
  * Created by Malbac on 19.10.2015.
@@ -16,10 +18,10 @@ public class TreapIm {
         this.root.setParent(null);
     }
 
-    public TNode search(int key){
+    public TNode search(int key) {
         current = root;
         if (root.getKey() == key) {
-            System.out.println("Found node with key: " + key + "  priority: " + current.getPriority());
+           // System.out.println("Found node with key: " + key + "  priority: " + current.getPriority());
             return current;
         }
 
@@ -30,11 +32,13 @@ public class TreapIm {
                     current = current.getLeft(); // ak nie prestav o na aktualny
 
                     if (current.getKey() == key) {
-                        System.out.println("Found node with key: " + key + "  priority: " + current.getPriority());
+                       // System.out.println("Found node with key: " + key + "  priority: " + current.getPriority());
                         return current;
                     }
 
                     continue; // a pokracuj
+                } else { //nasla sa slepa vetva vrat false
+                    return null;
                 }
             }
             if (current.key < key) {//ak je sucasny kluc mensi ako kluc co vkladam, chod do prava
@@ -43,14 +47,16 @@ public class TreapIm {
                     current = current.getRight();
 
                     if (current.getKey() == key) {
-                        System.out.println("Found node with key: " + key + "  priority: " + current.getPriority());
+                      //  System.out.println("Found node with key: " + key + "  priority: " + current.getPriority());
                         return current;
                     }
 
                     continue; // a ukonci
+                } else { //nasla sa slepa vetva vrat false
+                    return null;
                 }
             }
-            if(current.getLeft()==null && current.getRight()==null){
+            if (current.getLeft() == null && current.getRight() == null) {
                 return null;
             }
         }
@@ -58,9 +64,12 @@ public class TreapIm {
     }
 
     public boolean delete(int key) {
+
         current = root;
+        if(root==null) return false; //ak je list prazdny skonci
+
         if (root.getKey() == key) {
-            System.out.println("Delete node with key: " + key + "  priority: " + current.getPriority());
+           // System.out.println("Delete node with key: " + key + "  priority: " + current.getPriority());
             manageDeleteIntegrity(current);
             return true;
         }
@@ -73,28 +82,32 @@ public class TreapIm {
 
                     if (current.getKey() == key) {
                         manageDeleteIntegrity(current);
-                        System.out.println("Delete node with key: " + key + "  priority: " + current.getPriority());
+                      //  System.out.println("Delete node with key: " + key + "  priority: " + current.getPriority());
                         return true;
                     }
 
                     continue; // a pokracuj
+                } else {//neexistuj hladany kluc
+                    return false;
                 }
             }
-            if (current.key < key) {//ak je sucasny kluc mensi ako kluc co vkladam, chod do prava
+            if (current.key < key) {//ak je sucasny kluc mensi ako kluc co hladam, chod do prava
                 //zisti ci je v volny pravy smernik, ak ano vloz, ak nie prestav ho na aktualny
-                if (current.getRight() == null) {
+                if (current.getRight() != null) {
                     current = current.getRight();
 
                     if (current.getKey() == key) {
                         manageDeleteIntegrity(current);
-                        System.out.println("Delete node with key: " + key + "  priority: " + current.getPriority());
+                       // System.out.println("Delete node with key: " + key + "  priority: " + current.getPriority());
                         return true;
                     }
 
                     continue; // a ukonci
+                } else {//neexistuj hladany kluc
+                    return false;
                 }
             }
-            if(current.getLeft()==null && current.getRight()==null){
+            if (current.getLeft() == null && current.getRight() == null) {
                 return false;
             }
         }
@@ -105,7 +118,7 @@ public class TreapIm {
     public boolean insert(int key) {
         if (root == null) {
             root = new TNode(key, null);
-            System.out.println("Root vlozeny: " + key + "  priority: " + root.getPriority());
+           // System.out.println("Root vlozeny: " + key + "  priority: " + root.getPriority());
 
             return true;
         }
@@ -116,6 +129,57 @@ public class TreapIm {
                 //zisti ci je v volny lavy smernik, ak ano vloz, ak nie prestav ho na aktualny
                 if (current.getLeft() == null) {
                     current.setLeft(new TNode(key, current));// ak ano vloz
+                    current = current.getLeft();
+
+                    handleIntegrity();
+
+
+                  //  System.out.println("Node vlozeny left: " + key + "  priority: " + current.getPriority());
+                    return true; // a ukonci
+                } else {
+                    current = current.getLeft(); // ak nie prestav o na aktualny
+                  //  System.out.println("<< go LEFT " + current.key + "  priority: " + current.getPriority() + " << ");
+                    continue; // a pokracuj
+                }
+            }
+            if (current.key < key) {//ak je sucasny kluc mensi ako kluc co vkladam, chod do prava
+                //zisti ci je v volny pravy smernik, ak ano vloz, ak nie prestav ho na aktualny
+                if (current.getRight() == null) {
+                    current.setRight(new TNode(key, current));// ak ano vloz
+                    current = current.getRight();
+
+                    handleIntegrity();
+
+
+                 //   System.out.println("Node vlozeny right: " + key + "  priority: " + current.getPriority());
+                    return true; // a ukonci
+                } else { // prestav ho na aktualny
+                    current = current.getRight(); // ak nie prestav o na aktualny
+                  //  System.out.println(">> go RIGHT " + current.key + "  priority: " + current.getPriority() + " >> ");
+                    continue; // a pokracuj
+                }
+            }
+            if (current.key == key) {
+                System.out.print("DANY VRCHOL UZ EXISTUJE");
+                return false;
+            }
+        }
+    }
+
+    public boolean insertT(int key,int priority) {
+        if (root == null) {
+            root = new TNode(key, null,priority);
+            System.out.println("Root vlozeny: " + key + "  priority: " + root.getPriority());
+
+            return true;
+        }
+
+        current = root;
+        while (true) {
+            if (key < current.key) {//ak je sucasny kluc vacsi ako kluc co vkladam, chod do lava
+                //zisti ci je v volny lavy smernik, ak ano vloz, ak nie prestav ho na aktualny
+                if (current.getLeft() == null) {
+                    current.setLeft(new TNode(key, current,priority));// ak ano vloz
                     current = current.getLeft();
 
                     handleIntegrity();
@@ -132,7 +196,7 @@ public class TreapIm {
             if (current.key < key) {//ak je sucasny kluc mensi ako kluc co vkladam, chod do prava
                 //zisti ci je v volny pravy smernik, ak ano vloz, ak nie prestav ho na aktualny
                 if (current.getRight() == null) {
-                    current.setRight(new TNode(key, current));// ak ano vloz
+                    current.setRight(new TNode(key, current,priority));// ak ano vloz
                     current = current.getRight();
 
                     handleIntegrity();
@@ -161,50 +225,73 @@ public class TreapIm {
                 return;
             }
             //current ma len len lavy a je to list
-            if (current.getLeft() != null && current.getRight() == null && hasOnlyLeafs(current)) {
+            if (current.getLeft() != null && current.getRight() == null && hasOnlyLeafsOnLeft(current)) {
+                if (root == current) {//ak vymazavam koren
+                    setRoot(current.getLeft());
+                    return;
+                }
                 if (current.getParent().getKey() >= current.getKey()) {
-                    current.getParent().setLeft(current.getLeft());
+                    current.getParent().setLeft(current.getLeft());// delete node by seting left side
+                    return;
                 }
                 if (current.getParent().getKey() <= current.getKey()) {
-                    current.getParent().setRight(current.getLeft());
+                    current.getParent().setRight(current.getLeft());// delete node by seting right side
+                    return;
                 }
                 return;
             }
             //current ma len len pravy a je to list
-            if (current.getRight() != null && current.getLeft() == null && hasOnlyLeafs(current)) {
+            if (current.getRight() != null && current.getLeft() == null && hasOnlyLeafsOnRight(current)) {
+                if (root == current) {//ak vymazavam koren
+                    setRoot(current.getRight());
+                    return;
+                }
                 if (current.getParent().getKey() >= current.getKey()) {
                     current.getParent().setLeft(current.getRight());
+                    return;
                 }
                 if (current.getParent().getKey() <= current.getKey()) {
                     current.getParent().setRight(current.getRight());
+                    return;
                 }
                 return;
             }
             //current ma praveho aj laveho syna, oba su listy a vyberie toho najvacsieho
             if (current.getRight() != null && current.getLeft() != null && hasOnlyLeafs(current)) {
                 //ak kluc laveho je mensi ako kluc praveho
-                TNode biggerNode;
+                TNode higherPriorityNode;
                 TNode left;
                 TNode right;
                 left = current.getLeft();
                 right = current.getRight();
 
-                if (left.getPriority() < right.getPriority()) {
-                    biggerNode = right;
+                if (left.getPriority() > right.getPriority()) {
+                    higherPriorityNode = right;
                     //ak je vacsi na pravo tak nastav pravy OBR. 5
-                    biggerNode.setLeft(left);
+                    if (current == root) {
+                        setRoot(higherPriorityNode);
+                    }
+                    higherPriorityNode.setLeft(left);
+
                 } else {
-                    biggerNode = left;
+                    higherPriorityNode = left;
                     //obr 6
-                    biggerNode.setRight(right);
+                    if (current == root) {
+                        setRoot(higherPriorityNode);
+                    }
+                    higherPriorityNode.setRight(right);
                 }
-                //LEFT LEFT
-                if (current.getParent().getKey() >= current.getKey()) {
-                    current.getParent().setLeft(biggerNode);
-                }
-                //RIGHT RIGHT
-                if (current.getParent().getKey() <= current.getKey()) {
-                    current.getParent().setRight(biggerNode);
+                if (current.getParent() != null) {// case there si a parent
+                    //LEFT LEFT
+                    if (current.getParent().getKey() >= current.getKey()) {
+                        current.getParent().setLeft(higherPriorityNode);
+                        return;
+                    }
+                    //RIGHT RIGHT
+                    if (current.getParent().getKey() <= current.getKey()) {
+                        current.getParent().setRight(higherPriorityNode);
+                        return;
+                    }
                 }
                 return;
             }
@@ -231,22 +318,40 @@ public class TreapIm {
     }
 
     private boolean hasOnlyLeafs(TNode current) {
-        if (current.getLeft().getLeft() != null) return true;
-        if (current.getLeft().getRight() != null) return true;
-        if (current.getRight().getLeft() != null) return true;
-        if (current.getRight().getRight() != null) return true;
+        if (current.getLeft().getLeft() == null &&
+                current.getLeft().getRight() == null &&
+                current.getRight().getLeft() == null &&
+                current.getRight().getRight() == null) return true;
+        else return false;
+    }
+
+    private boolean hasOnlyLeafsOnLeft(TNode current) {
+        if (current.getLeft().getLeft() == null &&
+                current.getLeft().getRight() == null) return true;
+        else return false;
+    }
+
+    private boolean hasOnlyLeafsOnRight(TNode current) {
+        if (current.getRight().getLeft() == null &&
+                current.getRight().getRight() == null) return true;
         else return false;
     }
 
     private void deleteNode(TNode current) {
         //zisti ci je z pravej alebo lavej strany
+        if (current == root) {//vymazavanie korena
+            root = null;
+            return;
+        }
         if (current.getParent().getKey() <= current.getKey()) {//RIGHT RIGHT
             current.getParent().setRight(null);
             current.setParent(null);
+            return;
         }
         if (current.getParent().getKey() > current.getKey()) {//LEFT LEFT
             current.getParent().setLeft(null);
             current.setParent(null);
+            return;
         }
     }
 
@@ -256,13 +361,13 @@ public class TreapIm {
 
                 rotateLeft(current);
 
-                return;
+                continue;
             }
             if (isLeftLeft()) {
 
                 rotateRight(current);
 
-                return;
+                continue;
             }
         }
 
@@ -290,7 +395,7 @@ public class TreapIm {
         //-----------
         TNode u, v;
 
-        parent = getGrandParent();
+        parent = getGrandParent(current);
 
         u = current.getParent();
         v = current;
@@ -341,7 +446,7 @@ public class TreapIm {
             //-----------
             TNode u, v;
 
-            parent = getGrandParent();
+            parent = getGrandParent(current);
 
             u = current.getParent();
             v = current;
@@ -392,7 +497,7 @@ public class TreapIm {
         }
     }
 
-    private TNode getGrandParent() {
+    private TNode getGrandParent(TNode current) {
         if (current.getParent() != null) {
             return current.getParent().getParent();
         } else {
@@ -408,6 +513,9 @@ public class TreapIm {
      */
     private boolean priorityOfCurrentIsNotOkey() {
 
+        if(current.getParent()==null){
+            return false;
+        }
         if (current.getPriority() < current.getParent().getPriority()) {
             return true;// ak ma sucasny mensiu prioritu ako rodic, tak to nie je v poriadku
         } else {
@@ -477,48 +585,50 @@ public class TreapIm {
 
     // prints in level order
     public void levelOrderTraversal(TNode startNode) {
-        Queue<TNode> queue=new LinkedList<TNode>();
-        queue.add(startNode);
-        while(!queue.isEmpty())
-        {
-            TNode tempNode=queue.poll();
-            System.out.printf("%d ",tempNode.getKey());
-            if(tempNode.getLeft()!=null)
-                queue.add(tempNode.getLeft());
-            if(tempNode.getRight()!=null)
-                queue.add(tempNode.getRight());
+        if (root != null) {
+            System.out.println("Root is : " + root.getKey());
+
+            Queue<TNode> queue = new LinkedList<TNode>();
+            queue.add(startNode);
+            while (!queue.isEmpty()) {
+                TNode tempNode = queue.poll();
+                System.out.printf("%d ", tempNode.getKey());
+                if (tempNode.getLeft() != null)
+                    queue.add(tempNode.getLeft());
+                if (tempNode.getRight() != null)
+                    queue.add(tempNode.getRight());
+            }
         }
     }
 
     // prints in level order
     public int levelOrderCount(TNode startNode) {
         int counter = 0;
-        Queue<TNode> queue=new LinkedList<TNode>();
+        Queue<TNode> queue = new LinkedList<TNode>();
         queue.add(startNode);
-        while(!queue.isEmpty())
-        {
-            TNode tempNode=queue.poll();
+        while (!queue.isEmpty()) {
+            TNode tempNode = queue.poll();
             //System.out.printf("%d ",tempNode.getKey());
             counter++;
-            if(tempNode.getLeft()!=null)
+            if (tempNode.getLeft() != null)
                 queue.add(tempNode.getLeft());
-            if(tempNode.getRight()!=null)
+            if (tempNode.getRight() != null)
                 queue.add(tempNode.getRight());
         }
         return counter;
     }
 
-    public void testMethod(int limit,boolean writeDown){
+    public void testMethod(int limit, boolean writeDown) {
         LinkedList<TNode> list = new LinkedList<TNode>();
-        for (int i=1;i<=limit;i++){
-        insert(i);
-        list.add(new TNode(i,i*10));
+        for (int i = 1; i <= limit; i++) {
+            insert(i);
+            list.add(new TNode(i, i * 10));
         }
         int counter = levelOrderCount(root);
         System.out.println("Counter level order: " + counter);
         System.out.println("List size: " + list.size());
 
-        if(writeDown) {
+        if (writeDown) {
             System.out.println();
             System.out.println("List:");
             for (int i = 0; i < list.size(); i++) {
@@ -533,6 +643,174 @@ public class TreapIm {
         System.out.println("Kluc cislo 1 " + search(1).getKey());
         System.out.println("Kluc cislo 1 " + search(6).getKey());
         System.out.println("Kluc cislo 1 " + search(2).getKey());
+
+
+    }
+
+    public void testDeleteLeftLeft() {
+        TNode a = new TNode(7, 10);
+        TNode b = new TNode(6, 8);
+        TNode c = new TNode(5, 7);
+
+        setRoot(a);
+        a.setLeft(b);
+        b.setLeft(c);
+
+        current = b;
+        delete(6);
+
+        levelOrderTraversal(root);
+
+    }
+
+    public void testDeleteRightRight() {
+        TNode a = new TNode(5, 7);
+        TNode b = new TNode(6, 8);
+        TNode c = new TNode(7, 10);
+
+
+        setRoot(a);
+        a.setRight(b);
+        b.setRight(c);
+
+        current = c;
+        delete(6);
+
+        levelOrderTraversal(root);
+
+    }
+
+    public void testDeleteBothSide() {
+        TNode a = new TNode(7, 10);
+        TNode b = new TNode(6, 20);
+        TNode c = new TNode(9, 30);
+
+
+        setRoot(a);
+        a.setLeft(b);
+        a.setRight(c);
+
+        current = c;
+        delete(7);
+
+        levelOrderTraversal(root);
+
+    }
+
+    public void testDeleteBothSideHigher() {
+        TNode p = new TNode(15, 2);
+        TNode a = new TNode(7, 10);
+        TNode b = new TNode(6, 30);
+        TNode c = new TNode(8, 60);
+
+
+        setRoot(p);
+        p.setLeft(a);
+        a.setLeft(b);
+        a.setRight(c);
+
+        current = c;
+        delete(7);
+
+
+        levelOrderTraversal(root);
+
+    }
+
+    public void testDeleteRotateLeftLeft() {
+        TNode a = new TNode(4, 10);
+        TNode b = new TNode(3, 20);
+        TNode c = new TNode(2, 30);
+        TNode d = new TNode(1, 40);
+
+        setRoot(a);
+        a.setLeft(b);
+        b.setLeft(c);
+        c.setLeft(d);
+
+        current = d;
+        delete(4);
+
+        levelOrderTraversal(root);
+
+    }
+
+
+    public void testInsertDelete(int rounds) {
+        System.out.println("Insert part");
+        for (int i = 1; i < rounds; i++) {
+            insert(i);
+            levelOrderTraversal(root);
+            System.out.println();
+        }
+        System.out.println("Delete part");
+        for (int i = 1; i < rounds; i++) {
+            delete(i);
+            levelOrderTraversal(root);
+            System.out.println();
+        }
+    }
+
+    public void insertTest(){
+        insertT(1,61);
+        insertT(2,68);
+        insertT(3,29);
+        insertT(4,29);
+        insertT(5,99);
+        insertT(6,79);
+        insertT(7,52);
+        insertT(8,19);
+        insertT(9,25);
+
+        delete(1);
+        delete(2);
+        delete(3);
+        delete(4);
+        delete(5);
+        delete(6);
+        delete(7);
+        delete(8);
+        delete(9);
+    }
+    public void seriousTestMethod(int rounds){
+        TreeMap<Integer,String> helpStructure = new TreeMap<Integer, String>();
+        int size;
+        int sizeHelp;
+
+        //INSERT PART
+        for(int i=0;i<rounds;i++){
+            insert(i);
+            helpStructure.put(i,"");
+        }
+        if(levelOrderCount(root)==helpStructure.size()){
+            System.out.println("Same size" + helpStructure.size());
+        } else {
+            System.out.println("PROBLEM different size");
+        }
+        //RANDOM DELELETE PART
+        Random random = new Random();
+        int randomIndex;
+        TNode nodeFound;
+        for (int i=0;i<rounds/2;i++){
+            randomIndex = random.nextInt(rounds);
+            helpStructure.remove(randomIndex);
+            delete(randomIndex);
+            nodeFound = search(randomIndex);
+            if(nodeFound!=null){
+                System.out.println("We found the node, which was deleted");
+            }
+            if(i==5){
+                System.out.println("A mame ho junaka");
+            }
+        }
+        System.out.println("Delete session completed");
+        System.out.println();
+        System.out.println("Compare size of structure");
+        if(levelOrderCount(root)==helpStructure.size()){
+            System.out.println("Same size" + helpStructure.size());
+        } else {
+            System.out.println("PROBLEM different size");
+        }
 
 
     }
@@ -552,7 +830,8 @@ public class TreapIm {
 //        treapIm.insert(8);
 //
 //        levelOrderTraversal(treapIm.root);
-        treapIm.testMethod(10, true);
+        //treapIm.testMethod(10, true);
+        treapIm.seriousTestMethod(10000000);
 
 
     }
