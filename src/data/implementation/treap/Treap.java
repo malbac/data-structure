@@ -1,4 +1,7 @@
-package implementation.treap;
+package data.implementation.treap;
+
+import structure.classes.KatastralnyUrad;
+import structure.searchIndex.KatastralnyUradId;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -18,44 +21,26 @@ public class Treap {
         this.root.setParent(null);
     }
 
-    /**
-     * A>B  >> 1
-     * A<B  >>-1
-     * A==B >> 0
-     * @param A
-     * @param B
-     * @return
-     */
 
-
-    public boolean AisBiggerThanB(Object A,Object B){
-        int a = ((Integer) A);
-        int b = ((Integer) B);
-        if(a>b)return true;
-        else return false;
+    public int size(){
+        return levelOrderCount(root);
     }
 
-    public boolean AisEqualToB(Object A,Object B){
-        int a = ((Integer) A);
-        int b = ((Integer) B);
-        if(a==b)return true;
-        else return false;
-    }
-
-    public TNode search(Object key) {
+    public TNode search(TNode key) {
         current = root;
-        if (root.getKey() == key) {
+        //if (root.getKey() == key) {
+        if (root.isEqualTo(key)) {
            // System.out.println("Found node with key: " + key + "  priority: " + current.getPriority());
             return current;
         }
         while (true) {
             //if (key < current.key) {//ak je sucasny kluc vacsi ako kluc co vkladam, chod do lava
-            if (AisBiggerThanB(current.key,key)) {//ak je sucasny kluc vacsi ako kluc co vkladam, chod do lava
+            if (current.isBiggerThan(key)) {//ak je sucasny kluc vacsi ako kluc co vkladam, chod do lava
                 //zisti ci je v volny lavy smernik, ak ano vloz, ak nie prestav ho na aktualny
                 if (current.getLeft() != null) {
                     current = current.getLeft(); // ak nie prestav o na aktualny
 
-                    if (current.getKey() == key) {
+                    if (current.isEqualTo(key)) {
                        // System.out.println("Found node with key: " + key + "  priority: " + current.getPriority());
                         return current;
                     }
@@ -65,12 +50,12 @@ public class Treap {
                     return null;
                 }
             }
-            if (AisBiggerThanB(key,current.key)) {//ak je sucasny kluc mensi ako kluc co vkladam, chod do prava
+            if (key.isBiggerThan(current)) {//ak je sucasny kluc mensi ako kluc co vkladam, chod do prava
                 //zisti ci je v volny pravy smernik, ak ano vloz, ak nie prestav ho na aktualny
                 if (current.getRight() != null) {
                     current = current.getRight();
 
-                    if (current.getKey() == key) {
+                    if (current.isEqualTo(key)) {
                       //  System.out.println("Found node with key: " + key + "  priority: " + current.getPriority());
                         return current;
                     }
@@ -87,24 +72,24 @@ public class Treap {
 
     }
 
-    public boolean delete(int key) {
+    public boolean delete(TNode key) {
 
         current = root;
         if(root==null) return false; //ak je list prazdny skonci
 
-        if (AisEqualToB(root.getKey(), key)) {
+        if (root.isEqualTo(key)) {
            // System.out.println("Delete node with key: " + key + "  priority: " + current.getPriority());
             manageDeleteIntegrity(current);
             return true;
         }
 
         while (true) {
-            if (AisBiggerThanB(current.key,key)) {//ak je sucasny kluc vacsi ako kluc co vkladam, chod do lava
+            if (current.isBiggerThan(key)) {//ak je sucasny kluc vacsi ako kluc co vkladam, chod do lava
                 //zisti ci je v volny lavy smernik, ak ano vloz, ak nie prestav ho na aktualny
                 if (current.getLeft() != null) {
                     current = current.getLeft(); // ak nie prestav o na aktualny
 
-                    if (AisEqualToB(current.getKey(),key)) {
+                    if (current.isEqualTo(key)) {
                         manageDeleteIntegrity(current);
                       //  System.out.println("Delete node with key: " + key + "  priority: " + current.getPriority());
                         return true;
@@ -115,12 +100,12 @@ public class Treap {
                     return false;
                 }
             }
-            if (AisBiggerThanB(key,current.key)) {//ak je sucasny kluc mensi ako kluc co hladam, chod do prava
+            if (key.isBiggerThan(current)) {//ak je sucasny kluc mensi ako kluc co hladam, chod do prava
                 //zisti ci je v volny pravy smernik, ak ano vloz, ak nie prestav ho na aktualny
                 if (current.getRight() != null) {
                     current = current.getRight();
 
-                    if (AisEqualToB(current.getKey(),key)) {
+                    if (current.isEqualTo(key)) {
                         manageDeleteIntegrity(current);
                        // System.out.println("Delete node with key: " + key + "  priority: " + current.getPriority());
                         return true;
@@ -139,107 +124,58 @@ public class Treap {
     }
 
 
-    public boolean insert(int key) {
+    public boolean insert(TNode newNode) {
         if (root == null) {
-            root = new TNode(key, null);
-           // System.out.println("Root vlozeny: " + key + "  priority: " + root.getPriority());
+            root = newNode;
+           // System.out.println("Root vlozeny: " + newNode + "  priority: " + root.getPriority());
 
             return true;
         }
 
         current = root;
         while (true) {
-            if (AisBiggerThanB(current.key,key) ) {//ak je sucasny kluc vacsi ako kluc co vkladam, chod do lava
+            if (current.isBiggerThan(newNode) ) {//ak je sucasny kluc vacsi ako kluc co vkladam, chod do lava
                 //zisti ci je v volny lavy smernik, ak ano vloz, ak nie prestav ho na aktualny
                 if (current.getLeft() == null) {
-                    current.setLeft(new TNode(key, current));// ak ano vloz
+                    current.setLeft(newNode);// ak ano vloz
                     current = current.getLeft();
 
                     handleIntegrity();
 
 
-                  //  System.out.println("Node vlozeny left: " + key + "  priority: " + current.getPriority());
+                  //  System.out.println("Node vlozeny left: " + newNode + "  priority: " + current.getPriority());
                     return true; // a ukonci
                 } else {
                     current = current.getLeft(); // ak nie prestav o na aktualny
-                  //  System.out.println("<< go LEFT " + current.key + "  priority: " + current.getPriority() + " << ");
+                  //  System.out.println("<< go LEFT " + current.newNode + "  priority: " + current.getPriority() + " << ");
                     continue; // a pokracuj
                 }
             }
-            if (AisBiggerThanB(key,current.key)) {//ak je sucasny kluc mensi ako kluc co vkladam, chod do prava
+            if (newNode.isBiggerThan(current)) {//ak je sucasny kluc mensi ako kluc co vkladam, chod do prava
                 //zisti ci je v volny pravy smernik, ak ano vloz, ak nie prestav ho na aktualny
                 if (current.getRight() == null) {
-                    current.setRight(new TNode(key, current));// ak ano vloz
+                    current.setRight(newNode);// ak ano vloz
                     current = current.getRight();
 
                     handleIntegrity();
 
 
-                 //   System.out.println("Node vlozeny right: " + key + "  priority: " + current.getPriority());
+                 //   System.out.println("Node vlozeny right: " + newNode + "  priority: " + current.getPriority());
                     return true; // a ukonci
                 } else { // prestav ho na aktualny
                     current = current.getRight(); // ak nie prestav o na aktualny
-                  //  System.out.println(">> go RIGHT " + current.key + "  priority: " + current.getPriority() + " >> ");
+                  //  System.out.println(">> go RIGHT " + current.newNode + "  priority: " + current.getPriority() + " >> ");
                     continue; // a pokracuj
                 }
             }
-            if (AisEqualToB(current.key,key)) {
+            if (current.isEqualTo(newNode)) {
                 System.out.print("DANY VRCHOL UZ EXISTUJE");
                 return false;
             }
         }
     }
 
-    public boolean insertT(int key,int priority) {
-        if (root == null) {
-            root = new TNode(key, null,priority);
-            System.out.println("Root vlozeny: " + key + "  priority: " + root.getPriority());
 
-            return true;
-        }
-
-        current = root;
-        while (true) {
-            if (AisBiggerThanB(current.key,key)) {//ak je sucasny kluc vacsi ako kluc co vkladam, chod do lava
-                //zisti ci je v volny lavy smernik, ak ano vloz, ak nie prestav ho na aktualny
-                if (current.getLeft() == null) {
-                    current.setLeft(new TNode(key, current,priority));// ak ano vloz
-                    current = current.getLeft();
-
-                    handleIntegrity();
-
-
-                    System.out.println("Node vlozeny left: " + key + "  priority: " + current.getPriority());
-                    return true; // a ukonci
-                } else {
-                    current = current.getLeft(); // ak nie prestav o na aktualny
-                    System.out.println("<< go LEFT " + current.key + "  priority: " + current.getPriority() + " << ");
-                    continue; // a pokracuj
-                }
-            }
-            if (AisBiggerThanB(key,current.key)) {//ak je sucasny kluc mensi ako kluc co vkladam, chod do prava
-                //zisti ci je v volny pravy smernik, ak ano vloz, ak nie prestav ho na aktualny
-                if (current.getRight() == null) {
-                    current.setRight(new TNode(key, current,priority));// ak ano vloz
-                    current = current.getRight();
-
-                    handleIntegrity();
-
-
-                    System.out.println("Node vlozeny right: " + key + "  priority: " + current.getPriority());
-                    return true; // a ukonci
-                } else { // prestav ho na aktualny
-                    current = current.getRight(); // ak nie prestav o na aktualny
-                    System.out.println(">> go RIGHT " + current.key + "  priority: " + current.getPriority() + " >> ");
-                    continue; // a pokracuj
-                }
-            }
-            if (AisEqualToB(current.key,key)) {
-                System.out.print("DANY VRCHOL UZ EXISTUJE");
-                return false;
-            }
-        }
-    }
 
     private void manageDeleteIntegrity(TNode current) {
         while (true) {
@@ -255,14 +191,14 @@ public class Treap {
                     return;
                 }
                 //if (current.getParent().getKey() >= current.getKey()) {
-                if (AisBiggerThanB(current.getParent().getKey(),current.getKey()) ||
-                        AisEqualToB(current.getParent().getKey(), current.getKey())) {
+                if (current.getParent().isBiggerThan(current) ||
+                        current.getParent().isEqualTo(current)) {
                     current.getParent().setLeft(current.getLeft());// delete node by seting left side
                     return;
                 }
                 //if (current.getParent().getKey() <= current.getKey()) {
-                if (AisBiggerThanB(current.getKey(),current.getParent().getKey()) ||
-                        AisEqualToB(current.getParent().getKey() , current.getKey())) {
+                if (current.isBiggerThan(current.getParent()) ||
+                        current.getParent().isEqualTo(current)) {
                     current.getParent().setRight(current.getLeft());// delete node by seting right side
                     return;
                 }
@@ -274,13 +210,13 @@ public class Treap {
                     setRoot(current.getRight());
                     return;
                 }
-                if (AisBiggerThanB(current.getParent().getKey(), current.getKey()) ||
-                        AisEqualToB(current.getParent().getKey(), current.getKey())) {
+                if (current.getParent().isBiggerThan(current) ||
+                        current.getParent().isEqualTo(current)) {
                     current.getParent().setLeft(current.getRight());
                     return;
                 }
-                if (AisBiggerThanB(current.getKey(), current.getParent().getKey()) ||
-                        AisEqualToB(current.getParent().getKey(), current.getKey())) {
+                if (current.isBiggerThan(current.getParent()) ||
+                        current.getParent().isEqualTo(current)) {
                     current.getParent().setRight(current.getRight());
                     return;
                 }
@@ -314,15 +250,15 @@ public class Treap {
                 if (current.getParent() != null) {// case there si a parent
                     //LEFT LEFT
                     //if (current.getParent().getKey() >= current.getKey()) {
-                    if (AisBiggerThanB(current.getParent().getKey(), current.getKey()) ||
-                            AisEqualToB(current.getParent().getKey(), current.getKey())) {
+                    if (current.getParent().isBiggerThan( current) ||
+                            current.getParent().isEqualTo(current)) {
                         current.getParent().setLeft(higherPriorityNode);
                         return;
                     }
                     //RIGHT RIGHT
                     //if (current.getParent().getKey() <= current.getKey()) {
-                    if (AisBiggerThanB(current.getKey(),current.getParent().getKey()) ||
-                            AisEqualToB(current.getParent().getKey() , current.getKey())) {
+                    if (current.isBiggerThan(current.getParent()) ||
+                            current.getParent().isEqualTo(current)) {
                         current.getParent().setRight(higherPriorityNode);
                         return;
                     }
@@ -378,14 +314,14 @@ public class Treap {
             return;
         }
 
-        if (AisBiggerThanB(current.getKey(),current.getParent().getKey())||
-                AisEqualToB(current.getKey(),current.getParent().getKey()) ) {//RIGHT RIGHT
+        if (current.isBiggerThan(current.getParent())||
+                current.isEqualTo(current.getParent()) ) {//RIGHT RIGHT
             current.getParent().setRight(null);
             current.setParent(null);
             return;
         }
 
-        if (AisBiggerThanB(current.getParent().getKey(),current.getKey())) {//LEFT LEFT
+        if (current.getParent().isBiggerThan(current)) {//LEFT LEFT
             current.getParent().setLeft(null);
             current.setParent(null);
             return;
@@ -411,14 +347,14 @@ public class Treap {
     }
 
     private boolean isRightRight() {
-        if (AisBiggerThanB(current.getKey(),current.getParent().getKey())) {
+        if (current.isBiggerThan(current.getParent())) {
             return true;
         }
         return false;
     }
 
     private boolean isLeftLeft() {
-        if (AisBiggerThanB(current.getParent().getKey(),current.getKey())) {
+        if (current.getParent().isBiggerThan(current)) {
             return true;
         }
         return false;
@@ -461,11 +397,11 @@ public class Treap {
 
         // KROK 4 spojenie s rozpojenou vetvou, spojenie s rodicom
         if (parent != null) {
-            if (AisBiggerThanB(u.getKey(),parent.getKey())||
-                AisEqualToB(u.getKey(),parent.getKey()) ) {//RIGHT RIGHT
+            if (u.isBiggerThan(parent)||
+                u.isEqualTo(parent) ) {//RIGHT RIGHT
                 parent.setRight(u);
             }
-            if (AisBiggerThanB(parent.getKey(),u.getKey())) {//LEFT LEFT
+            if (parent.isBiggerThan(u)) {//LEFT LEFT
                 parent.setLeft(u);
             }
         }
@@ -511,10 +447,10 @@ public class Treap {
 
             // KROK 4 spojenie s rozpojenou vetvou, spojenie s rodicom
             if (parent != null) {
-                if (AisBiggerThanB(u.getKey(),parent.getKey())||AisEqualToB(u.getKey(),parent.getKey()) ) {//RIGHT RIGHT
+                if (u.isBiggerThan(parent)|| u.isEqualTo(parent) ) {//RIGHT RIGHT
                     parent.setRight(u);
                 }
-                if (AisBiggerThanB(parent.getKey(),u.getKey())) {//LEFT LEFT
+                if (parent.isBiggerThan( u)) {//LEFT LEFT
                     parent.setLeft(u);
                 }
             }
@@ -561,76 +497,23 @@ public class Treap {
         }
     }
 
-    private void generalTestRotationLeft() {
-        Treap treap = new Treap();
-        TNode a = new TNode(1, 10);
-        TNode b = new TNode(2, 20);
-        TNode c = new TNode(3, 30);
-        TNode d = new TNode(4, 40);
-        TNode e = new TNode(5, 35);
-
-        //-----------------------
-        treap.setRoot(a);
-        a.setRight(b);
-        b.setRight(c);
-        c.setRight(d);
-        d.setRight(e);
-        current = e;
-        rotateLeft(current);
-    }
 
 
-    private void generalTestRotationRight() {
-        Treap treap = new Treap();
-        TNode a = new TNode(5, 50);
-        TNode b = new TNode(4, 40);
-        TNode c = new TNode(3, 30);
-        TNode d = new TNode(2, 20);
-        TNode e = new TNode(1, 25);
 
 
-        //-----------------------
-        treap.setRoot(a);
-        a.setLeft(b);
-        b.setLeft(c);
-        c.setLeft(d);
-        d.setLeft(e);
-        current = e;
-        rotateRight(current);
-    }
 
-    private void generalTestRotationLeft2() {
-        TNode a = new TNode(1, 93);
-        TNode b = new TNode(2, 75);
 
-        //-----------------------
-        setRoot(a);
-        a.setRight(b);
-        current = b;
-        rotateLeft(current);
-    }
-
-    private void generalTestRotationRight2() {
-        TNode a = new TNode(2, 93);
-        TNode b = new TNode(1, 75);
-
-        //-----------------------
-        setRoot(a);
-        a.setLeft(b);
-        current = b;
-        rotateRight(current);
-    }
 
     // prints in level order
     public void levelOrderTraversal(TNode startNode) {
         if (root != null) {
-            System.out.println("Root is : " + root.getKey());
+            System.out.println("Root is : " + root);
 
             Queue<TNode> queue = new LinkedList<TNode>();
             queue.add(startNode);
             while (!queue.isEmpty()) {
                 TNode tempNode = queue.poll();
-                System.out.printf("%d ", tempNode.getKey());
+                System.out.printf("%d ", tempNode);
                 if (tempNode.getLeft() != null)
                     queue.add(tempNode.getLeft());
                 if (tempNode.getRight() != null)
@@ -656,169 +539,17 @@ public class Treap {
         return counter;
     }
 
-    public void testMethod(int limit, boolean writeDown) {
-        LinkedList<TNode> list = new LinkedList<TNode>();
-        for (int i = 1; i <= limit; i++) {
-            insert(i);
-            list.add(new TNode(i, i * 10));
-        }
-        int counter = levelOrderCount(root);
-        System.out.println("Counter level order: " + counter);
-        System.out.println("List size: " + list.size());
-
-        if (writeDown) {
-            System.out.println();
-            System.out.println("List:");
-            for (int i = 0; i < list.size(); i++) {
-                System.out.print(list.get(i).getKey() + ", ");
-            }
-            System.out.println();
-            System.out.println("LevelOrder:");
-            levelOrderTraversal(root);
-        }
-
-        System.out.println("\n\nSearch results");
-        System.out.println("Kluc cislo 1 " + search(1).getKey());
-        System.out.println("Kluc cislo 1 " + search(6).getKey());
-        System.out.println("Kluc cislo 1 " + search(2).getKey());
 
 
-    }
-
-    public void testDeleteLeftLeft() {
-        TNode a = new TNode(7, 10);
-        TNode b = new TNode(6, 8);
-        TNode c = new TNode(5, 7);
-
-        setRoot(a);
-        a.setLeft(b);
-        b.setLeft(c);
-
-        current = b;
-        delete(6);
-
-        levelOrderTraversal(root);
-
-    }
-
-    public void testDeleteRightRight() {
-        TNode a = new TNode(5, 7);
-        TNode b = new TNode(6, 8);
-        TNode c = new TNode(7, 10);
-
-
-        setRoot(a);
-        a.setRight(b);
-        b.setRight(c);
-
-        current = c;
-        delete(6);
-
-        levelOrderTraversal(root);
-
-    }
-
-    public void testDeleteBothSide() {
-        TNode a = new TNode(7, 10);
-        TNode b = new TNode(6, 20);
-        TNode c = new TNode(9, 30);
-
-
-        setRoot(a);
-        a.setLeft(b);
-        a.setRight(c);
-
-        current = c;
-        delete(7);
-
-        levelOrderTraversal(root);
-
-    }
-
-    public void testDeleteBothSideHigher() {
-        TNode p = new TNode(15, 2);
-        TNode a = new TNode(7, 10);
-        TNode b = new TNode(6, 30);
-        TNode c = new TNode(8, 60);
-
-
-        setRoot(p);
-        p.setLeft(a);
-        a.setLeft(b);
-        a.setRight(c);
-
-        current = c;
-        delete(7);
-
-
-        levelOrderTraversal(root);
-
-    }
-
-    public void testDeleteRotateLeftLeft() {
-        TNode a = new TNode(4, 10);
-        TNode b = new TNode(3, 20);
-        TNode c = new TNode(2, 30);
-        TNode d = new TNode(1, 40);
-
-        setRoot(a);
-        a.setLeft(b);
-        b.setLeft(c);
-        c.setLeft(d);
-
-        current = d;
-        delete(4);
-
-        levelOrderTraversal(root);
-
-    }
-
-
-    public void testInsertDelete(int rounds) {
-        System.out.println("Insert part");
-        for (int i = 1; i < rounds; i++) {
-            insert(i);
-            levelOrderTraversal(root);
-            System.out.println();
-        }
-        System.out.println("Delete part");
-        for (int i = 1; i < rounds; i++) {
-            delete(i);
-            levelOrderTraversal(root);
-            System.out.println();
-        }
-    }
-
-    public void insertTest(){
-        insertT(1,61);
-        insertT(2,68);
-        insertT(3,29);
-        insertT(4,29);
-        insertT(5,99);
-        insertT(6,79);
-        insertT(7,52);
-        insertT(8,19);
-        insertT(9,25);
-
-        delete(1);
-        delete(2);
-        delete(3);
-        delete(4);
-        delete(5);
-        delete(6);
-        delete(7);
-        delete(8);
-        delete(9);
-    }
     public void seriousTestMethod(int rounds){
-        TreeMap<Integer,String> helpStructure = new TreeMap<Integer, String>();
-        int size;
-        int sizeHelp;
+        LinkedList<TNode> helpStructure = new LinkedList<TNode>();
 
         //INSERT PART
+        KatastralnyUradId katastralnyUradId;
         for(int i=0;i<rounds;i++){
-            insert(i);
-            helpStructure.put(i,"");
+            katastralnyUradId = new KatastralnyUradId(new KatastralnyUrad(i));
+            insert(katastralnyUradId);
+            helpStructure.add(katastralnyUradId);
         }
         if(levelOrderCount(root)==helpStructure.size()){
             System.out.println("Same size" + helpStructure.size());
@@ -827,13 +558,13 @@ public class Treap {
         }
         //RANDOM DELELETE PART
         Random random = new Random();
-        int randomIndex;
-        TNode nodeFound;
+        TNode randomTNode;
+        Object nodeFound;
         for (int i=0;i<rounds/2;i++){
-            randomIndex = random.nextInt(rounds);
-            helpStructure.remove(randomIndex);
-            delete(randomIndex);
-            nodeFound = search(randomIndex);
+            randomTNode = helpStructure.get(random.nextInt(rounds/2));
+            helpStructure.remove(randomTNode);
+            delete(randomTNode);
+            nodeFound = search(randomTNode);
             if(nodeFound!=null){
                 System.out.println("We found the node, which was deleted");
             }
@@ -853,24 +584,24 @@ public class Treap {
 
     }
 
+    public void insertTest(int rounds){
 
-    public static void main(String[] args) {
-        Treap treap = new Treap();
-
-//
-//        treap.insert(1);
-//        treap.insert(2);
-//        treap.insert(3);
-//        treap.insert(4);
-//        treap.insert(5);
-//        treap.insert(6);
-//        treap.insert(7);
-//        treap.insert(8);
-//
-//        levelOrderTraversal(treap.root);
-        //treap.testMethod(10, true);
-        treap.seriousTestMethod(1000000);
+        //INSERT PART
+        KatastralnyUradId katastralnyUradId;
+        for(int i=0;i<rounds;i++){
+            katastralnyUradId = new KatastralnyUradId(new KatastralnyUrad(i));
+            insert(katastralnyUradId);
+        }
+            System.out.println("Data inserted");
 
 
     }
+
+    public static void main(String[] args){
+        Treap treap = new Treap();
+       // treap.seriousTestMethod(100000);
+        treap.insertTest(100000);
+    }
+
+
 }

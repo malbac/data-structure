@@ -1,11 +1,11 @@
 package structure.classes;
 
-import data.RBTree.Node;
+import data.implementation.treap.TNode;
 
 /**
  * Created by Malbac on 11.10.2015.
  */
-public class Osoba extends Node {
+public class Osoba {
     private String rodneCislo;
     private String menoPriezvisko;
     private String trvalyPobyt;
@@ -39,4 +39,5 @@ public class Osoba extends Node {
         this.menoPriezvisko = menoPriezvisko;
         this.trvalyPobyt = trvalyPobyt;
     }
+
 }

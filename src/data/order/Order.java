@@ -1,14 +1,14 @@
 package data.order;
 
 import data.Column;
-import data.RBTree.Node;
+import data.implementation.treap.TNode;
 
 /**
  * Created by Malbac on 12.10.2015.
  */
 public  abstract class Order {
     protected Column structure;
-    protected Node currentNode;
+    protected TNode currentNode;
 
 
 
@@ -16,7 +16,7 @@ public  abstract class Order {
         return structure;
     }
 
-    protected void setCurrentNode(Node currentNode){
+    protected void setCurrentNode(TNode currentNode){
         this.currentNode = currentNode;
     }
 
@@ -27,7 +27,7 @@ public  abstract class Order {
 
 
     abstract public void setFirst();
-    abstract public Node getCurrentNode();
+    abstract public TNode getCurrentNode();
 
     abstract public Object next();
 

@@ -1,11 +1,11 @@
 package data;
 
-import data.RBTree.RBTree;
+import data.implementation.treap.Treap;
 
 /**
  * Created by Malbac on 12.10.2015.
  */
-public class Column extends RBTree {
+public class Column extends Treap {
 
 
 
@@ -52,4 +52,6 @@ public class Column extends RBTree {
     public void setNOT_NULL(boolean NOT_NULL) {
         this.NOT_NULL = NOT_NULL;
     }
+
+
 }

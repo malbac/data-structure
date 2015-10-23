@@ -1,11 +1,11 @@
 package structure.classes;
 
-import data.RBTree.Node;
+
 
 /**
  * Created by Malbac on 11.10.2015.
  */
-public class KatastralnyUrad extends Node {
+public class KatastralnyUrad  {
     int id_uradu;
 
     public int getId_uradu() {

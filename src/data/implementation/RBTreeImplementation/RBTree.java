@@ -1,4 +1,4 @@
-package implementation.RBTreeImplementation;
+package data.implementation.RBTreeImplementation;
 
 import java.util.LinkedList;
 

@@ -1,8 +1,8 @@
 package Test;
 
 import data.Column;
+import data.implementation.treap.TNode;
 import structure.classes.Osoba;
-import data.RBTree.Node;
 import log4j.Log4j;
 import org.apache.log4j.Logger;
 
@@ -23,7 +23,7 @@ public class Reflection {
             System.out.println("False");
         }
 
-        System.out.println(getKeyDataFromColumn(osoba,new Column("rodneCislo",false,false,false)));
+        //System.out.println(getKeyDataFromColumn(osoba,new Column("rodneCislo",false,false,false)));
 
     }
 
@@ -32,7 +32,7 @@ public class Reflection {
         new Reflection();
 
     }
-    private Object getKeyDataFromColumn(Node data,Column column) {
+    private Object getKeyDataFromColumn(TNode data,Column column) {
         String localKey = column.getMetaKeyName();
         Field[] fields = data.getClass().getDeclaredFields();
         for (Field f : fields) {
@@ -79,7 +79,7 @@ public class Reflection {
         } return false;
     }
 
-    private Object getRightKeyValueForCurrentIndex(Node data, String localKey) {
+    private Object getRightKeyValueForCurrentIndex(TNode data, String localKey) {
 
         Field[] fields = data.getClass().getDeclaredFields();
         for (Field f : fields) {

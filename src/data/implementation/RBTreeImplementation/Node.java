@@ -1,4 +1,4 @@
-package implementation.RBTreeImplementation;
+package data.implementation.RBTreeImplementation;
 
 /**
  * Created by Malbac on 14.10.2015.
