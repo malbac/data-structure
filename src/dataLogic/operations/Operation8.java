@@ -1,6 +1,7 @@
 package dataLogic.operations;
 
 import data.DataManager;
+import data.DataStateEntity;
 import data.InsertDataObject;
 import data.implementation.treap.Treap;
 import structure.classes.*;
@@ -19,11 +20,8 @@ public class Operation8 {
     ////
 
     public Operation8(){
-        dataManager = new DataManager();
-        new InsertDataObject(dataManager);
+        dataManager = DataStateEntity.getDataManager();
         listOsoba = dataManager.getListOsoba();
-        System.out.println(vypisNehnutelnostiMajitelaVKatUzemi("1111",1));
-
     }
 
 
@@ -65,6 +63,7 @@ public class Operation8 {
 
 
     public static void main(String[] args){
-        new Operation8();
+        Operation8 operation8 = new Operation8();
+        System.out.println(operation8.vypisNehnutelnostiMajitelaVKatUzemi("1111", 1));
     }
 }

@@ -27,7 +27,10 @@ public class DataManager {
        listPodiel = new Treap();
        listOsoba = new Treap();
        listPodielnikovListV = new Treap();
+
+        new InsertDataObject(this);
     }
+
 
 
     public Treap getListKatastralnyUrad() {

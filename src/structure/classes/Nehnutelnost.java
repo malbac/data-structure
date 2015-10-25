@@ -14,7 +14,7 @@ public class Nehnutelnost {
     private LinkedList<Podiel> listPodiely;
 
 
-    public LinkedList getListPodiely() {
+    public LinkedList<Podiel> getListPodiely() {
         return listPodiely;
     }
 

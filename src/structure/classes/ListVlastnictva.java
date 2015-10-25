@@ -1,7 +1,10 @@
 package structure.classes;
 
+import data.implementation.treap.TNode;
 import data.implementation.treap.Treap;
 import structure.searchIndex.NehnutelnostSupisneCislo;
+
+import java.util.LinkedList;
 
 /**
  * Created by Malbac on 24.10.2015.
@@ -48,5 +51,42 @@ public class ListVlastnictva {
 
     public void setKatastralneUzemie(KatastralneUzemie katastralneUzemie) {
         this.katastralneUzemie = katastralneUzemie;
+    }
+
+    @Override
+    public String toString() {
+        String result = "ListVlastnictva: \n" +
+                "idListVlastnictva=" + idListVlastnictva +
+                ", katastralneUzemie=" + katastralneUzemie.getNazovKatastralnehoUzemia() +"\n\n";
+
+        if(listNehnutelnost!=null){
+            LinkedList<TNode> localListNehnutelnost = listNehnutelnost.inorderTraversal();
+            LinkedList<Podiel> localListPodiely;
+
+            Podiel localPodiel;
+            Nehnutelnost localNehnutelnost;
+            for (int i = 0;i<localListNehnutelnost.size();i++){
+                localNehnutelnost = ((NehnutelnostSupisneCislo)localListNehnutelnost.get(i)).getDataReference();
+                result+= "Supisne Cislo: " + localNehnutelnost.getIdSupisneCislo() + "Adresa: " + localNehnutelnost.getAdresa() + "\n";
+            }
+
+            result  += "\nSupis vsetkych vlastnikov\n";
+            for (int i = 0;i<localListNehnutelnost.size();i++){
+                localNehnutelnost = ((NehnutelnostSupisneCislo)localListNehnutelnost.get(i)).getDataReference();
+                localListPodiely = localNehnutelnost.getListPodiely();
+                for(int j=0;j<localListPodiely.size();j++){
+                    localPodiel = localListPodiely.get(j);
+                    result+= "Majitel : " + localPodiel.getMajitel().getMenoPriezvisko() + " Majetkovy podiel: " + localPodiel.getPodiel();
+                }
+
+            }
+        }
+
+        return "ListVlastnictva: \n" +
+                "idListVlastnictva=" + idListVlastnictva +
+                ", katastralneUzemie=" + katastralneUzemie.getNazovKatastralnehoUzemia() +
+                ", listNehnutelnost=" + listNehnutelnost +
+                ", listPodielnici=" + listPodielnici +
+                '}' + result;
     }
 }

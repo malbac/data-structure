@@ -74,7 +74,11 @@ public class KatastralneUzemie {
         this.nazovKatastralnehoUzemia = nazovKatastralnehoUzemia;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "KatastralneUzemie: \n" +
+                "idKatastralneUzemie=" + idKatastralneUzemie +
+                ", katastralnyUrad=" + katastralnyUrad +
+                ", nazovKatastralnehoUzemia='" + nazovKatastralnehoUzemia;
+    }
 }

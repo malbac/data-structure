@@ -1,6 +1,7 @@
 package dataLogic.operations;
 
 import data.DataManager;
+import data.DataStateEntity;
 import data.InsertDataObject;
 import data.implementation.treap.TNode;
 import data.implementation.treap.Treap;
@@ -21,8 +22,8 @@ public class Operation7 {
 
     public Operation7(){
 
-        dataManager = new DataManager();
-        new InsertDataObject(dataManager);
+        dataManager =  DataStateEntity.getDataManager();
+
         katUzemieNTreap = dataManager.getListKatastralneUzemie();
         System.out.println(vypisNehnutelnostiPodlaKatUzemia("Zilina"));
 
