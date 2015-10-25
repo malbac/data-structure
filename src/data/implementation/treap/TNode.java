@@ -31,6 +31,9 @@ public abstract class TNode {
 //    public void setValue(Object value) {
 //        this.value = value;
 //    }
+    public TNode(){
+        priority = createPriority();
+    }
 
 
 
@@ -128,7 +131,7 @@ public abstract class TNode {
 
     private int createPriority(){
         Random random = new Random();
-        int result = random.nextInt();
+        int result = random.nextInt(100);
         if(result>0) return result;
         else return result*-1;
     }

@@ -8,9 +8,16 @@ import structure.classes.KatastralnyUrad;
  */
 public class KatastralnyUradId extends TNode {
 
+
+
     private KatastralnyUrad dataReference;
 
+    public KatastralnyUrad getDataReference() {
+        return dataReference;
+    }
+
     public KatastralnyUradId(KatastralnyUrad dataReference){
+        super();
         this.dataReference =dataReference;
     }
 

@@ -6,7 +6,7 @@ import structure.searchIndex.KatastralnyUradId;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Random;
-import java.util.TreeMap;
+import java.util.Stack;
 
 /**
  * Created by Malbac on 19.10.2015.
@@ -72,7 +72,7 @@ public class Treap {
 
     }
 
-    public boolean delete(TNode key) {
+    public boolean remove(TNode key) {
 
         current = root;
         if(root==null) return false; //ak je list prazdny skonci
@@ -193,13 +193,13 @@ public class Treap {
                 //if (current.getParent().getKey() >= current.getKey()) {
                 if (current.getParent().isBiggerThan(current) ||
                         current.getParent().isEqualTo(current)) {
-                    current.getParent().setLeft(current.getLeft());// delete node by seting left side
+                    current.getParent().setLeft(current.getLeft());// remove node by seting left side
                     return;
                 }
                 //if (current.getParent().getKey() <= current.getKey()) {
                 if (current.isBiggerThan(current.getParent()) ||
                         current.getParent().isEqualTo(current)) {
-                    current.getParent().setRight(current.getLeft());// delete node by seting right side
+                    current.getParent().setRight(current.getLeft());// remove node by seting right side
                     return;
                 }
                 return;
@@ -278,10 +278,8 @@ public class Treap {
             // inak rotuj podla priority
             if (current.getLeft().getPriority() < current.getRight().getPriority()) {
                 rotateRight(current.getLeft());
-                continue;
             } else {
                 rotateLeft(current.getRight());
-                continue;
             }
         }
 
@@ -324,7 +322,6 @@ public class Treap {
         if (current.getParent().isBiggerThan(current)) {//LEFT LEFT
             current.getParent().setLeft(null);
             current.setParent(null);
-            return;
         }
     }
 
@@ -339,8 +336,6 @@ public class Treap {
             if (isLeftLeft()) {
 
                 rotateRight(current);
-
-                continue;
             }
         }
 
@@ -505,7 +500,7 @@ public class Treap {
 
 
     // prints in level order
-    public void levelOrderTraversal(TNode startNode) {
+    public void levelOrder(TNode startNode) {
         if (root != null) {
             System.out.println("Root is : " + root);
 
@@ -513,13 +508,19 @@ public class Treap {
             queue.add(startNode);
             while (!queue.isEmpty()) {
                 TNode tempNode = queue.poll();
-                System.out.printf("%d ", tempNode);
+                KatastralnyUradId katastralnyUradId = ((KatastralnyUradId)tempNode);
+                System.out.printf("%d ", katastralnyUradId.getDataReference().getId_uradu());
                 if (tempNode.getLeft() != null)
                     queue.add(tempNode.getLeft());
                 if (tempNode.getRight() != null)
                     queue.add(tempNode.getRight());
             }
         }
+    }
+
+    // prints in level order
+    public void levelOrder() {
+        levelOrder(root);
     }
 
     // prints in level order
@@ -538,6 +539,56 @@ public class Treap {
         }
         return counter;
     }
+
+    void inOrder (TNode root)
+    {
+
+        if(root == null) return;
+
+        inOrder(root.getLeft());
+        KatastralnyUradId katastralnyUradId = ((KatastralnyUradId)root);
+        System.out.printf("%d ", katastralnyUradId.getDataReference().getId_uradu());
+        inOrder( root.getRight() );
+
+    }
+
+    public LinkedList<TNode> inorderTraversal(TNode root) {
+        // IMPORTANT: Please reset any member data you declared, as
+        // the same Solution instance will be reused for each test case.
+        LinkedList<TNode> lst = new LinkedList<TNode>();
+
+        if(root == null)
+            return lst;
+
+        Stack<TNode> stack = new Stack<TNode>();
+        //define a pointer to track nodes
+        TNode p = root;
+
+        while(!stack.empty() || p != null){
+
+            // if it is not null, push to stack
+            //and go down the tree to left
+            if(p != null){
+                stack.push(p);
+                p = p.getLeft();
+
+                // if no left child
+                // pop stack, process the node
+                // then let p point to the right
+            }else{
+                TNode t = stack.pop();
+                lst.add(t);
+                p = t.getRight();
+            }
+        }
+
+        return lst;
+    }
+
+    public LinkedList<TNode> inorderTraversal() {
+        return inorderTraversal(root);
+    }
+
 
 
 
@@ -563,7 +614,7 @@ public class Treap {
         for (int i=0;i<rounds/2;i++){
             randomTNode = helpStructure.get(random.nextInt(rounds/2));
             helpStructure.remove(randomTNode);
-            delete(randomTNode);
+            remove(randomTNode);
             nodeFound = search(randomTNode);
             if(nodeFound!=null){
                 System.out.println("We found the node, which was deleted");
@@ -589,18 +640,20 @@ public class Treap {
         //INSERT PART
         KatastralnyUradId katastralnyUradId;
         for(int i=0;i<rounds;i++){
-            katastralnyUradId = new KatastralnyUradId(new KatastralnyUrad(i));
+            katastralnyUradId = new KatastralnyUradId(new KatastralnyUrad(1));
             insert(katastralnyUradId);
         }
-            System.out.println("Data inserted");
+        System.out.println("Data inserted");
 
 
     }
 
     public static void main(String[] args){
         Treap treap = new Treap();
-       // treap.seriousTestMethod(100000);
-        treap.insertTest(100000);
+        treap.insertTest(5);
+        //treap.levelOrder();
+        treap.inOrder(treap.root);
+        //treap.insertTest(100000);
     }
 
 

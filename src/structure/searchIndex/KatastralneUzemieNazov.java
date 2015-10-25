@@ -10,7 +10,19 @@ public class KatastralneUzemieNazov extends TNode {
 
     private KatastralneUzemie dataReference;
 
+    public KatastralneUzemie getDataReference() {
+        return dataReference;
+    }
+
+    public void setDataReference(KatastralneUzemie dataReference) {
+
+        this.dataReference = dataReference;
+    }
+
+
+
     public KatastralneUzemieNazov(KatastralneUzemie katastralneUzemie) {
+        super();
         this.dataReference = katastralneUzemie;
     }
 
@@ -34,7 +46,7 @@ public class KatastralneUzemieNazov extends TNode {
 
 
     public static void main(String[] args){
-        KatastralneUzemieNazov ku = new KatastralneUzemieNazov(new KatastralneUzemie(1,1,"lolo"));
+        KatastralneUzemieNazov ku = new KatastralneUzemieNazov(new KatastralneUzemie(1,null,"mala bytca"));
         String a = "A";
         String b = "Z";
         if(a.compareTo(b)>0){
