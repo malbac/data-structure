@@ -23,7 +23,7 @@ import java.awt.event.ItemEvent;
 public class GUI_Kataster extends JFrame {
 
 
-    String currentOperation = "operation1";
+    String currentOperation = "operation7";
     DataManager dataManager;
     OperationManager operationManager;
     GuiManager guiManager;
@@ -31,10 +31,10 @@ public class GUI_Kataster extends JFrame {
         dataManager = DataStateEntity.getDataManager();
         operationManager = new OperationManager();
         guiManager = new GuiManager();
-        guiManager.initMainComboMenu(mainComboMenu);
+
 
         initComponents();
-
+        guiManager.initMainComboMenu(mainComboMenu);
     }
 
 
@@ -68,7 +68,7 @@ public class GUI_Kataster extends JFrame {
         labelRodneCislo = new javax.swing.JLabel();
         mainComboMenu = new javax.swing.JComboBox();
         labelIdKatastralnehoUzemia = new javax.swing.JLabel();
-        TFIdKatastralnyUrad = new javax.swing.JTextField();
+        TFIdKatastralnehoUzemia = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         textArea = new javax.swing.JTextArea();
         jPanel5 = new javax.swing.JPanel();
@@ -187,7 +187,7 @@ public class GUI_Kataster extends JFrame {
 
         jLabelVyhladavanie.setText("Vyhladavanie:");
 
-        TFNazovKatastralneUzemie.setText("katastralne uzemie");
+        TFNazovKatastralneUzemie.setText("Zilina");
 
         jLabel2.setLabelFor(TFNazovKatastralneUzemie);
         jLabel2.setText("Nazov Katastralneho Uzemia:");
@@ -199,7 +199,7 @@ public class GUI_Kataster extends JFrame {
             }
         });
 
-        TFRodneCislo.setText("rodne Cislo");
+        TFRodneCislo.setText("9499898");
 
         labelRodneCislo.setLabelFor(TFNazovKatastralneUzemie);
         labelRodneCislo.setText("Rodne Cislo");
@@ -244,7 +244,7 @@ public class GUI_Kataster extends JFrame {
 
         labelIdKatastralnehoUzemia.setText("id katastralneho uzemia");
 
-        TFIdKatastralnyUrad.setText("id katastralny urad");
+        TFIdKatastralnehoUzemia.setText("1");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -263,7 +263,7 @@ public class GUI_Kataster extends JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(labelIdKatastralnehoUzemia)
                                 .addGap(39, 39, 39)
-                                .addComponent(TFIdKatastralnyUrad, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(TFIdKatastralnehoUzemia, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -277,7 +277,7 @@ public class GUI_Kataster extends JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TFIdKatastralnyUrad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TFIdKatastralnehoUzemia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelIdKatastralnehoUzemia))
                 .addContainerGap(53, Short.MAX_VALUE))
         );
@@ -518,7 +518,7 @@ public class GUI_Kataster extends JFrame {
 
     private void buttonMainSearch(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonOperation7ActionPerformed
         String nazovKatastralnehoUzemia = TFNazovKatastralneUzemie.getText();
-        int idKatastralnehoUzemia = Integer.parseInt(TFNazovKatastralneUzemie.getText());
+        int idKatastralnehoUzemia = Integer.parseInt(TFIdKatastralnehoUzemia.getText());
         String rodneCislo = TFRodneCislo.getText();
         textArea.append(guiManager.performOperation(currentOperation,nazovKatastralnehoUzemia,idKatastralnehoUzemia,rodneCislo));
     }//GEN-LAST:event_ButtonOperation7ActionPerformed
@@ -566,7 +566,7 @@ public class GUI_Kataster extends JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonMainSearch;
-    private javax.swing.JTextField TFIdKatastralnyUrad;
+    private javax.swing.JTextField TFIdKatastralnehoUzemia;
     private javax.swing.JTextField TFNazovKatastralneUzemie;
     private javax.swing.JTextField TFRodneCislo;
     private javax.swing.JButton buttonClearTextArea;
