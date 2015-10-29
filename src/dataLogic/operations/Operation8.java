@@ -37,7 +37,8 @@ public class Operation8 {
      * @param idKatastralneUzemie
      */
     public String vypisNehnutelnostiMajitelaVKatUzemi(String rodneCislo,int idKatastralneUzemie){
-    String result = "";
+    String result = "*********************************************************************************************************\n";
+          result += "*************************Vypis nehnutelnosti majitela v katastralnom uzemi*******************************\n";
 
 
         OsobaRodCislo localOsobaRodCislo = (OsobaRodCislo)listOsoba.search(new OsobaRodCislo(new Osoba(rodneCislo,null,null)));
@@ -47,7 +48,7 @@ public class Operation8 {
         Nehnutelnost localNehnutelnost;
 
 
-        result = localOsobaRodCislo.toString() + "\n";
+        result += localOsobaRodCislo.toString() + "\n";
         for(int i = 0;i<listPodiely.size();i++){
             localNehnutelnost = listPodiely.get(i).getNehnutelnost();
             foundId = localNehnutelnost.getListVlastnictva().getKatastralneUzemie().getIdKatastralneUzemie();
@@ -56,7 +57,7 @@ public class Operation8 {
                 result +=localNehnutelnost.toString();
             }
         }
-
+        result+="\n*********************************************************************************************************\n";
         return result;
     }
 

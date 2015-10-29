@@ -25,7 +25,7 @@ public class Operation7 {
         dataManager =  DataStateEntity.getDataManager();
 
         katUzemieNTreap = dataManager.getListKatastralneUzemie();
-        System.out.println(vypisNehnutelnostiPodlaKatUzemia("Zilina"));
+        //System.out.println(vypisNehnutelnostiPodlaKatUzemia("Zilina"));
 
 
     }
@@ -34,7 +34,9 @@ public class Operation7 {
 
 
     public String vypisNehnutelnostiPodlaKatUzemia(String nazovKatastralnehoUzemia){
-        String result = "Katastralne uzemie: " + nazovKatastralnehoUzemia + "\n\n";
+        String result = "*********************************************************************************************************\n";
+              result += "****************************Vypis nehnutelnosti podla katastralneho uzemia*******************************\n" +
+                        "         Katastralne uzemie: " + nazovKatastralnehoUzemia + "\n\n";
         KatastralneUzemieNazov localKatastralneUzemie;
         LinkedList<TNode> listNehnut = new LinkedList<TNode>();
         localKatastralneUzemie = (KatastralneUzemieNazov) katUzemieNTreap.search(new KatastralneUzemieNazov(new KatastralneUzemie(0, null, nazovKatastralnehoUzemia)));
@@ -47,6 +49,7 @@ public class Operation7 {
         for (int i = 0;i<listNehnut.size();i++){
             localV = ((NehnutelnostSupisneCislo)listNehnut.get(i)).getDataReference();
             result += localV.toString() +"\n";
+            result += "\n*********************************************************************************************************\n";
         }
         return result;
     }

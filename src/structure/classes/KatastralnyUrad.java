@@ -35,4 +35,12 @@ public class KatastralnyUrad  {
     public KatastralnyUrad(int id_uradu) {
         this.id_uradu = id_uradu;
     }
+
+    @Override
+    public String toString() {
+        return "KatastralnyUrad{" +
+                "id_uradu=" + id_uradu +
+                ", listKatastralneUzemia=" + listKatastralneUzemia +
+                '}';
+    }
 }

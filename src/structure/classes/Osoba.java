@@ -15,7 +15,6 @@ public class Osoba {
 
 
     private LinkedList<Podiel> listPodiely;
-    private LinkedList<Podielnik> listPodienik;
 
 
     public LinkedList getListPodiely() {
@@ -28,14 +27,6 @@ public class Osoba {
 
     public boolean removeFromListPodiely(Podiel podiel){
         return listPodiely.remove(podiel);
-    }
-
-    public boolean addToListPodielnik(Podielnik podielnik){
-        return listPodienik.add(podielnik);
-    }
-
-    public boolean removeFromListPodielnik(Podielnik podielnik){
-        return listPodienik.remove(podielnik);
     }
 
 

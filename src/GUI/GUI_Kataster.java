@@ -11,10 +11,15 @@ import GUI.insertDialog.VlozNehnutelnostNaListVlastnictva;
 import GUI.insertDialog.VlozVlastnika;
 import data.DataManager;
 import data.DataStateEntity;
+import data.implementation.treap.TNode;
 import dataLogic.OperationManager;
+import ioLogic.IOHandler;
 
 import javax.swing.JFrame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
+import java.util.LinkedList;
 
 /**
  *
@@ -27,11 +32,14 @@ public class GUI_Kataster extends JFrame {
     DataManager dataManager;
     OperationManager operationManager;
     GuiManager guiManager;
+    IOHandler ioHandler;
     public GUI_Kataster() {
         dataManager = DataStateEntity.getDataManager();
         operationManager = new OperationManager();
         guiManager = new GuiManager();
+        ioHandler = new IOHandler(dataManager);
 
+        ioHandler.load();
 
         initComponents();
         guiManager.initMainComboMenu(mainComboMenu);
@@ -199,7 +207,7 @@ public class GUI_Kataster extends JFrame {
             }
         });
 
-        TFRodneCislo.setText("9499898");
+        TFRodneCislo.setText("1111");
 
         labelRodneCislo.setLabelFor(TFNazovKatastralneUzemie);
         labelRodneCislo.setText("Rodne Cislo");
@@ -236,9 +244,12 @@ public class GUI_Kataster extends JFrame {
         );
 
         //mainComboMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        mainComboMenu.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                mainComboMenuItemStateChanged(evt);
+
+
+        mainComboMenu.addActionListener (new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                mainComboMenuItemStateChanged();
+                System.out.println("State Changed");
             }
         });
 
@@ -249,37 +260,37 @@ public class GUI_Kataster extends JFrame {
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabelVyhladavanie)
-                                .addGap(18, 18, 18)
-                                .addComponent(mainComboMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(labelIdKatastralnehoUzemia)
-                                .addGap(39, 39, 39)
-                                .addComponent(TFIdKatastralnehoUzemia, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                                                .addComponent(jLabelVyhladavanie)
+                                                                .addGap(18, 18, 18)
+                                                                .addComponent(mainComboMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                                                .addComponent(labelIdKatastralnehoUzemia)
+                                                                .addGap(39, 39, 39)
+                                                                .addComponent(TFIdKatastralnehoUzemia, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addGap(0, 0, Short.MAX_VALUE)))
+                                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelVyhladavanie)
-                    .addComponent(mainComboMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TFIdKatastralnehoUzemia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelIdKatastralnehoUzemia))
-                .addContainerGap(53, Short.MAX_VALUE))
+                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabelVyhladavanie)
+                                        .addComponent(mainComboMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(TFIdKatastralnehoUzemia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelIdKatastralnehoUzemia))
+                                .addContainerGap(53, Short.MAX_VALUE))
         );
 
         textArea.setColumns(20);
@@ -328,33 +339,33 @@ public class GUI_Kataster extends JFrame {
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(buttonRemoveMajetkovyPodiel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(buttonRemoveNehnutelnost, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(buttonRemoveObcan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(buttonRemoveListVlastnictva, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(buttonRemoveKatastralneUzemie, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(20, Short.MAX_VALUE))
+                jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(buttonRemoveMajetkovyPodiel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(buttonRemoveNehnutelnost, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(buttonRemoveObcan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(buttonRemoveListVlastnictva, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(buttonRemoveKatastralneUzemie, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap(20, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(buttonRemoveMajetkovyPodiel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(buttonRemoveObcan)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(buttonRemoveListVlastnictva)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(buttonRemoveNehnutelnost)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(buttonRemoveKatastralneUzemie)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(buttonRemoveMajetkovyPodiel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(buttonRemoveObcan)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(buttonRemoveListVlastnictva)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(buttonRemoveNehnutelnost)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(buttonRemoveKatastralneUzemie)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         buttonClearTextArea.setText("Vymaz plochu");
@@ -366,7 +377,48 @@ public class GUI_Kataster extends JFrame {
 
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
+        buttonListyVlastnictvaVypis.setText("ListyVlastnictva");
+        buttonListyVlastnictvaVypis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonListyVlastnictvaVypisActionPerformed(evt);
+            }
+        });
+
+        buttonNehnutelnostVypis.setText("Nehnutelnost");
+        buttonNehnutelnostVypis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonNehnutelnostVypisActionPerformed(evt);
+            }
+        });
+
+        buttonOsobaVypis.setText("Osoba");
+        buttonOsobaVypis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonOsobaVypisActionPerformed(evt);
+            }
+        });
+
+        buttonPodielVypis.setText("Podiel");
+        buttonPodielVypis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonPodielVypisActionPerformed(evt);
+            }
+        });
+
+        buttonKatastralnyUradVypis.setText("KatastalnyUrad");
+        buttonKatastralnyUradVypis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonKatastralnyUradVypisActionPerformed(evt);
+            }
+        });
+
+
         buttonKatastralneUzemiaVypis.setText("KatastralneUzemia");
+        buttonKatastralneUzemiaVypis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonKatastralneUzemiaVypisActionPerformed(evt);
+            }
+        });
 
         buttonListyVlastnictvaVypis.setText("ListyVlastnictva");
 
@@ -432,7 +484,7 @@ public class GUI_Kataster extends JFrame {
                 .addGap(8, 8, 8)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -442,8 +494,8 @@ public class GUI_Kataster extends JFrame {
 
 
 
-    private void mainComboMenuItemStateChanged(ItemEvent evt) {
-        String currentOperation = guiManager.getOperation((String)mainComboMenu.getSelectedItem());
+    private void mainComboMenuItemStateChanged() {
+        currentOperation = guiManager.getOperation((String)mainComboMenu.getSelectedItem());
         setRightLabelToOperation(currentOperation);
     }
 
@@ -454,7 +506,7 @@ public class GUI_Kataster extends JFrame {
     private void jButtonVlozOsobaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVlozOsobaActionPerformed
         // TODO add your handling code here:
         JFrame frame = new JFrame();
-            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
             frame.getContentPane().add(new VlozVlastnika());
             frame.pack();
             frame.setVisible(true);
@@ -513,10 +565,38 @@ public class GUI_Kataster extends JFrame {
     }//GEN-LAST:event_buttonRemoveListVlastnictvaActionPerformed
 
     private void buttonRemoveKatastralneUzemieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRemoveKatastralneUzemieActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_buttonRemoveKatastralneUzemieActionPerformed
+    private void buttonListyVlastnictvaVypisActionPerformed(java.awt.event.ActionEvent evt) {
+        textArea.append("*****************Listy vlastnictva \n");
+        textArea.append(dataManager.vypisListVlastnictva());
+    }
+
+    private void buttonNehnutelnostVypisActionPerformed(java.awt.event.ActionEvent evt) {
+        textArea.append(dataManager.vypisNehnutelnosti());
+    }
+
+    private void buttonOsobaVypisActionPerformed(java.awt.event.ActionEvent evt) {
+        textArea.append(dataManager.vypisOsob());
+    }
+
+    private void buttonPodielVypisActionPerformed(java.awt.event.ActionEvent evt) {
+        //not implemented
+    }
+
+    private void buttonKatastralnyUradVypisActionPerformed(java.awt.event.ActionEvent evt) {
+        textArea.append(dataManager.vypisKatastralnychUradov());
+    }
+
+    private void buttonKatastralneUzemiaVypisActionPerformed(java.awt.event.ActionEvent evt) {
+        textArea.append(dataManager.vypisKatastralnychUzemi());
+    }
 
     private void buttonMainSearch(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonOperation7ActionPerformed
+        //docasne kym nefunguje state changed
+        //String currentOperation = guiManager.getOperation((String)mainComboMenu.getSelectedItem());
+        //setRightLabelToOperation(currentOperation);
+        //implementation
         String nazovKatastralnehoUzemia = TFNazovKatastralneUzemie.getText();
         int idKatastralnehoUzemia = Integer.parseInt(TFIdKatastralnehoUzemia.getText());
         String rodneCislo = TFRodneCislo.getText();
@@ -526,7 +606,8 @@ public class GUI_Kataster extends JFrame {
 
 
     private void buttonClearTextAreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonClearTextAreaActionPerformed
-        textArea.setText("");
+        textArea.setText("Was saved");
+        ioHandler.save();
     }//GEN-LAST:event_buttonClearTextAreaActionPerformed
 
     /**

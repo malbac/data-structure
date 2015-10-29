@@ -58,7 +58,7 @@ public class KatastralneUzemie {
         this.idKatastralneUzemie = idKatastralneUzemie;
     }
 
-    public KatastralnyUrad getIdUradu() {
+    public KatastralnyUrad getUrad() {
         return katastralnyUrad;
     }
 

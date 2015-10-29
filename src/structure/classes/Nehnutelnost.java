@@ -19,7 +19,9 @@ public class Nehnutelnost {
     }
 
     public boolean addToListPodiely(Podiel podiel){
-        return listPodiely.add(podiel);
+        if(!listPodiely.contains(podiel)) {
+            return listPodiely.add(podiel);
+        } return false;
     }
 
     public boolean removeToListPodiely(Podiel podiel){

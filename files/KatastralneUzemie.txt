@@ -1,0 +1,2 @@
+1,1,Bytca
+1,2,Zilina

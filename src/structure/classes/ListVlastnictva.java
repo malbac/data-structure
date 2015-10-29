@@ -86,7 +86,6 @@ public class ListVlastnictva {
                 "idListVlastnictva=" + idListVlastnictva +
                 ", katastralneUzemie=" + katastralneUzemie.getNazovKatastralnehoUzemia() +
                 ", listNehnutelnost=" + listNehnutelnost +
-                ", listPodielnici=" + listPodielnici +
-                '}' + result;
+                ", listPodielnici=" + listPodielnici+ " " + result;
     }
 }

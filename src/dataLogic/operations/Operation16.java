@@ -41,7 +41,7 @@ public class Operation16 {
         }
 
         // tu mozez vyriesit integritu dat
-        boolean vlozene = dataManager.insertListVlastnictva(nazovKatastralnehoUzemia,idListVlastnictva);
+        boolean vlozene = dataManager.insertListVlastnictva(idListVlastnictva,nazovKatastralnehoUzemia);
 
         if(vlozene){
             return  "uspesne vlozene";

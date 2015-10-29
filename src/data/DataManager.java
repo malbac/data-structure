@@ -1,6 +1,8 @@
 package data;
 
+import data.implementation.treap.TNode;
 import data.implementation.treap.Treap;
+import ioLogic.IOHandler;
 import structure.classes.*;
 import structure.searchIndex.*;
 
@@ -28,7 +30,7 @@ public class DataManager {
        listOsoba = new Treap();
        listPodielnikovListV = new Treap();
 
-        new InsertDataObject(this);
+        //new InsertDataObject(this);
     }
 
 
@@ -78,7 +80,7 @@ public class DataManager {
         return listKatastralneUzemie.insert(new KatastralneUzemieNazov(insertedKatastralneUzemie));
     }
 
-    public boolean insertListVlastnictva(String nazovKatastralnehoUzemie,int idListVlastnictva){
+    public boolean insertListVlastnictva(int idListVlastnictva,String nazovKatastralnehoUzemie){
         KatastralneUzemieNazov katastralneUzemieNazov = (KatastralneUzemieNazov)listKatastralneUzemie.search(new KatastralneUzemieNazov(new KatastralneUzemie(0,null,nazovKatastralnehoUzemie)));
         KatastralneUzemie katastralneUzemie = katastralneUzemieNazov.getDataReference();
         ListVlastnictva inserteListVlastnictva = new ListVlastnictva(idListVlastnictva,katastralneUzemie);
@@ -199,8 +201,8 @@ public class DataManager {
         majitel.addToListPodiely(insertedPodiel);
     }
 
-    private void insertPodielToMainListPodiel(Podiel insertedPodiel) {
-
+    private boolean insertPodielToMainListPodiel(Podiel insertedPodiel) {
+        return listPodiel.insert(new PodielId(insertedPodiel));
     }
 
     private void updatePodiely(Nehnutelnost nehnutelnost) {
@@ -213,6 +215,64 @@ public class DataManager {
         }
 
     }
+
+    //**********Vypisy*//***////////////////
+
+    public String vypisListVlastnictva(){
+        String result = "Vypis Listov Vlastnictva\n\n";
+        LinkedList<TNode> list=  getListListVlastnictva().inorderTraversal();
+        ListVlastnictva local;
+        for(int i=0;i<list.size();i++){
+            local = ((ListVlastnictvaId)list.get(i)).getDataReference();
+            result += local.getKatastralneUzemie()  +  "  ," + local.getIdListVlastnictva() + "\n";
+        }
+        return result;
+    }
+
+    public String vypisKatastralnychUzemi(){
+        String result = "Vypis KatUzemi\n\n";
+        LinkedList<TNode> list=  getListKatastralneUzemie().inorderTraversal();
+        KatastralneUzemie local;
+        for(int i=0;i<list.size();i++){
+            local = ((KatastralneUzemieNazov)list.get(i)).getDataReference();
+            result += local.getNazovKatastralnehoUzemia() +"\n";
+        }
+        return result;
+    }
+
+    public String vypisOsob(){
+        String result = "Vypis Osob\n\n";
+        LinkedList<TNode> list=  getListOsoba().inorderTraversal();
+        Osoba local;
+        for(int i=0;i<list.size();i++){
+            local = ((OsobaRodCislo)list.get(i)).getDataReference();
+            result += local.getMenoPriezvisko() +"  "+ local.getRodneCislo()+"\n";
+        }
+        return result;
+    }
+
+    public String vypisNehnutelnosti(){
+        String result = "Vypis podiely\n\n";
+        LinkedList<TNode> list=  getListNehnutelnost().inorderTraversal();
+        Nehnutelnost local;
+        for(int i=0;i<list.size();i++){
+            local = ((NehnutelnostSupisneCislo)list.get(i)).getDataReference();
+            result += local.getIdSupisneCislo() + ", " + local.getAdresa() + "\n";
+        }
+        return result;
+    }
+
+    public String vypisKatastralnychUradov(){
+        String result = "Vypis podiely\n\n";
+        LinkedList<TNode> list=  getListKatastralnyUrad().inorderTraversal();
+        KatastralnyUrad local;
+        for(int i=0;i<list.size();i++){
+            local = ((KatastralnyUradId)list.get(i)).getDataReference();
+            result += local.getId_uradu() + "\n";
+        }
+        return result;
+    }
+
 
 
 }

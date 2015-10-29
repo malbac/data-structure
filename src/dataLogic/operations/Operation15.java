@@ -23,7 +23,7 @@ public class Operation15 {
 
     public Operation15(){
         dataManager =  DataStateEntity.getDataManager();
-        new InsertDataObject(dataManager);
+        //new InsertDataObject(dataManager);
     }
 
 

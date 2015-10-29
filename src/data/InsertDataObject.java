@@ -33,8 +33,8 @@ public class InsertDataObject {
     }
 
     private void naplnListVlastnictva() {
-        dataManager.insertListVlastnictva("Bytca",1);
-        dataManager.insertListVlastnictva("Zilina",2);
+        dataManager.insertListVlastnictva(1,"Bytca");
+        dataManager.insertListVlastnictva(2,"Zilina");
     }
 
     private void naplnNehnutelnost() {
@@ -53,9 +53,9 @@ public class InsertDataObject {
 
     private void naplnPodiel() {
         dataManager.insertPodiel(1,"1111",1,100);// vyries podiel, aby sa vypocitaval automaticky
-        dataManager.insertPodiel(1,"1111",2,100);// vyries podiel, aby sa vypocitaval automaticky
-        dataManager.insertPodiel(1,"1111",3,100);// vyries podiel, aby sa vypocitaval automaticky
-        dataManager.insertPodiel(2,"1112",1,100);// vyries podiel, aby sa vypocitaval automaticky
+        dataManager.insertPodiel(2,"1111",2,100);// vyries podiel, aby sa vypocitaval automaticky
+        dataManager.insertPodiel(3,"1111",3,100);// vyries podiel, aby sa vypocitaval automaticky
+        dataManager.insertPodiel(4,"1112",1,100);// vyries podiel, aby sa vypocitaval automaticky
     }
 
 

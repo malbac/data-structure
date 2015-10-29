@@ -17,8 +17,8 @@ public class GuiManager {
 
     public String getOperation(String inputItem){
         switch (inputItem){
-            case operation7: return operation7.getClass().getName();
-            case operation8: return operation8.getClass().getName();
+            case operation7: return "operation7";
+            case operation8: return "operation8";
             default: return operation7.getClass().getName();
         }
     }

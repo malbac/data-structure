@@ -50,5 +50,12 @@ public class Podiel {
         this.podiel = podiel;
     }
 
-
+    @Override
+    public String toString() {
+        return "Podiel " +
+                "id_podiel=" + id_podiel +
+                ", majitel=" + majitel.getMenoPriezvisko() + " R.C.:" + majitel.getRodneCislo() +
+                ", nehnutelnost=" + nehnutelnost.getIdSupisneCislo() +
+                ", podiel=" + podiel;
+    }
 }

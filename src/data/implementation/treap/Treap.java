@@ -100,7 +100,8 @@ public class Treap {
                     return false;
                 }
             }
-            if (key.isBiggerThan(current)) {//ak je sucasny kluc mensi ako kluc co hladam, chod do prava
+            if (key.isBiggerThan(current))
+            {//ak je sucasny kluc mensi ako kluc co hladam, chod do prava
                 //zisti ci je v volny pravy smernik, ak ano vloz, ak nie prestav ho na aktualny
                 if (current.getRight() != null) {
                     current = current.getRight();
