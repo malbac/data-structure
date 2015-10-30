@@ -1,7 +1,6 @@
 package ioLogic.loadClasses;
 
 import data.DataManager;
-import ioLogic.loadClasses.LoadInsertTemplate;
 import structure.classes.KatastralneUzemie;
 
 /**
