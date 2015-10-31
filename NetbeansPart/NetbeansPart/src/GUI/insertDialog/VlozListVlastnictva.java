@@ -37,6 +37,7 @@ public class VlozListVlastnictva extends javax.swing.JPanel {
         TFKatastralneUzemie = new javax.swing.JTextField();
         LabelKatastralneUzemie = new javax.swing.JLabel();
         labelState = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
 
         jButtonVlozOsoba.setText("Vloz");
         jButtonVlozOsoba.addActionListener(new java.awt.event.ActionListener() {
@@ -63,7 +64,7 @@ public class VlozListVlastnictva extends javax.swing.JPanel {
         });
 
         LabelKatastralneUzemie.setLabelFor(TFKatastralneUzemie);
-        LabelKatastralneUzemie.setText("nazov katastralneho uzemie");
+        LabelKatastralneUzemie.setText("id katastralne uzemie");
 
         labelState.setText("XXXX");
 
@@ -74,6 +75,7 @@ public class VlozListVlastnictva extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator1)
                     .addComponent(jButtonVlozOsoba, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -93,7 +95,9 @@ public class VlozListVlastnictva extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(TFKatastralneUzemie, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
                     .addComponent(LabelKatastralneUzemie, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
+                .addGap(2, 2, 2)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(TFCisloListuVlastnictva)
                     .addComponent(LabelCisloListuVlastnictva, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -128,6 +132,7 @@ public class VlozListVlastnictva extends javax.swing.JPanel {
     private javax.swing.JTextField TFCisloListuVlastnictva;
     private javax.swing.JTextField TFKatastralneUzemie;
     private javax.swing.JButton jButtonVlozOsoba;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel labelState;
     // End of variables declaration//GEN-END:variables
 }

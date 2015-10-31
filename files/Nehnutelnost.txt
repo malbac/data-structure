@@ -1,3 +1,5 @@
 1,1,1
 2,2,2
-5,1,NovaAdresa
+3,1,Mala Bytca 60
+4,2,Vrutky 1
+5,5,5
