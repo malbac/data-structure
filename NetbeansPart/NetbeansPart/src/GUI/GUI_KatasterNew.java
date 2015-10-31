@@ -16,19 +16,20 @@ import data.DataStateEntity;
 import data.InsertDataObject;
 import dataLogic.OperationManager;
 import ioLogic.IOHandler;
+
 import javax.swing.JFrame;
 
 /**
- *
  * @author Malbac
  */
 public class GUI_KatasterNew extends javax.swing.JFrame {
 
-   String currentOperation = "operation7";
+    String currentOperation = "operation7";
     DataManager dataManager;
     OperationManager operationManager;
     GuiManager guiManager;
     IOHandler ioHandler;
+
     public GUI_KatasterNew() {
         dataManager = DataStateEntity.getDataManager();
         operationManager = new OperationManager();
@@ -50,14 +51,9 @@ public class GUI_KatasterNew extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonOsobaVypis = new javax.swing.JButton();
-        buttonPodielVypis = new javax.swing.JButton();
-        buttonKatastralnyUradVypis = new javax.swing.JButton();
         buttonSave = new javax.swing.JButton();
         buttonLoad = new javax.swing.JButton();
         buttonCreateDefaultData = new javax.swing.JButton();
-        buttonClearTextArea = new javax.swing.JButton();
-        jSeparator2 = new javax.swing.JSeparator();
         jPanel2 = new javax.swing.JPanel();
         jLabelVyhladavanie = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
@@ -70,9 +66,13 @@ public class GUI_KatasterNew extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         labelRodneCislo = new javax.swing.JLabel();
         TFRodneCislo = new javax.swing.JTextField();
+        jPanel7 = new javax.swing.JPanel();
+        labelSupisneCislo = new javax.swing.JLabel();
+        TFsupisneCislo = new javax.swing.JTextField();
+        LabelCisloListuVlastnictva = new javax.swing.JLabel();
+        TFCisloListuVlastnictva = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         textArea = new javax.swing.JTextArea();
-        buttonKatastralneUzemiaVypis = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jButtonVlozOsoba = new javax.swing.JButton();
         jButtonVlozKatastralneUzemie = new javax.swing.JButton();
@@ -82,7 +82,6 @@ public class GUI_KatasterNew extends javax.swing.JFrame {
         buttonVlozPodiel = new javax.swing.JButton();
         buttonKatastralnyUrad = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
-        buttonListyVlastnictvaVypis = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         buttonRemoveMajetkovyPodiel = new javax.swing.JButton();
         buttonRemoveNehnutelnost = new javax.swing.JButton();
@@ -90,15 +89,23 @@ public class GUI_KatasterNew extends javax.swing.JFrame {
         buttonRemoveListVlastnictva = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         buttonRemoveKatastralneUzemie = new javax.swing.JButton();
+        jPanel6 = new javax.swing.JPanel();
+        buttonClearTextArea = new javax.swing.JButton();
+        jSeparator2 = new javax.swing.JSeparator();
         buttonNehnutelnostVypis = new javax.swing.JButton();
+        buttonOsobaVypis = new javax.swing.JButton();
+        buttonKatastralneUzemiaVypis = new javax.swing.JButton();
+        buttonListyVlastnictvaVypis = new javax.swing.JButton();
+        buttonPodielVypis = new javax.swing.JButton();
+        buttonKatastralnyUradVypis = new javax.swing.JButton();
+        jPanel11 = new javax.swing.JPanel();
+        labelZmena = new javax.swing.JLabel();
+        buttonZmenaTrvalehoPobytuMajitela = new javax.swing.JButton();
+        buttonZmenaTrvalehoPobytuMajitela1 = new javax.swing.JButton();
+        jPanel8 = new javax.swing.JPanel();
+        labelStatus = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        buttonOsobaVypis.setText("Osoba");
-
-        buttonPodielVypis.setText("Podiel");
-
-        buttonKatastralnyUradVypis.setText("KatastalnyUrad");
 
         buttonSave.setText("Save");
         buttonSave.addActionListener(new java.awt.event.ActionListener() {
@@ -121,18 +128,11 @@ public class GUI_KatasterNew extends javax.swing.JFrame {
             }
         });
 
-        buttonClearTextArea.setText("Vymaz plochu");
-        buttonClearTextArea.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonClearTextAreaActionPerformed(evt);
-            }
-        });
-
-        jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
-
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabelVyhladavanie.setText("Vyhladavanie:");
+
+        jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         TFNazovKatastralneUzemie.setText("katastralne uzemie");
 
@@ -145,33 +145,40 @@ public class GUI_KatasterNew extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(TFNazovKatastralneUzemie, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(labelIdKatastralnehoUzemia)
-                        .addGap(39, 39, 39)
-                        .addComponent(TFIdKatastralnehoUzemia, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 12, Short.MAX_VALUE))
+                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(labelIdKatastralnehoUzemia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(TFNazovKatastralneUzemie, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE))
+                                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                                .addGap(10, 10, 10)
+                                                .addComponent(TFIdKatastralnehoUzemia)))
+                                .addGap(10, 10, 10))
         );
         jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TFNazovKatastralneUzemie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TFIdKatastralnehoUzemia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelIdKatastralnehoUzemia))
-                .addContainerGap(105, Short.MAX_VALUE))
+                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(TFNazovKatastralneUzemie, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel2))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(TFIdKatastralnehoUzemia)
+                                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                                .addComponent(labelIdKatastralnehoUzemia)
+                                                .addGap(0, 0, Short.MAX_VALUE))))
         );
 
-        mainComboMenu.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        mainComboMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mainComboMenuActionPerformed(evt);
+            }
+        });
 
         mainSearchButton.setText("Hladaj");
         mainSearchButton.addActionListener(new java.awt.event.ActionListener() {
@@ -180,6 +187,8 @@ public class GUI_KatasterNew extends javax.swing.JFrame {
             }
         });
 
+        jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
         labelRodneCislo.setText("Rodne Cislo");
 
         TFRodneCislo.setText("rodne Cislo");
@@ -187,60 +196,109 @@ public class GUI_KatasterNew extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addComponent(labelRodneCislo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(TFRodneCislo, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 10, Short.MAX_VALUE))
+                jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(labelRodneCislo)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                                .addComponent(TFRodneCislo, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TFRodneCislo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelRodneCislo))
-                .addGap(0, 0, Short.MAX_VALUE))
+                jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(TFRodneCislo, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelRodneCislo, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        labelSupisneCislo.setText("supisne cislo");
+
+        TFsupisneCislo.setText("supisne cislo");
+        TFsupisneCislo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TFsupisneCisloActionPerformed(evt);
+            }
+        });
+
+        LabelCisloListuVlastnictva.setText("Cislo Listu Vlastnictva");
+
+        TFCisloListuVlastnictva.setText("Cislo Listu Vlastnictva");
+        TFCisloListuVlastnictva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TFCisloListuVlastnictvaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+                jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(LabelCisloListuVlastnictva, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelSupisneCislo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(TFsupisneCislo)
+                                        .addComponent(TFCisloListuVlastnictva, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)))
+        );
+        jPanel7Layout.setVerticalGroup(
+                jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(TFsupisneCislo)
+                                        .addComponent(labelSupisneCislo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(jPanel7Layout.createSequentialGroup()
+                                                .addGap(7, 7, 7)
+                                                .addComponent(LabelCisloListuVlastnictva, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(jPanel7Layout.createSequentialGroup()
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(TFCisloListuVlastnictva)
+                                                .addGap(5, 5, 5))))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabelVyhladavanie)
-                        .addGap(18, 18, 18)
-                        .addComponent(mainComboMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 411, Short.MAX_VALUE)
-                        .addComponent(mainSearchButton))))
+                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jLabelVyhladavanie)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(mainComboMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(mainSearchButton))
+                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addContainerGap())))
         );
         jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelVyhladavanie)
-                    .addComponent(mainComboMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mainSearchButton))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabelVyhladavanie)
+                                        .addComponent(mainComboMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(mainSearchButton))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jPanel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         textArea.setColumns(20);
         textArea.setRows(5);
         jScrollPane1.setViewportView(textArea);
-
-        buttonKatastralneUzemiaVypis.setText("KatastralneUzemia");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -291,42 +349,40 @@ public class GUI_KatasterNew extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButtonVlozOsoba, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonVlozKatastralneUzemie, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonVlozListVlastnictva, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonVlozNehnutelnost, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(buttonKatastralnyUrad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(buttonVlozPodiel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jSeparator1))
-                .addContainerGap(20, Short.MAX_VALUE))
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jButtonVlozOsoba, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButtonVlozKatastralneUzemie, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButtonVlozListVlastnictva, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButtonVlozNehnutelnost, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(buttonKatastralnyUrad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(buttonVlozPodiel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jSeparator1))
+                                .addContainerGap(20, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonVlozOsoba)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonVlozListVlastnictva)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonVlozNehnutelnost)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonVlozKatastralneUzemie)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(buttonKatastralnyUrad)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(buttonVlozPodiel)
-                .addContainerGap(203, Short.MAX_VALUE))
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonVlozOsoba)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonVlozListVlastnictva)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonVlozNehnutelnost)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonVlozKatastralneUzemie)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(buttonKatastralnyUrad)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(buttonVlozPodiel)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        buttonListyVlastnictvaVypis.setText("ListyVlastnictva");
 
         jPanel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -370,60 +426,92 @@ public class GUI_KatasterNew extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(buttonRemoveMajetkovyPodiel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(buttonRemoveNehnutelnost, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(buttonRemoveObcan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(buttonRemoveListVlastnictva, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(buttonRemoveKatastralneUzemie, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(20, Short.MAX_VALUE))
+                jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(buttonRemoveMajetkovyPodiel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(buttonRemoveNehnutelnost, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(buttonRemoveObcan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(buttonRemoveListVlastnictva, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(buttonRemoveKatastralneUzemie, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(buttonRemoveMajetkovyPodiel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(buttonRemoveObcan)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(buttonRemoveListVlastnictva)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(buttonRemoveNehnutelnost)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(buttonRemoveKatastralneUzemie)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(buttonRemoveMajetkovyPodiel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(buttonRemoveObcan)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(buttonRemoveListVlastnictva)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(buttonRemoveNehnutelnost)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(buttonRemoveKatastralneUzemie)
+                                .addContainerGap(29, Short.MAX_VALUE))
         );
 
-        buttonNehnutelnostVypis.setText("Nehnutelnost");
+        buttonClearTextArea.setText("Vymaz plochu");
+        buttonClearTextArea.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonClearTextAreaActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(buttonSave)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(buttonLoad)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(buttonCreateDefaultData))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 654, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
+        jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        buttonNehnutelnostVypis.setText("Nehnutelnost");
+        buttonNehnutelnostVypis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonNehnutelnostVypisActionPerformed(evt);
+            }
+        });
+
+        buttonOsobaVypis.setText("Osoba");
+        buttonOsobaVypis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonOsobaVypisActionPerformed(evt);
+            }
+        });
+
+        buttonKatastralneUzemiaVypis.setText("KatastralneUzemia");
+        buttonKatastralneUzemiaVypis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonKatastralneUzemiaVypisActionPerformed(evt);
+            }
+        });
+
+        buttonListyVlastnictvaVypis.setText("ListyVlastnictva");
+        buttonListyVlastnictvaVypis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonListyVlastnictvaVypisActionPerformed(evt);
+            }
+        });
+
+        buttonPodielVypis.setText("Podiel");
+        buttonPodielVypis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonPodielVypisActionPerformed(evt);
+            }
+        });
+
+        buttonKatastralnyUradVypis.setText("KatastalnyUrad");
+        buttonKatastralnyUradVypis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonKatastralnyUradVypisActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+                jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                                .addContainerGap()
                                 .addComponent(buttonClearTextArea)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -439,52 +527,191 @@ public class GUI_KatasterNew extends javax.swing.JFrame {
                                 .addComponent(buttonPodielVypis)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(buttonKatastralnyUradVypis)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 276, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(21, Short.MAX_VALUE))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+                jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                                .addGap(0, 11, Short.MAX_VALUE)
+                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(buttonClearTextArea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                .addComponent(buttonKatastralneUzemiaVypis)
+                                                .addComponent(buttonListyVlastnictvaVypis)
+                                                .addComponent(buttonNehnutelnostVypis)
+                                                .addComponent(buttonOsobaVypis)
+                                                .addComponent(buttonPodielVypis)
+                                                .addComponent(buttonKatastralnyUradVypis))))
+        );
+
+        jPanel11.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        labelZmena.setText("Zmena:");
+
+        buttonZmenaTrvalehoPobytuMajitela.setText("Trvaleho pobytu majitela");
+        buttonZmenaTrvalehoPobytuMajitela.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonZmenaTrvalehoPobytuMajitelaActionPerformed(evt);
+            }
+        });
+
+        buttonZmenaTrvalehoPobytuMajitela1.setText("Majitela nehnutelnosti");
+        buttonZmenaTrvalehoPobytuMajitela1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonZmenaTrvalehoPobytuMajitela1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+                jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(buttonZmenaTrvalehoPobytuMajitela1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(buttonZmenaTrvalehoPobytuMajitela, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(labelZmena, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(20, 20, 20))
+        );
+        jPanel11Layout.setVerticalGroup(
+                jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel11Layout.createSequentialGroup()
+                                .addComponent(labelZmena)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(buttonZmenaTrvalehoPobytuMajitela)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(buttonZmenaTrvalehoPobytuMajitela1)
+                                .addGap(0, 56, Short.MAX_VALUE))
+        );
+
+        labelStatus.setText("StatusLabel");
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+                jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(labelStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap())
+        );
+        jPanel8Layout.setVerticalGroup(
+                jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(labelStatus)
+                                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(buttonSave)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(buttonLoad)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(buttonCreateDefaultData))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 654, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                                        .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                        .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                .addGap(0, 0, Short.MAX_VALUE))
+                                        .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap())
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(buttonSave)
-                    .addComponent(buttonLoad)
-                    .addComponent(buttonCreateDefaultData))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(buttonClearTextArea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(buttonKatastralneUzemiaVypis)
-                        .addComponent(buttonListyVlastnictvaVypis)
-                        .addComponent(buttonNehnutelnostVypis)
-                        .addComponent(buttonOsobaVypis)
-                        .addComponent(buttonPodielVypis)
-                        .addComponent(buttonKatastralnyUradVypis)))
-                .addGap(8, 8, 8)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18))
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(buttonSave)
+                                        .addComponent(buttonLoad)
+                                        .addComponent(buttonCreateDefaultData))
+                                .addGap(18, 18, 18)
+                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jScrollPane1))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonClearTextAreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonClearTextAreaActionPerformed
-        textArea.setText("Was saved");
-        
+        textArea.setText("");
+
     }//GEN-LAST:event_buttonClearTextAreaActionPerformed
 
     private void mainSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mainSearchButtonActionPerformed
-        String nazovKatastralnehoUzemia = TFNazovKatastralneUzemie.getText();
-        int idKatastralnehoUzemia = Integer.parseInt(TFIdKatastralnehoUzemia.getText());
-        String rodneCislo = TFRodneCislo.getText();
-        textArea.append(guiManager.performOperation(currentOperation,nazovKatastralnehoUzemia,idKatastralnehoUzemia,rodneCislo));
+        //DEFAULT SETTING
+        labelStatus.setText("");
+
+        //INITIALIZATION
+        String nazovKatastralnehoUzemia = "";
+        int idKatastralnehoUzemia = 0;
+        String rodneCislo = "";
+        int supisneCislo = 0;
+        int cisloListuVlastnicta = 0;
+
+        if (TFNazovKatastralneUzemie.isEnabled()) {
+            nazovKatastralnehoUzemia = TFNazovKatastralneUzemie.getText();
+        }
+        if (TFIdKatastralnehoUzemia.isEnabled()) {
+            try {
+                idKatastralnehoUzemia = Integer.parseInt(TFIdKatastralnehoUzemia.getText());
+            } catch (NumberFormatException e) {
+                idKatastralnehoUzemia = -1;
+                labelStatus.setText("idKatastralneho uradu obsahuje znaky");
+            }
+        }
+        if (TFRodneCislo.isEnabled()) {
+            rodneCislo = TFRodneCislo.getText();
+        }
+        if (TFsupisneCislo.isEnabled()) {
+            try {
+                supisneCislo = Integer.parseInt(TFsupisneCislo.getText());
+            } catch (NumberFormatException e) {
+                supisneCislo = -1;
+                labelStatus.setText("Supisne Cislo obsahuje znaky");
+            }
+        }
+        if (TFCisloListuVlastnictva.isEnabled()) {
+            try {
+                cisloListuVlastnicta = Integer.parseInt(TFCisloListuVlastnictva.getText());
+            } catch (NumberFormatException e) {
+                cisloListuVlastnicta = -1;
+                labelStatus.setText("Cislo listu vlastnictva obsahuje znaky");
+            }
+        }
+
+        String outputToAppend = guiManager.performOperation(currentOperation, nazovKatastralnehoUzemia, idKatastralnehoUzemia, rodneCislo, supisneCislo, cisloListuVlastnicta);
+        textArea.append(outputToAppend);
     }//GEN-LAST:event_mainSearchButtonActionPerformed
 
     private void jButtonVlozOsobaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVlozOsobaActionPerformed
@@ -561,12 +788,65 @@ public class GUI_KatasterNew extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonSaveActionPerformed
 
     private void buttonLoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLoadActionPerformed
-        ioHandler.load();        // TODO add your handling code here:
+        boolean dataLoaded;
+        dataLoaded = ioHandler.load();
+        if(dataLoaded){
+            labelStatus.setText("Data loaded");
+        }
+
     }//GEN-LAST:event_buttonLoadActionPerformed
 
     private void buttonCreateDefaultDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCreateDefaultDataActionPerformed
         new InsertDataObject(dataManager);
     }//GEN-LAST:event_buttonCreateDefaultDataActionPerformed
+
+    private void TFsupisneCisloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFsupisneCisloActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TFsupisneCisloActionPerformed
+
+    private void TFCisloListuVlastnictvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFCisloListuVlastnictvaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TFCisloListuVlastnictvaActionPerformed
+
+    private void buttonZmenaTrvalehoPobytuMajitelaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonZmenaTrvalehoPobytuMajitelaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonZmenaTrvalehoPobytuMajitelaActionPerformed
+
+    private void buttonZmenaTrvalehoPobytuMajitela1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonZmenaTrvalehoPobytuMajitela1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonZmenaTrvalehoPobytuMajitela1ActionPerformed
+
+    private void mainComboMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mainComboMenuActionPerformed
+        currentOperation = guiManager.getOperation(mainComboMenu.getSelectedItem().toString());
+        String status;
+        status = guiManager.updateInputLayout(currentOperation, TFNazovKatastralneUzemie, TFIdKatastralnehoUzemia, TFRodneCislo, TFsupisneCislo, TFCisloListuVlastnictva);
+        labelStatus.setText(status);
+    }//GEN-LAST:event_mainComboMenuActionPerformed
+
+    private void buttonKatastralneUzemiaVypisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonKatastralneUzemiaVypisActionPerformed
+        textArea.append(dataManager.vypisKatastralnychUzemi());
+    }//GEN-LAST:event_buttonKatastralneUzemiaVypisActionPerformed
+
+    private void buttonListyVlastnictvaVypisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonListyVlastnictvaVypisActionPerformed
+        textArea.append("*****************Listy vlastnictva \n");
+        textArea.append(dataManager.vypisListVlastnictva());
+    }//GEN-LAST:event_buttonListyVlastnictvaVypisActionPerformed
+
+    private void buttonNehnutelnostVypisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonNehnutelnostVypisActionPerformed
+        textArea.append(dataManager.vypisNehnutelnosti());
+    }//GEN-LAST:event_buttonNehnutelnostVypisActionPerformed
+
+    private void buttonOsobaVypisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonOsobaVypisActionPerformed
+        textArea.append(dataManager.vypisOsob());
+    }//GEN-LAST:event_buttonOsobaVypisActionPerformed
+
+    private void buttonPodielVypisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPodielVypisActionPerformed
+        textArea.append(dataManager.vypisPodielov());
+    }//GEN-LAST:event_buttonPodielVypisActionPerformed
+
+    private void buttonKatastralnyUradVypisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonKatastralnyUradVypisActionPerformed
+        textArea.append(dataManager.vypisKatastralnychUradov());
+    }//GEN-LAST:event_buttonKatastralnyUradVypisActionPerformed
 
     /**
      * @param args the command line arguments
@@ -604,9 +884,12 @@ public class GUI_KatasterNew extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel LabelCisloListuVlastnictva;
+    private javax.swing.JTextField TFCisloListuVlastnictva;
     private javax.swing.JTextField TFIdKatastralnehoUzemia;
     private javax.swing.JTextField TFNazovKatastralneUzemie;
     private javax.swing.JTextField TFRodneCislo;
+    private javax.swing.JTextField TFsupisneCislo;
     private javax.swing.JButton buttonClearTextArea;
     private javax.swing.JButton buttonCreateDefaultData;
     private javax.swing.JButton buttonKatastralneUzemiaVypis;
@@ -624,6 +907,8 @@ public class GUI_KatasterNew extends javax.swing.JFrame {
     private javax.swing.JButton buttonRemoveObcan;
     private javax.swing.JButton buttonSave;
     private javax.swing.JButton buttonVlozPodiel;
+    private javax.swing.JButton buttonZmenaTrvalehoPobytuMajitela;
+    private javax.swing.JButton buttonZmenaTrvalehoPobytuMajitela1;
     private javax.swing.JButton jButtonVlozKatastralneUzemie;
     private javax.swing.JButton jButtonVlozListVlastnictva;
     private javax.swing.JButton jButtonVlozNehnutelnost;
@@ -633,15 +918,22 @@ public class GUI_KatasterNew extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabelVyhladavanie;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel labelIdKatastralnehoUzemia;
     private javax.swing.JLabel labelRodneCislo;
+    private javax.swing.JLabel labelStatus;
+    private javax.swing.JLabel labelSupisneCislo;
+    private javax.swing.JLabel labelZmena;
     private javax.swing.JComboBox mainComboMenu;
     private javax.swing.JButton mainSearchButton;
     private javax.swing.JTextArea textArea;

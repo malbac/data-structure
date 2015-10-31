@@ -219,18 +219,21 @@ public class DataManager {
     //**********Vypisy*//***////////////////
 
     public String vypisListVlastnictva(){
-        String result = "Vypis Listov Vlastnictva\n\n";
+        String result = "*******************************************************\n";
+               result += "Vypis Listov Vlastnictva\n\nIdList , IdKatUzemie\n\n";
         LinkedList<TNode> list=  getListListVlastnictva().inorderTraversal();
         ListVlastnictva local;
         for(int i=0;i<list.size();i++){
             local = ((ListVlastnictvaId)list.get(i)).getDataReference();
-            result += local.getKatastralneUzemie()  +  "  ," + local.getIdListVlastnictva() + "\n";
+            result += local.getIdListVlastnictva()  +  "  ," + local.getKatastralneUzemie().getIdKatastralneUzemie() + "\n";
         }
         return result;
     }
 
     public String vypisKatastralnychUzemi(){
-        String result = "Vypis KatUzemi\n\n";
+        String result = "*******************************************************\n";
+               result += "Vypis KatUzemi\n" +
+                       "nazov\n";
         LinkedList<TNode> list=  getListKatastralneUzemie().inorderTraversal();
         KatastralneUzemie local;
         for(int i=0;i<list.size();i++){
@@ -241,18 +244,20 @@ public class DataManager {
     }
 
     public String vypisOsob(){
-        String result = "Vypis Osob\n\n";
+        String result = "String result = \"*******************************************************\n";
+               result += "Vypis \nOsob, rodne cislo\n\n";
         LinkedList<TNode> list=  getListOsoba().inorderTraversal();
         Osoba local;
         for(int i=0;i<list.size();i++){
             local = ((OsobaRodCislo)list.get(i)).getDataReference();
-            result += local.getMenoPriezvisko() +"  "+ local.getRodneCislo()+"\n";
+            result += local.getMenoPriezvisko() +",  "+ local.getRodneCislo()+"\n";
         }
         return result;
     }
 
     public String vypisNehnutelnosti(){
-        String result = "Vypis podiely\n\n";
+        String result = "*******************************************************\n";
+         result += "Vypis nehnutelnosti\nSupcislo, get adresa\n";
         LinkedList<TNode> list=  getListNehnutelnost().inorderTraversal();
         Nehnutelnost local;
         for(int i=0;i<list.size();i++){
@@ -263,12 +268,26 @@ public class DataManager {
     }
 
     public String vypisKatastralnychUradov(){
-        String result = "Vypis podiely\n\n";
+        String result = "*******************************************************\n";
+               result += "Vypis Katastralne urady\n\n";
         LinkedList<TNode> list=  getListKatastralnyUrad().inorderTraversal();
         KatastralnyUrad local;
         for(int i=0;i<list.size();i++){
             local = ((KatastralnyUradId)list.get(i)).getDataReference();
             result += local.getId_uradu() + "\n";
+        }
+        return result;
+    }
+
+    public String vypisPodielov(){
+        String result = "*******************************************************\n";
+        result += "Vypis podiely\n" +
+                "idPodiel, majitel, supisCislo,velkost Podielu\n";
+        LinkedList<TNode> list=  getListPodiel().inorderTraversal();
+        Podiel local;
+        for(int i=0;i<list.size();i++){
+            local = ((PodielId)list.get(i)).getDataReference();
+            result += local.getId_podiel() + ", " + local.getMajitel().getMenoPriezvisko() +", "+ local.getNehnutelnost().getIdSupisneCislo() + ", " +  local.getPodiel() + "\n";
         }
         return result;
     }
