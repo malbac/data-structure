@@ -60,6 +60,7 @@ public class ListVlastnictva {
                 ", katastralneUzemie=" + katastralneUzemie.getNazovKatastralnehoUzemia() +"\n\n";
 
         if(listNehnutelnost!=null){
+            result+="\n";
             LinkedList<TNode> localListNehnutelnost = listNehnutelnost.inorderTraversal();
             LinkedList<Podiel> localListPodiely;
 
@@ -67,7 +68,7 @@ public class ListVlastnictva {
             Nehnutelnost localNehnutelnost;
             for (int i = 0;i<localListNehnutelnost.size();i++){
                 localNehnutelnost = ((NehnutelnostSupisneCislo)localListNehnutelnost.get(i)).getDataReference();
-                result+= "Supisne Cislo: " + localNehnutelnost.getIdSupisneCislo() + "Adresa: " + localNehnutelnost.getAdresa() + "\n";
+                result+= "Supisne Cislo: " + localNehnutelnost.getIdSupisneCislo() + ", Adresa: " + localNehnutelnost.getAdresa() + "\n";
             }
 
             result  += "\nSupis vsetkych vlastnikov\n";
@@ -76,16 +77,12 @@ public class ListVlastnictva {
                 localListPodiely = localNehnutelnost.getListPodiely();
                 for(int j=0;j<localListPodiely.size();j++){
                     localPodiel = localListPodiely.get(j);
-                    result+= "Majitel : " + localPodiel.getMajitel().getMenoPriezvisko() + " Majetkovy podiel: " + localPodiel.getPodiel();
+                    result+= "Majitel : " + localPodiel.getMajitel().getMenoPriezvisko() + ",  Majetkovy podiel: " + localPodiel.getPodiel()+ " na nehnutelnosti :" + localPodiel.getNehnutelnost().getAdresa() + "\n";
                 }
 
             }
         }
 
-        return "ListVlastnictva: \n" +
-                "idListVlastnictva=" + idListVlastnictva +
-                ", katastralneUzemie=" + katastralneUzemie.getNazovKatastralnehoUzemia() +
-                ", listNehnutelnost=" + listNehnutelnost +
-                ", listPodielnici=" + listPodielnici+ " " + result;
+        return result;
     }
 }

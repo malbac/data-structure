@@ -22,7 +22,9 @@ public class Osoba {
     }
 
     public boolean addToListPodiely(Podiel podiel){
-        return listPodiely.add(podiel);
+        if(!listPodiely.contains(podiel)) {
+            return listPodiely.add(podiel);
+        } else return false;
     }
 
     public boolean removeFromListPodiely(Podiel podiel){

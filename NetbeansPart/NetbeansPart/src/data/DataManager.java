@@ -2,7 +2,6 @@ package data;
 
 import data.implementation.treap.TNode;
 import data.implementation.treap.Treap;
-import ioLogic.IOHandler;
 import structure.classes.*;
 import structure.searchIndex.*;
 
@@ -14,20 +13,35 @@ import java.util.LinkedList;
 public class DataManager {
 
     private Treap listKatastralnyUrad;
-    private Treap listKatastralneUzemie;
+    private Treap listKatastralneUzemiePodlaNazov;
+
+
+
+    private Treap listKatastralneUzemiePodlaId;
     private Treap listListVlastnictva;
-    private Treap listNehnutelnost;
+    private Treap listNehnutelnostPodlaSupC;
+
+
+
+    private Treap listNehnutelnostPodlaAdresa;
     private Treap listPodiel;
-    private Treap listOsoba;
+    private Treap listOsobaPodlaRodneCislo;
+
+
+
+    private Treap listOsobaPodlaTrvalyPobyt;
     private Treap listPodielnikovListV;
 
     public DataManager(){
        listKatastralnyUrad = new Treap();
-       listKatastralneUzemie = new Treap();
+       listKatastralneUzemiePodlaNazov = new Treap();
+        listKatastralneUzemiePodlaId = new Treap();
        listListVlastnictva = new Treap();
-       listNehnutelnost = new Treap();
+       listNehnutelnostPodlaSupC = new Treap();
+       listNehnutelnostPodlaAdresa = new Treap();
        listPodiel = new Treap();
-       listOsoba = new Treap();
+       listOsobaPodlaRodneCislo = new Treap();
+        listOsobaPodlaTrvalyPobyt = new Treap();
        listPodielnikovListV = new Treap();
 
         //new InsertDataObject(this);
@@ -39,32 +53,41 @@ public class DataManager {
         return listKatastralnyUrad;
     }
 
-    public Treap getListKatastralneUzemie() {
-        return listKatastralneUzemie;
+    public Treap getListKatastralneUzemiePodlaNazov() {
+        return listKatastralneUzemiePodlaNazov;
     }
 
     public Treap getListListVlastnictva() {
         return listListVlastnictva;
     }
 
-    public Treap getListNehnutelnost() {
-        return listNehnutelnost;
+    public Treap getListNehnutelnostPodlaSupC() {
+        return listNehnutelnostPodlaSupC;
     }
 
     public Treap getListPodiel() {
         return listPodiel;
     }
 
-    public Treap getListOsoba() {
-        return listOsoba;
+    public Treap getListOsobaPodlaRodneCislo() {
+        return listOsobaPodlaRodneCislo;
     }
 
     public Treap getListPodielnikovListV() {
         return listPodielnikovListV;
     }
 
+    public Treap getListKatastralneUzemiePodlaId() {
+        return listKatastralneUzemiePodlaId;
+    }
 
+    public Treap getListNehnutelnostPodlaAdresa() {
+        return listNehnutelnostPodlaAdresa;
+    }
 
+    public Treap getListOsobaPodlaTrvalyPobyt() {
+        return listOsobaPodlaTrvalyPobyt;
+    }
 
     //=====INSERT PART==============
 
@@ -77,11 +100,12 @@ public class DataManager {
         KatastralnyUrad katastralnyUrad = katastralnyUradId.getDataReference();
         KatastralneUzemie insertedKatastralneUzemie = new KatastralneUzemie(idKatastralneUzemie,katastralnyUrad,nazovKatastralnehoUzemia);
         //====DIFFERENT LIST
-        return listKatastralneUzemie.insert(new KatastralneUzemieNazov(insertedKatastralneUzemie));
+        listKatastralneUzemiePodlaId.insert(new KatastralneUzemieId(insertedKatastralneUzemie));
+        return listKatastralneUzemiePodlaNazov.insert(new KatastralneUzemieNazov(insertedKatastralneUzemie));
     }
 
     public boolean insertListVlastnictva(int idListVlastnictva,String nazovKatastralnehoUzemie){
-        KatastralneUzemieNazov katastralneUzemieNazov = (KatastralneUzemieNazov)listKatastralneUzemie.search(new KatastralneUzemieNazov(new KatastralneUzemie(0,null,nazovKatastralnehoUzemie)));
+        KatastralneUzemieNazov katastralneUzemieNazov = (KatastralneUzemieNazov) listKatastralneUzemiePodlaNazov.search(new KatastralneUzemieNazov(new KatastralneUzemie(0,null,nazovKatastralnehoUzemie)));
         KatastralneUzemie katastralneUzemie = katastralneUzemieNazov.getDataReference();
         ListVlastnictva inserteListVlastnictva = new ListVlastnictva(idListVlastnictva,katastralneUzemie);
         //====DIFFERENT LIST
@@ -105,7 +129,8 @@ public class DataManager {
 
         Nehnutelnost insertedNehnutelnost = new Nehnutelnost(idSupisneCislo,listVlastnictva,adresa);
         //====DIFFERENT LIST
-        insertToMainListNehnutelnost(insertedNehnutelnost);
+        insertToMainListNehnutelnostPodlaSupisnehoCisla(insertedNehnutelnost);
+        insertToMainListNehnutelnostPodlaAdresa(insertedNehnutelnost);
         insertNehnutelnostToListInListVlastnictva(ListVlastnictvaId, insertedNehnutelnost);
         insertNehnutelnostToListInListKatastralneUzemie(ListVlastnictvaId, insertedNehnutelnost);
         return true;
@@ -119,14 +144,23 @@ public class DataManager {
     public boolean insertOsoba(String rodneCislo,String menoPriezvisko,String trvalyPobyt){
         Osoba insetedOsoba = new Osoba(rodneCislo,menoPriezvisko,trvalyPobyt);
         //====DIFFERENT LIST
-        return listOsoba.insert(new OsobaRodCislo(insetedOsoba));
+        insertPodielToMainListOsobaPodlaAdresa(insetedOsoba);
+        return insertPodielToMainListOsobaPodlaRodneCislo(insetedOsoba);
+    }
+
+    private boolean insertPodielToMainListOsobaPodlaAdresa(Osoba insetedOsoba) {
+        return listOsobaPodlaTrvalyPobyt.insert(new OsobaTrvalyPobyt(insetedOsoba));
+    }
+
+    private boolean insertPodielToMainListOsobaPodlaRodneCislo(Osoba insetedOsoba) {
+        return listOsobaPodlaRodneCislo.insert(new OsobaRodCislo(insetedOsoba));
     }
 
     public boolean insertPodiel(int idPodiel,String rodneCisloPodielnika,int supisneCisloNehnutelnosti, int velkostPodielu){
-        OsobaRodCislo osobaRodCislo = (OsobaRodCislo)listOsoba.search(new OsobaRodCislo(new Osoba(rodneCisloPodielnika,null,null)));
+        OsobaRodCislo osobaRodCislo = (OsobaRodCislo) listOsobaPodlaRodneCislo.search(new OsobaRodCislo(new Osoba(rodneCisloPodielnika,null,null)));
         Osoba majitel = osobaRodCislo.getDataReference();
 
-        NehnutelnostSupisneCislo nehnutelnostSupisneCislo = (NehnutelnostSupisneCislo) listNehnutelnost.search(new NehnutelnostSupisneCislo(new Nehnutelnost(supisneCisloNehnutelnosti,null,null)));
+        NehnutelnostSupisneCislo nehnutelnostSupisneCislo = (NehnutelnostSupisneCislo) listNehnutelnostPodlaSupC.search(new NehnutelnostSupisneCislo(new Nehnutelnost(supisneCisloNehnutelnosti,null,null)));
         Nehnutelnost nehnutelnost = nehnutelnostSupisneCislo.getDataReference();
         //====NOVY PODIEL====
         Podiel insertedPodiel = new Podiel(idPodiel,majitel,nehnutelnost,velkostPodielu);
@@ -180,13 +214,17 @@ public class DataManager {
     }
 
     private void insertToListInKatastraneUzemie(KatastralneUzemie katastralneUzemie,ListVlastnictva listVlastnictva) {
-        KatastralneUzemieNazov localKUN = (KatastralneUzemieNazov)listKatastralneUzemie.search(new KatastralneUzemieNazov(katastralneUzemie));
+        KatastralneUzemieNazov localKUN = (KatastralneUzemieNazov) listKatastralneUzemiePodlaNazov.search(new KatastralneUzemieNazov(katastralneUzemie));
         localKUN.getDataReference().addListVlastnictva(new ListVlastnictvaId(listVlastnictva));
     }
 
     //-----NEHNUTELNOST -----------------------------
-    private boolean insertToMainListNehnutelnost(Nehnutelnost insertedNehnutelnost) {
-        return listNehnutelnost.insert(new NehnutelnostSupisneCislo(insertedNehnutelnost));
+    private boolean insertToMainListNehnutelnostPodlaSupisnehoCisla(Nehnutelnost insertedNehnutelnost) {
+        return listNehnutelnostPodlaSupC.insert(new NehnutelnostSupisneCislo(insertedNehnutelnost));
+    }
+
+    private boolean insertToMainListNehnutelnostPodlaAdresa(Nehnutelnost insertedNehnutelnost) {
+        return listNehnutelnostPodlaAdresa.insert(new NehnutelnostAdresa(insertedNehnutelnost));
     }
 
     private void insertNehnutelnostToListInListVlastnictva(ListVlastnictvaId listVlastnictvaId, Nehnutelnost insertedNehnutelnost) {
@@ -234,11 +272,11 @@ public class DataManager {
         String result = "*******************************************************\n";
                result += "Vypis KatUzemi\n" +
                        "nazov\n";
-        LinkedList<TNode> list=  getListKatastralneUzemie().inorderTraversal();
+        LinkedList<TNode> list=  getListKatastralneUzemiePodlaNazov().inorderTraversal();
         KatastralneUzemie local;
         for(int i=0;i<list.size();i++){
             local = ((KatastralneUzemieNazov)list.get(i)).getDataReference();
-            result += local.getNazovKatastralnehoUzemia() +"\n";
+            result += local.getNazovKatastralnehoUzemia() + ", " + local.getIdKatastralneUzemie()+"\n";
         }
         return result;
     }
@@ -246,7 +284,7 @@ public class DataManager {
     public String vypisOsob(){
         String result = "String result = \"*******************************************************\n";
                result += "Vypis \nOsob, rodne cislo\n\n";
-        LinkedList<TNode> list=  getListOsoba().inorderTraversal();
+        LinkedList<TNode> list=  getListOsobaPodlaRodneCislo().inorderTraversal();
         Osoba local;
         for(int i=0;i<list.size();i++){
             local = ((OsobaRodCislo)list.get(i)).getDataReference();
@@ -258,7 +296,7 @@ public class DataManager {
     public String vypisNehnutelnosti(){
         String result = "*******************************************************\n";
          result += "Vypis nehnutelnosti\nSupcislo, get adresa\n";
-        LinkedList<TNode> list=  getListNehnutelnost().inorderTraversal();
+        LinkedList<TNode> list=  getListNehnutelnostPodlaSupC().inorderTraversal();
         Nehnutelnost local;
         for(int i=0;i<list.size();i++){
             local = ((NehnutelnostSupisneCislo)list.get(i)).getDataReference();

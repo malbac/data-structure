@@ -1,3 +1,2 @@
 1,Bytca
 2,Zilina
-5,Bytca

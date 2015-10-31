@@ -1,7 +1,6 @@
 package ioLogic;
 
 import data.DataManager;
-import data.DataStateEntity;
 import data.InsertDataObject;
 import data.implementation.treap.TNode;
 import ioLogic.loadClasses.*;
@@ -42,12 +41,7 @@ public class IOHandler {
 
     }
 
-    private void createFile() {
-        File file = new File(filePath);
-        if(!file.exists()){
-            file.mkdir();
-        }
-    }
+
 
 
     public boolean save(){
@@ -60,6 +54,23 @@ public class IOHandler {
         savePodiel();
 
         return true;
+    }
+    public boolean load(){
+        loadKatastralnyUrad();
+        loadKatastralneUzemie();
+        loadListVlastnictva();
+        loadNehnutelnost();
+        loadOsoba();
+        loadPodiel();
+        return true;
+    }
+    //////*******IMPLEMENTATION PART******************************
+
+    private void createFile() {
+        File file = new File(filePath);
+        if(!file.exists()){
+            file.mkdir();
+        }
     }
 
     private void initializePrintWriters() {
@@ -78,15 +89,7 @@ public class IOHandler {
         }
     }
 
-    public boolean load(){
-        loadKatastralnyUrad();
-        loadKatastralneUzemie();
-        loadListVlastnictva();
-        loadNehnutelnost();
-        loadOsoba();
-        loadPodiel();
-        return true;
-    }
+
 
     //SAVE PART
 
@@ -102,7 +105,7 @@ public class IOHandler {
     }
 
     private void saveKatastralneUzemie() {
-        LinkedList<TNode> localKatastralneUzemie = dataManager.getListKatastralneUzemie().inorderTraversal();
+        LinkedList<TNode> localKatastralneUzemie = dataManager.getListKatastralneUzemiePodlaNazov().inorderTraversal();
         KatastralneUzemie localVar;
         for (int i=0;i<localKatastralneUzemie.size();i++){
             localVar = ((KatastralneUzemieNazov)localKatastralneUzemie.get(i)).getDataReference();
@@ -127,7 +130,8 @@ public class IOHandler {
     }
 
     private void saveNehnutelnost() {
-        LinkedList<TNode> localListNehnutelnosti = dataManager.getListNehnutelnost().inorderTraversal();
+        //int idSupisneCislo,int idListVlastnictva, String adresa
+        LinkedList<TNode> localListNehnutelnosti = dataManager.getListNehnutelnostPodlaSupC().inorderTraversal();
         Nehnutelnost localVar;
         for (int i=0;i<localListNehnutelnosti.size();i++){
             localVar = ((NehnutelnostSupisneCislo)localListNehnutelnosti.get(i)).getDataReference();
@@ -140,7 +144,7 @@ public class IOHandler {
     }
 
     private void saveOsoba() {
-        LinkedList<TNode> localListOsoba = dataManager.getListOsoba().inorderTraversal();
+        LinkedList<TNode> localListOsoba = dataManager.getListOsobaPodlaRodneCislo().inorderTraversal();
         Osoba localVar;
         for (int i=0;i<localListOsoba.size();i++){
             localVar = ((OsobaRodCislo)localListOsoba.get(i)).getDataReference();

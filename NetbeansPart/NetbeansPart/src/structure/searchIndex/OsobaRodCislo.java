@@ -23,9 +23,9 @@ public class OsobaRodCislo extends TNode {
 
 
 
-    public OsobaRodCislo(Osoba katastralneUzemie) {
+    public OsobaRodCislo(Osoba osoba) {
         super();
-        this.dataReference = katastralneUzemie;
+        this.dataReference = osoba;
     }
 
     @Override

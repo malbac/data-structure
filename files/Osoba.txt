@@ -1,3 +1,5 @@
-1111,Martin Malobicky,Mala Bytca
-1112,Erik Malobicky,Mala Bytca
-1113,Fero,Jablonove
+1111,Martin Malobicky,Mala Bytca 175
+1112,Fero Krk,Mala Bytca 60
+1113,Milan Kucera,Mala Bytca 60
+1114,Robo Hlavaty,Mala Bytca 60
+1115,Milo Nosaty,Mala Bytca 60

@@ -67,7 +67,13 @@ public class Nehnutelnost {
                 ", idListVlastnictva=" + listVlastnictva.getIdListVlastnictva() +
                 ", adresa='" + adresa + '\'';
         if(listPodiely!=null && !listPodiely.isEmpty()){
-            result += ", podiel=" + listPodiely.getFirst().getPodiel() + "%";
+            result += "\nPodiely:\n";
+            Podiel localPodiel;
+            for(int i=0;i<listPodiely.size();i++){
+                localPodiel = listPodiely.get(i);
+                result += localPodiel.getMajitel().getMenoPriezvisko() + " ma " + localPodiel.getPodiel() + "%\n";
+            }
+
         }
         return result;
     }

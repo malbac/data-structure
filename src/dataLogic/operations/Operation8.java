@@ -2,7 +2,6 @@ package dataLogic.operations;
 
 import data.DataManager;
 import data.DataStateEntity;
-import data.InsertDataObject;
 import data.implementation.treap.Treap;
 import structure.classes.*;
 import structure.searchIndex.*;
@@ -21,7 +20,7 @@ public class Operation8 {
 
     public Operation8(){
         dataManager = DataStateEntity.getDataManager();
-        listOsoba = dataManager.getListOsoba();
+        listOsoba = dataManager.getListOsobaPodlaRodneCislo();
     }
 
 

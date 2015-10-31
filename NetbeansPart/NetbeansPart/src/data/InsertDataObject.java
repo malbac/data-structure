@@ -46,8 +46,11 @@ public class InsertDataObject {
     }
 
     private void naplnOsoba() {
-        dataManager.insertOsoba("1111","Martin Malobicky","Mala Bytca");
-        dataManager.insertOsoba("1112","Erik Malobicky","Mala Bytca");
+        dataManager.insertOsoba("1111","Martin Malobicky","Mala Bytca 175");
+        dataManager.insertOsoba("1112","Fero Krk","Mala Bytca 60");
+        dataManager.insertOsoba("1113","Milan Kucera","Mala Bytca 60");
+        dataManager.insertOsoba("1114","Robo Hlavaty","Mala Bytca 60");
+        dataManager.insertOsoba("1115","Milo Nosaty","Mala Bytca 60");
     }
 
 
