@@ -125,7 +125,7 @@ public class DeleteListVlastnictva extends javax.swing.JPanel {
         int idKatastralnehoUzemia = Integer.parseInt(TFKatastralneUzemie.getText());
 
         String result ="";
-        //result = operationManager.getOperation21().insertKatastralneUzemie(idUradu,idKatastralnehoUzemia,nazovKatastralnehoUzemia);
+        result = operationManager.getOperation19().odstranenieListuVlastnictva(idListVlastnictva,idKatastralnehoUzemia);
         labelState.setText(result);
     }//GEN-LAST:event_buttonVymazActionPerformed
 

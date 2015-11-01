@@ -18,51 +18,49 @@ public class Operation8 {
 
     ////
 
-    public Operation8(){
+    public Operation8() {
         dataManager = DataStateEntity.getDataManager();
         listOsoba = dataManager.getListOsobaPodlaRodneCislo();
     }
 
 
-
-
-
-
-
-
     /**
      * vypis vsetky nehnutelnosti majitela
+     *
      * @param rodneCislo
      * @param idKatastralneUzemie
      */
-    public String vypisNehnutelnostiMajitelaVKatUzemi(String rodneCislo,int idKatastralneUzemie){
-    String result = "*********************************************************************************************************\n";
-          result += "*************************Vypis nehnutelnosti majitela v katastralnom uzemi*******************************\n";
+    public String vypisNehnutelnostiMajitelaVKatUzemi(String rodneCislo, int idKatastralneUzemie) {
+        String result = "*********************************************************************************************************\n";
+        result += "*************************Vypis nehnutelnosti majitela v katastralnom uzemi*******************************\n";
 
 
-        OsobaRodCislo localOsobaRodCislo = (OsobaRodCislo)listOsoba.search(new OsobaRodCislo(new Osoba(rodneCislo,null,null)));
-        LinkedList<Podiel> listPodiely = localOsobaRodCislo.getDataReference().getListPodiely();
-        //prehladavanie listu podielov a kontrola, ci sa podiel/majetok nachadza v idKatastalneUzemie
-        int foundId;
-        Nehnutelnost localNehnutelnost;
+        OsobaRodCislo localOsobaRodCislo = (OsobaRodCislo) listOsoba.search(new OsobaRodCislo(new Osoba(rodneCislo, null, null)));
+        if (localOsobaRodCislo != null) {
+            LinkedList<Podiel> listPodiely = localOsobaRodCislo.getDataReference().getListPodiely();
+            //prehladavanie listu podielov a kontrola, ci sa podiel/majetok nachadza v idKatastalneUzemie
+            int foundId;
+            Nehnutelnost localNehnutelnost;
 
 
-        result += localOsobaRodCislo.toString() + "\n";
-        for(int i = 0;i<listPodiely.size();i++){
-            localNehnutelnost = listPodiely.get(i).getNehnutelnost();
-            foundId = localNehnutelnost.getListVlastnictva().getKatastralneUzemie().getIdKatastralneUzemie();
-            if(foundId==idKatastralneUzemie){
-                result += "\n";
-                result +=localNehnutelnost.toString();
+            result += localOsobaRodCislo.toString() + "\n";
+            for (int i = 0; i < listPodiely.size(); i++) {
+                localNehnutelnost = listPodiely.get(i).getNehnutelnost();
+                foundId = localNehnutelnost.getListVlastnictva().getKatastralneUzemie().getIdKatastralneUzemie();
+                if (foundId == idKatastralneUzemie) {
+                    result += "\n";
+                    result += localNehnutelnost.toString();
+                }
             }
+        } else {
+            result += "\nZadana osoba neexistuje";
         }
-        result+="\n*********************************************************************************************************\n";
+        result += "\n*********************************************************************************************************\n";
         return result;
     }
 
 
-
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Operation8 operation8 = new Operation8();
         System.out.println(operation8.vypisNehnutelnostiMajitelaVKatUzemi("1111", 1));
     }

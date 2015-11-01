@@ -26,22 +26,33 @@
                           <Component id="LabelNazovKatastralnehoUzemia" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="labelSupisneCislo" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="7" max="32767" attributes="0"/>
+                      <EmptySpace pref="44" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="TFNazovKatastralnehoUzemia" pref="152" max="32767" attributes="0"/>
+                          <Component id="TFNazovKatastralnehoUzemia" pref="161" max="32767" attributes="0"/>
                           <Component id="TFsupisneCislo" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="LabelRodneCislo" pref="118" max="32767" attributes="0"/>
-                      <EmptySpace pref="23" max="32767" attributes="0"/>
-                      <Component id="TFRodneCislo" min="-2" pref="152" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="jSeparator1" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Component id="labelRemve" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
-                  <Component id="jSeparator1" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="LabelRodneCislo1" min="-2" pref="166" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="LabelRodneCislo" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="TFRodneCisloStaryMajitel" pref="163" max="32767" attributes="0"/>
+                          <Component id="TFRodneCisloNovyMajitel" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -66,10 +77,15 @@
               <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="TFRodneCislo" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="TFRodneCisloStaryMajitel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   <Component id="LabelRodneCislo" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="34" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LabelRodneCislo1" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="TFRodneCisloNovyMajitel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="26" max="32767" attributes="0"/>
               <Component id="buttonZmen" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="labelState" min="-2" max="-2" attributes="0"/>
@@ -90,17 +106,17 @@
     <Component class="javax.swing.JLabel" name="LabelRodneCislo">
       <Properties>
         <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="TFRodneCislo"/>
+          <ComponentRef name="TFRodneCisloStaryMajitel"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="rodne cislo"/>
+        <Property name="text" type="java.lang.String" value="rodne cislo stareho majitela"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="TFRodneCislo">
+    <Component class="javax.swing.JTextField" name="TFRodneCisloStaryMajitel">
       <Properties>
         <Property name="text" type="java.lang.String" value="rodne cislo"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TFRodneCisloActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TFRodneCisloStaryMajitelActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="labelState">
@@ -140,6 +156,22 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JSeparator" name="jSeparator1">
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelRodneCislo1">
+      <Properties>
+        <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="TFRodneCisloStaryMajitel"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="rodne cislo noveho majitela"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="TFRodneCisloNovyMajitel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="rodne cislo"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TFRodneCisloNovyMajitelActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

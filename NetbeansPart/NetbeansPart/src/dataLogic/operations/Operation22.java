@@ -29,29 +29,26 @@ public class Operation22 {
 
 
 
-    public String vypisNehnutelnosti(int supisneCislo,int idKatastralnehoUzemia){
-        String result = "*********************************************************************************************************\n";
-              result += "****************************Vypis nehnutelnosti podla supisneho cisla a id katastralneho uzemia**********\n" +
-                        "         Katastralne uzemie: " + supisneCislo + ", id kat uzemia"+ idKatastralnehoUzemia + "\n\n";
-        KatastralneUzemieId localKatastralneUzemie;
-        localKatastralneUzemie = (KatastralneUzemieId) katUzemieIdTreap.search(new KatastralneUzemieId(new KatastralneUzemie(idKatastralnehoUzemia, null, null)));
+    public String odstranenieKatastralnehoUzemia(int idKatastralnehoUzemia) {
 
-        if(localKatastralneUzemie!=null){//najdene katastralne uzemie
-            //variables
-            Treap listNehnutelnosti;
-            Nehnutelnost localN;
-            //search
-            listNehnutelnosti = localKatastralneUzemie.getDataReference().getListNehnutelnost();
-            localN = ((NehnutelnostSupisneCislo)listNehnutelnosti.search(new NehnutelnostSupisneCislo(new Nehnutelnost(supisneCislo,null,null)))).getDataReference();
-            //output
-            result += localN.toString();
-            result += "\n\nList Vlastnictva, kde je nehnutelnost zapisana";
-            result += localN.getListVlastnictva().toString();
-            result += "\n*********************************************************************************************************\n";
 
+        String nazovKatastralnehoUzemia;
+        int idUradu;
+
+        KatastralneUzemieId katastralneUzemieId = (KatastralneUzemieId)katUzemieIdTreap.search(new KatastralneUzemieId(new KatastralneUzemie(idKatastralnehoUzemia, null, null)));
+
+        if(katastralneUzemieId!=null) {
+            KatastralneUzemie katastralneUzemie;
+            katastralneUzemie = katastralneUzemieId.getDataReference();
+
+            nazovKatastralnehoUzemia = katastralneUzemie.getNazovKatastralnehoUzemia();
+            idUradu = katastralneUzemie.getUrad().getId_uradu();
+
+            dataManager.removeKatastralneUzemie(idUradu, idKatastralnehoUzemia, nazovKatastralnehoUzemia);
+        } else {
+            return "Osoba sa nenasla";
         }
-
-        return result;
+        return "uspesne odstranene";
     }
 
 

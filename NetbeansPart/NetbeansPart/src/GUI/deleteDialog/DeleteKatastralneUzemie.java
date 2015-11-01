@@ -101,7 +101,7 @@ public class DeleteKatastralneUzemie extends javax.swing.JPanel {
         int idKatastralnehoUzemia = Integer.parseInt(TFKatastralneUzemie.getText());
 
         String result ="";
-        //result = operationManager.getOperation21().insertKatastralneUzemie(idUradu,idKatastralnehoUzemia,nazovKatastralnehoUzemia);
+        result = operationManager.getOperation22().odstranenieKatastralnehoUzemia(idKatastralnehoUzemia);
         labelState.setText(result);
     }//GEN-LAST:event_buttonVymazActionPerformed
 

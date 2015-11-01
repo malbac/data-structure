@@ -19,6 +19,8 @@ public class GuiManager {
     final  String operation8 = "(Operacia 8) Vypis nehnutelnosti majitela";
     final  String operation9 = "(Operacia 9) Vypis nehnutelnosti majitela definovane rod. cislom";
 
+    final  String operation14 = "(Operacia 14) Vypis vsetkych katastralnych uzemi utriedenych podla ich nazvov";
+
     OperationManager operationManager;
 
     public GuiManager(){
@@ -36,6 +38,7 @@ public class GuiManager {
             case operation7: return "operation7";
             case operation8: return "operation8";
             case operation9: return "operation9";
+            case operation14: return "operation14";
             default: return operation7.getClass().getName();
         }
     }
@@ -50,6 +53,7 @@ public class GuiManager {
         mainComboMenu.addItem(operation7);
         mainComboMenu.addItem(operation8);
         mainComboMenu.addItem(operation9);
+        mainComboMenu.addItem(operation14);
     }
 
     public String performOperation(String currentOperation,String nazovKatastralnehoUzemia,int idKatastralnehoUzemia,String rodneCislo,int supisneCislo,int cisloListuVlastnicta) {
@@ -63,6 +67,7 @@ public class GuiManager {
             case "operation7" : return operationManager.getOperation7().vypisNehnutelnostiPodlaKatUzemia(nazovKatastralnehoUzemia);
             case "operation8"  : return operationManager.getOperation8().vypisNehnutelnostiMajitelaVKatUzemi(rodneCislo, idKatastralnehoUzemia);
             case "operation9"  : return operationManager.getOperation9().vypisNehnutelnostiMajitela(rodneCislo);
+            case "operation14"  : return operationManager.getOperation14().vypisVsetkychKatastralnychUzemi();
 
             default: return "No input";
         }
@@ -96,6 +101,7 @@ public class GuiManager {
             case "operation7" : return operation7enableInputLayout(TFNazovKatastralneUzemie);
             case "operation8"  : return operation8enableInputLayout(TFIdKatastralnehoUzemia, TFRodneCislo);
             case "operation9"  : return operation9enableInputLayout(TFRodneCislo);
+            case "operation14"  : return null;// nie je ziaden vstup
 
             default: return "Wrong input operation updateInputLayout";
         }
@@ -175,3 +181,7 @@ public class GuiManager {
     public static void main (String[] args){
     }
 }
+
+
+
+

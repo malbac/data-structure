@@ -23,22 +23,34 @@
                   <Component id="labelState" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Component id="labelRemve" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="151" max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="1" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="LabelRodneCislo" pref="152" max="32767" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="LabelCisloListuVlastnictva" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="labelRodneCislo" min="-2" pref="109" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="LabelKatastralneUzemie" max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="LabelKatastralneUzemie" max="32767" attributes="0"/>
-                              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="labelSupisneCislo" min="-2" pref="115" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="TFKatastralneUzemie" pref="156" max="32767" attributes="0"/>
-                          <Component id="TFRodneCislo" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="TFsupisneCislo" alignment="0" max="32767" attributes="0"/>
+                          <Component id="TFKatastralneUzemie" alignment="0" max="32767" attributes="0"/>
+                          <Component id="TFRodneCislo" alignment="0" max="32767" attributes="0"/>
+                          <Component id="TFCisloListuVlastnictva" alignment="0" pref="176" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -51,20 +63,30 @@
           <Group type="102" attributes="0">
               <Component id="labelRemve" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="TFRodneCislo" alignment="0" max="32767" attributes="0"/>
-                  <Component id="LabelRodneCislo" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="TFRodneCislo" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="labelRodneCislo" alignment="3" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="TFKatastralneUzemie" max="32767" attributes="0"/>
-                  <Component id="LabelKatastralneUzemie" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="TFKatastralneUzemie" alignment="0" max="32767" attributes="0"/>
+                  <Component id="LabelKatastralneUzemie" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="22" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="TFCisloListuVlastnictva" alignment="0" max="32767" attributes="0"/>
+                  <Component id="LabelCisloListuVlastnictva" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="TFsupisneCislo" alignment="0" max="32767" attributes="0"/>
+                  <Component id="labelSupisneCislo" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="buttonVymaz" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="labelState" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -78,22 +100,6 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonVymazActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="TFKatastralneUzemie">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="katastralne uzemie"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TFKatastralneUzemieActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="LabelKatastralneUzemie">
-      <Properties>
-        <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="TFKatastralneUzemie"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="id katastralne uzemie"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JLabel" name="labelState">
       <Properties>
         <Property name="text" type="java.lang.String" value="XXXX"/>
@@ -104,17 +110,56 @@
         <Property name="text" type="java.lang.String" value="Odstranenie Majetkoveho podielu"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="LabelRodneCislo">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="rodne cislo na liste V."/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JTextField" name="TFRodneCislo">
       <Properties>
-        <Property name="text" type="java.lang.String" value="rodne cislo"/>
+        <Property name="text" type="java.lang.String" value="rodneCislo"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TFRodneCisloActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelRodneCislo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="rodne_cislo"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelCisloListuVlastnictva">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cislo Listu Vlastnictva"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="TFCisloListuVlastnictva">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cislo Listu Vlastnictva"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TFCisloListuVlastnictvaActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelSupisneCislo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="supisne cislo"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelKatastralneUzemie">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="id katastralne uzemie"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="TFsupisneCislo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="supisne cislo"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TFsupisneCisloActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="TFKatastralneUzemie">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="katastralne uzemie"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TFKatastralneUzemieActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

@@ -32,41 +32,23 @@ public class VlozPodiel extends javax.swing.JPanel {
     private void initComponents() {
 
         jButtonVlozOsoba = new javax.swing.JButton();
-        TFIdPodiel = new javax.swing.JTextField();
-        LabelIdPodiel = new javax.swing.JLabel();
-        LabelIdSupisneCislo = new javax.swing.JLabel();
-        TFSupisneCislo = new javax.swing.JTextField();
         TFRodneCislo = new javax.swing.JTextField();
         labelRodneCislo = new javax.swing.JLabel();
         labelState = new javax.swing.JLabel();
         LabelVelkostPodielu = new javax.swing.JLabel();
         TFVelkostPodielu = new javax.swing.JTextField();
-        jSeparator1 = new javax.swing.JSeparator();
+        LabelCisloListuVlastnictva = new javax.swing.JLabel();
+        TFCisloListuVlastnictva = new javax.swing.JTextField();
+        LabelKatastralneUzemie = new javax.swing.JLabel();
+        TFKatastralneUzemie = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        labelSupisneCislo = new javax.swing.JLabel();
+        TFsupisneCislo = new javax.swing.JTextField();
 
         jButtonVlozOsoba.setText("Vloz");
         jButtonVlozOsoba.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonVlozOsobaActionPerformed(evt);
-            }
-        });
-
-        TFIdPodiel.setText("id podiel");
-        TFIdPodiel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TFIdPodielActionPerformed(evt);
-            }
-        });
-
-        LabelIdPodiel.setLabelFor(TFIdPodiel);
-        LabelIdPodiel.setText("id podiel");
-
-        LabelIdSupisneCislo.setLabelFor(TFSupisneCislo);
-        LabelIdSupisneCislo.setText("rodne cislo");
-
-        TFSupisneCislo.setText("supisne cislo");
-        TFSupisneCislo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TFSupisneCisloActionPerformed(evt);
             }
         });
 
@@ -82,13 +64,41 @@ public class VlozPodiel extends javax.swing.JPanel {
 
         labelState.setText("XXXX");
 
-        LabelVelkostPodielu.setLabelFor(TFIdPodiel);
         LabelVelkostPodielu.setText("velkost podielu");
 
         TFVelkostPodielu.setText("velkost podielu");
         TFVelkostPodielu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TFVelkostPodieluActionPerformed(evt);
+            }
+        });
+
+        LabelCisloListuVlastnictva.setText("Cislo Listu Vlastnictva");
+
+        TFCisloListuVlastnictva.setText("Cislo Listu Vlastnictva");
+        TFCisloListuVlastnictva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TFCisloListuVlastnictvaActionPerformed(evt);
+            }
+        });
+
+        LabelKatastralneUzemie.setText("id katastralne uzemie");
+
+        TFKatastralneUzemie.setText("katastralne uzemie");
+        TFKatastralneUzemie.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TFKatastralneUzemieActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Zapisanie majetkoveho podielu majitela");
+
+        labelSupisneCislo.setText("supisne cislo");
+
+        TFsupisneCislo.setText("supisne cislo");
+        TFsupisneCislo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TFsupisneCisloActionPerformed(evt);
             }
         });
 
@@ -99,45 +109,59 @@ public class VlozPodiel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator1)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(labelRodneCislo, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(TFRodneCislo, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE))
                     .addComponent(jButtonVlozOsoba, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(labelState, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(LabelCisloListuVlastnictva, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGap(10, 10, 10))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(labelRodneCislo, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(26, 26, 26))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(LabelKatastralneUzemie, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(LabelVelkostPodielu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGap(32, 32, 32)))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(LabelIdSupisneCislo, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(LabelIdPodiel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(LabelVelkostPodielu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(10, 10, 10)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(labelSupisneCislo, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(20, 20, 20)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(TFsupisneCislo)
                             .addComponent(TFVelkostPodielu)
-                            .addComponent(TFSupisneCislo)
-                            .addComponent(TFIdPodiel, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE))))
+                            .addComponent(TFKatastralneUzemie)
+                            .addComponent(TFRodneCislo)
+                            .addComponent(TFCisloListuVlastnictva, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(4, 4, 4)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TFRodneCislo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelRodneCislo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(8, 8, 8)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(TFSupisneCislo, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                    .addComponent(LabelIdSupisneCislo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(4, 4, 4)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(TFIdPodiel)
-                    .addComponent(LabelIdPodiel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(TFKatastralneUzemie)
+                    .addComponent(LabelKatastralneUzemie, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(TFCisloListuVlastnictva)
+                    .addComponent(LabelCisloListuVlastnictva, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(19, 19, 19)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(TFsupisneCislo)
+                    .addComponent(labelSupisneCislo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(TFVelkostPodielu)
                     .addComponent(LabelVelkostPodielu, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -145,28 +169,22 @@ public class VlozPodiel extends javax.swing.JPanel {
                 .addComponent(jButtonVlozOsoba)
                 .addGap(18, 18, 18)
                 .addComponent(labelState)
-                .addContainerGap())
+                .addGap(109, 109, 109))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void TFSupisneCisloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFSupisneCisloActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TFSupisneCisloActionPerformed
-
-    private void TFIdPodielActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFIdPodielActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TFIdPodielActionPerformed
 
     private void TFRodneCisloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFRodneCisloActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TFRodneCisloActionPerformed
 
     private void jButtonVlozOsobaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVlozOsobaActionPerformed
-        String rodneCislo = TFSupisneCislo.getText();
-        String menoPriezvisko = TFRodneCislo.getText();
-        String trvalyPobyt = TFIdPodiel.getText();
+        String rodneCislo = TFRodneCislo.getText();
+        int idListVlastnictva = Integer.parseInt(TFCisloListuVlastnictva.getText());
+        int idKatastralnehoUzemia = Integer.parseInt(TFKatastralneUzemie.getText());
+        int velkostPodielu = Integer.parseInt(TFVelkostPodielu.getText());
+        int idSupisneCislo = Integer.parseInt(TFsupisneCislo.getText());
 
-        String result = operationManager.getOperation15().insertOsoba(rodneCislo,menoPriezvisko,trvalyPobyt);
+        String result = operationManager.getOperation12().zapisanieMajetkovehoPodielu(rodneCislo, idKatastralnehoUzemia, idListVlastnictva, idSupisneCislo, velkostPodielu);
         labelState.setText(result);
     }//GEN-LAST:event_jButtonVlozOsobaActionPerformed
 
@@ -174,18 +192,32 @@ public class VlozPodiel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_TFVelkostPodieluActionPerformed
 
+    private void TFCisloListuVlastnictvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFCisloListuVlastnictvaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TFCisloListuVlastnictvaActionPerformed
+
+    private void TFKatastralneUzemieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFKatastralneUzemieActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TFKatastralneUzemieActionPerformed
+
+    private void TFsupisneCisloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFsupisneCisloActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TFsupisneCisloActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel LabelIdPodiel;
-    private javax.swing.JLabel LabelIdSupisneCislo;
+    private javax.swing.JLabel LabelCisloListuVlastnictva;
+    private javax.swing.JLabel LabelKatastralneUzemie;
     private javax.swing.JLabel LabelVelkostPodielu;
-    private javax.swing.JTextField TFIdPodiel;
+    private javax.swing.JTextField TFCisloListuVlastnictva;
+    private javax.swing.JTextField TFKatastralneUzemie;
     private javax.swing.JTextField TFRodneCislo;
-    private javax.swing.JTextField TFSupisneCislo;
     private javax.swing.JTextField TFVelkostPodielu;
+    private javax.swing.JTextField TFsupisneCislo;
     private javax.swing.JButton jButtonVlozOsoba;
-    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel labelRodneCislo;
     private javax.swing.JLabel labelState;
+    private javax.swing.JLabel labelSupisneCislo;
     // End of variables declaration//GEN-END:variables
 }

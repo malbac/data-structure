@@ -34,7 +34,7 @@ public class ZmenaMajitela extends javax.swing.JPanel {
 
         buttonZmen = new javax.swing.JButton();
         LabelRodneCislo = new javax.swing.JLabel();
-        TFRodneCislo = new javax.swing.JTextField();
+        TFRodneCisloStaryMajitel = new javax.swing.JTextField();
         labelState = new javax.swing.JLabel();
         labelSupisneCislo = new javax.swing.JLabel();
         TFsupisneCislo = new javax.swing.JTextField();
@@ -42,6 +42,8 @@ public class ZmenaMajitela extends javax.swing.JPanel {
         TFNazovKatastralnehoUzemia = new javax.swing.JTextField();
         labelRemve = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
+        LabelRodneCislo1 = new javax.swing.JLabel();
+        TFRodneCisloNovyMajitel = new javax.swing.JTextField();
 
         buttonZmen.setText("Zmen");
         buttonZmen.addActionListener(new java.awt.event.ActionListener() {
@@ -50,13 +52,13 @@ public class ZmenaMajitela extends javax.swing.JPanel {
             }
         });
 
-        LabelRodneCislo.setLabelFor(TFRodneCislo);
-        LabelRodneCislo.setText("rodne cislo");
+        LabelRodneCislo.setLabelFor(TFRodneCisloStaryMajitel);
+        LabelRodneCislo.setText("rodne cislo stareho majitela");
 
-        TFRodneCislo.setText("rodne cislo");
-        TFRodneCislo.addActionListener(new java.awt.event.ActionListener() {
+        TFRodneCisloStaryMajitel.setText("rodne cislo");
+        TFRodneCisloStaryMajitel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TFRodneCisloActionPerformed(evt);
+                TFRodneCisloStaryMajitelActionPerformed(evt);
             }
         });
 
@@ -82,6 +84,16 @@ public class ZmenaMajitela extends javax.swing.JPanel {
 
         labelRemve.setText("Zmena majitela nehnutelnosti v zadanom kat. uzemi");
 
+        LabelRodneCislo1.setLabelFor(TFRodneCisloStaryMajitel);
+        LabelRodneCislo1.setText("rodne cislo noveho majitela");
+
+        TFRodneCisloNovyMajitel.setText("rodne cislo");
+        TFRodneCisloNovyMajitel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TFRodneCisloNovyMajitelActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -95,18 +107,25 @@ public class ZmenaMajitela extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(LabelNazovKatastralnehoUzemia)
                             .addComponent(labelSupisneCislo, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(TFNazovKatastralnehoUzemia, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
+                            .addComponent(TFNazovKatastralnehoUzemia, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
                             .addComponent(TFsupisneCislo)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(LabelRodneCislo, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
-                        .addComponent(TFRodneCislo, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jSeparator1)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(labelRemve)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jSeparator1))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(LabelRodneCislo1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(LabelRodneCislo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(45, 45, 45)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(TFRodneCisloStaryMajitel, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
+                            .addComponent(TFRodneCisloNovyMajitel))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -126,9 +145,13 @@ public class ZmenaMajitela extends javax.swing.JPanel {
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TFRodneCislo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TFRodneCisloStaryMajitel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LabelRodneCislo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LabelRodneCislo1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TFRodneCisloNovyMajitel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addComponent(buttonZmen)
                 .addGap(18, 18, 18)
                 .addComponent(labelState)
@@ -136,17 +159,18 @@ public class ZmenaMajitela extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void TFRodneCisloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFRodneCisloActionPerformed
+    private void TFRodneCisloStaryMajitelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFRodneCisloStaryMajitelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_TFRodneCisloActionPerformed
+    }//GEN-LAST:event_TFRodneCisloStaryMajitelActionPerformed
 
     private void buttonZmenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonZmenActionPerformed
-        String rodneCislo = TFRodneCislo.getText();
+        String rodneCisloStaryMajitel = TFRodneCisloStaryMajitel.getText();
+        String rodneCisloNovyMajitel = TFRodneCisloNovyMajitel.getText();
         String nazovKatastralnehoUzemia = TFNazovKatastralnehoUzemia.getText();
         int idSupisneCislo = Integer.parseInt(TFsupisneCislo.getText());
 
         String result= "";
-        //String result = operationManager.getOperation15().insertOsoba(rodneCislo,menoPriezvisko,trvalyPobyt);
+        result = operationManager.getOperation11().zmenaMajitelaNehnutelnosti(rodneCisloStaryMajitel,rodneCisloNovyMajitel,idSupisneCislo,nazovKatastralnehoUzemia);
         labelState.setText(result);
     }//GEN-LAST:event_buttonZmenActionPerformed
 
@@ -158,12 +182,18 @@ public class ZmenaMajitela extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_TFNazovKatastralnehoUzemiaActionPerformed
 
+    private void TFRodneCisloNovyMajitelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFRodneCisloNovyMajitelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TFRodneCisloNovyMajitelActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel LabelNazovKatastralnehoUzemia;
     private javax.swing.JLabel LabelRodneCislo;
+    private javax.swing.JLabel LabelRodneCislo1;
     private javax.swing.JTextField TFNazovKatastralnehoUzemia;
-    private javax.swing.JTextField TFRodneCislo;
+    private javax.swing.JTextField TFRodneCisloNovyMajitel;
+    private javax.swing.JTextField TFRodneCisloStaryMajitel;
     private javax.swing.JTextField TFsupisneCislo;
     private javax.swing.JButton buttonZmen;
     private javax.swing.JSeparator jSeparator1;

@@ -5,6 +5,11 @@
  */
 package GUI;
 
+import GUI.deleteDialog.DeleteKatastralneUzemie;
+import GUI.deleteDialog.DeleteListVlastnictva;
+import GUI.deleteDialog.DeleteMajetkovyPodiel;
+import GUI.deleteDialog.DeleteNehnutelnost;
+import GUI.deleteDialog.DeleteObcan;
 import GUI.insertDialog.VlozKatastralneUzemie;
 import GUI.insertDialog.VlozKatastralnyUrad;
 import GUI.insertDialog.VlozListVlastnictva;
@@ -766,23 +771,43 @@ public class GUI_KatasterNew extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonKatastralnyUradActionPerformed
 
     private void buttonRemoveMajetkovyPodielActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRemoveMajetkovyPodielActionPerformed
-        // TODO add your handling code here:
+        JFrame frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.getContentPane().add(new DeleteMajetkovyPodiel());
+        frame.pack();
+        frame.setVisible(true);  
     }//GEN-LAST:event_buttonRemoveMajetkovyPodielActionPerformed
 
     private void buttonRemoveNehnutelnostActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRemoveNehnutelnostActionPerformed
-        // TODO add your handling code here:
+        JFrame frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.getContentPane().add(new DeleteNehnutelnost());
+        frame.pack();
+        frame.setVisible(true); 
     }//GEN-LAST:event_buttonRemoveNehnutelnostActionPerformed
 
     private void buttonRemoveObcanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRemoveObcanActionPerformed
-        // TODO add your handling code here:
+        JFrame frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.getContentPane().add(new DeleteObcan());
+        frame.pack();
+        frame.setVisible(true); 
     }//GEN-LAST:event_buttonRemoveObcanActionPerformed
 
     private void buttonRemoveListVlastnictvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRemoveListVlastnictvaActionPerformed
-        // TODO add your handling code here:
+        JFrame frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.getContentPane().add(new DeleteListVlastnictva());
+        frame.pack();
+        frame.setVisible(true); 
     }//GEN-LAST:event_buttonRemoveListVlastnictvaActionPerformed
 
     private void buttonRemoveKatastralneUzemieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRemoveKatastralneUzemieActionPerformed
-
+        JFrame frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.getContentPane().add(new DeleteKatastralneUzemie());
+        frame.pack();
+        frame.setVisible(true); 
     }//GEN-LAST:event_buttonRemoveKatastralneUzemieActionPerformed
 
     private void buttonSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSaveActionPerformed

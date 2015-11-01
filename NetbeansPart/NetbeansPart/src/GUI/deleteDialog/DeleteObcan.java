@@ -100,7 +100,7 @@ public class DeleteObcan extends javax.swing.JPanel {
         String rodneCislo = TFRodneCislo.getText();
 
        String result ="";
-        //result = operationManager.getOperation21().insertKatastralneUzemie(idUradu,idKatastralnehoUzemia,nazovKatastralnehoUzemia);
+        result = operationManager.getOperation18().odstranenieObcana(rodneCislo);
         labelState.setText(result);
     }//GEN-LAST:event_buttonVymazActionPerformed
 

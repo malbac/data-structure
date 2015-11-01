@@ -6,21 +6,25 @@ import data.implementation.treap.Treap;
 import structure.classes.KatastralneUzemie;
 import structure.classes.Nehnutelnost;
 import structure.searchIndex.KatastralneUzemieId;
+import structure.searchIndex.KatastralneUzemieNazov;
 import structure.searchIndex.NehnutelnostSupisneCislo;
+
+import java.util.LinkedList;
 
 /**
  * Created by Malbac on 23.10.2015.
+ * 14. Výpis všetkých katastrálnych území utriedených pod¾a ich názvov.
  */
 public class Operation14 {
 
-    Treap katUzemieIdTreap;
+    Treap katUzemieNazovTreap;
     DataManager dataManager;
 
     public Operation14(){
 
         dataManager =  DataStateEntity.getDataManager();
 
-        katUzemieIdTreap = dataManager.getListKatastralneUzemiePodlaId();
+        katUzemieNazovTreap = dataManager.getListKatastralneUzemiePodlaNazov();
         //System.out.println(vypisNehnutelnostiPodlaKatUzemia("Zilina"));
 
 
@@ -29,27 +33,17 @@ public class Operation14 {
 
 
 
-    public String vypisNehnutelnosti(int supisneCislo,int idKatastralnehoUzemia){
+    public String vypisVsetkychKatastralnychUzemi(){
         String result = "*********************************************************************************************************\n";
-              result += "****************************Vypis nehnutelnosti podla supisneho cisla a id katastralneho uzemia**********\n" +
-                        "         Katastralne uzemie: " + supisneCislo + ", id kat uzemia"+ idKatastralnehoUzemia + "\n\n";
-        KatastralneUzemieId localKatastralneUzemie;
-        localKatastralneUzemie = (KatastralneUzemieId) katUzemieIdTreap.search(new KatastralneUzemieId(new KatastralneUzemie(idKatastralnehoUzemia, null, null)));
+              result += "**************************Výpis všetkých katastrálnych území utriedených pod¾a ich názvov*******************\n\n";
+        LinkedList listKatuzemi = katUzemieNazovTreap.inorderTraversal();
 
-        if(localKatastralneUzemie!=null){//najdene katastralne uzemie
-            //variables
-            Treap listNehnutelnosti;
-            Nehnutelnost localN;
-            //search
-            listNehnutelnosti = localKatastralneUzemie.getDataReference().getListNehnutelnost();
-            localN = ((NehnutelnostSupisneCislo)listNehnutelnosti.search(new NehnutelnostSupisneCislo(new Nehnutelnost(supisneCislo,null,null)))).getDataReference();
-            //output
-            result += localN.toString();
-            result += "\n\nList Vlastnictva, kde je nehnutelnost zapisana";
-            result += localN.getListVlastnictva().toString();
-            result += "\n*********************************************************************************************************\n";
-
+        if(listKatuzemi!=null){
+            for(int i = 0;i<listKatuzemi.size();i++){
+                result += ((KatastralneUzemieNazov)listKatuzemi.get(i)).getDataReference().getNazovKatastralnehoUzemia() + "\n";
+            }
         }
+        result += "\n*********************************************************************************************************\n";
 
         return result;
     }

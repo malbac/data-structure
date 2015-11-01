@@ -13,29 +13,32 @@ public class ListVlastnictva {
     private int idListVlastnictva;
     private KatastralneUzemie katastralneUzemie;
 
+
     private Treap listNehnutelnost = new Treap();
-    private Treap listPodielnici = new Treap();
 
     public ListVlastnictva(int idListVlastnictva, KatastralneUzemie katastralneUzemie) {
         this.idListVlastnictva = idListVlastnictva;
         this.katastralneUzemie = katastralneUzemie;
     }
 
-    public void addNehnutelnostToListNehnutelnost(Nehnutelnost nehnutelnost){
+    public void addNehnutelnostToListNehnutelnost(Nehnutelnost nehnutelnost) {
         listNehnutelnost.insert(new NehnutelnostSupisneCislo(nehnutelnost));
     }
 
-    public void removeNehnutelnostToListNehnutelnost(Nehnutelnost nehnutelnost) {
+    public void removeNehnutelnostFromListNehnutelnost(Nehnutelnost nehnutelnost) {
         listNehnutelnost.remove(new NehnutelnostSupisneCislo(nehnutelnost));
     }
 
-//    public void addPodielnikToListPodielnici(Podielnik podielnik){
+    //    public void addPodielnikToListPodielnici(Podielnik podielnik){
 //        listPodielnici.insert(new (nehnutelnost));
 //    }
 //
 //    public void removePodielnikToListPodielnici(Podielnik podielnik){
 //        listPodielnici.remove(new NehnutelnostSupisneCislo(nehnutelnost));
 //    }
+    public Treap getListNehnutelnost() {
+        return listNehnutelnost;
+    }
 
     public int getIdListVlastnictva() {
         return idListVlastnictva;
@@ -57,27 +60,27 @@ public class ListVlastnictva {
     public String toString() {
         String result = "ListVlastnictva: \n" +
                 "idListVlastnictva=" + idListVlastnictva +
-                ", katastralneUzemie=" + katastralneUzemie.getNazovKatastralnehoUzemia() +"\n\n";
+                ", katastralneUzemie=" + katastralneUzemie.getNazovKatastralnehoUzemia() + "\n\n";
 
-        if(listNehnutelnost!=null){
-            result+="\n";
+        if (listNehnutelnost != null) {
+            result += "\n";
             LinkedList<TNode> localListNehnutelnost = listNehnutelnost.inorderTraversal();
             LinkedList<Podiel> localListPodiely;
 
             Podiel localPodiel;
             Nehnutelnost localNehnutelnost;
-            for (int i = 0;i<localListNehnutelnost.size();i++){
-                localNehnutelnost = ((NehnutelnostSupisneCislo)localListNehnutelnost.get(i)).getDataReference();
-                result+= "Supisne Cislo: " + localNehnutelnost.getIdSupisneCislo() + ", Adresa: " + localNehnutelnost.getAdresa() + "\n";
+            for (int i = 0; i < localListNehnutelnost.size(); i++) {
+                localNehnutelnost = ((NehnutelnostSupisneCislo) localListNehnutelnost.get(i)).getDataReference();
+                result += "Supisne Cislo: " + localNehnutelnost.getIdSupisneCislo() + ", Adresa: " + localNehnutelnost.getAdresa() + "\n";
             }
 
-            result  += "\nSupis vsetkych vlastnikov\n";
-            for (int i = 0;i<localListNehnutelnost.size();i++){
-                localNehnutelnost = ((NehnutelnostSupisneCislo)localListNehnutelnost.get(i)).getDataReference();
+            result += "\nSupis vsetkych vlastnikov\n";
+            for (int i = 0; i < localListNehnutelnost.size(); i++) {
+                localNehnutelnost = ((NehnutelnostSupisneCislo) localListNehnutelnost.get(i)).getDataReference();
                 localListPodiely = localNehnutelnost.getListPodiely();
-                for(int j=0;j<localListPodiely.size();j++){
+                for (int j = 0; j < localListPodiely.size(); j++) {
                     localPodiel = localListPodiely.get(j);
-                    result+= "Majitel : " + localPodiel.getMajitel().getMenoPriezvisko() + ",  Majetkovy podiel: " + localPodiel.getPodiel()+ " na nehnutelnosti :" + localPodiel.getNehnutelnost().getAdresa() + "\n";
+                    result += "Majitel : " + localPodiel.getMajitel().getMenoPriezvisko() + ",  Majetkovy podiel: " + localPodiel.getPodiel() + " na nehnutelnosti :" + localPodiel.getNehnutelnost().getAdresa() + "\n";
                 }
 
             }

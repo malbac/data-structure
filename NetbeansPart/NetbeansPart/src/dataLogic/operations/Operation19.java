@@ -5,11 +5,12 @@ import data.DataStateEntity;
 import data.implementation.treap.Treap;
 import structure.classes.KatastralneUzemie;
 import structure.classes.Nehnutelnost;
-import structure.searchIndex.KatastralneUzemieId;
-import structure.searchIndex.NehnutelnostSupisneCislo;
+import structure.classes.Osoba;
+import structure.searchIndex.*;
 
 /**
  * Created by Malbac on 23.10.2015.
+ * 18. Odstránenie obèana (definovaný rodným èíslom).
  */
 public class Operation19 {
 
@@ -29,29 +30,22 @@ public class Operation19 {
 
 
 
-    public String vypisNehnutelnosti(int supisneCislo,int idKatastralnehoUzemia){
-        String result = "*********************************************************************************************************\n";
-              result += "****************************Vypis nehnutelnosti podla supisneho cisla a id katastralneho uzemia**********\n" +
-                        "         Katastralne uzemie: " + supisneCislo + ", id kat uzemia"+ idKatastralnehoUzemia + "\n\n";
-        KatastralneUzemieId localKatastralneUzemie;
-        localKatastralneUzemie = (KatastralneUzemieId) katUzemieIdTreap.search(new KatastralneUzemieId(new KatastralneUzemie(idKatastralnehoUzemia, null, null)));
+    public String odstranenieListuVlastnictva(int listVlastnictva,int idKatastralnehoUzemia){
+        String nazovKatastralnehoUzemia;
 
-        if(localKatastralneUzemie!=null){//najdene katastralne uzemie
-            //variables
-            Treap listNehnutelnosti;
-            Nehnutelnost localN;
-            //search
-            listNehnutelnosti = localKatastralneUzemie.getDataReference().getListNehnutelnost();
-            localN = ((NehnutelnostSupisneCislo)listNehnutelnosti.search(new NehnutelnostSupisneCislo(new Nehnutelnost(supisneCislo,null,null)))).getDataReference();
-            //output
-            result += localN.toString();
-            result += "\n\nList Vlastnictva, kde je nehnutelnost zapisana";
-            result += localN.getListVlastnictva().toString();
-            result += "\n*********************************************************************************************************\n";
+        KatastralneUzemieId katastralneUzemieId = (KatastralneUzemieId)katUzemieIdTreap.search(new KatastralneUzemieId(new KatastralneUzemie(idKatastralnehoUzemia, null, null)));
 
+        if(katastralneUzemieId!=null) {
+            nazovKatastralnehoUzemia = katastralneUzemieId.getDataReference().getNazovKatastralnehoUzemia();
+
+            dataManager.removeListVlastnictva(listVlastnictva,nazovKatastralnehoUzemia);
+        } else {
+            return "Osoba sa nenasla";
         }
+        return "uspesne odstranene";
 
-        return result;
+
+
     }
 
 
