@@ -12,18 +12,18 @@ import structure.searchIndex.NehnutelnostSupisneCislo;
 import java.util.LinkedList;
 
 /**
- * Vyh¾adanie nehnute¾nosti pod¾a súpisného èísla a èísla katastrálneho územia.
- Po nájdení nehnute¾nosti je potrebné zobrazi všetky evidované údaje vrátane všetkıch
- údajov z listu vlastníctva na ktorom je nehnute¾nos zapísaná.
+ * Vyhï¿½adanie nehnuteï¿½nosti podï¿½a sï¿½pisnï¿½ho ï¿½ï¿½sla a ï¿½ï¿½sla katastrï¿½lneho ï¿½zemia.
+ Po nï¿½jdenï¿½ nehnuteï¿½nosti je potrebnï¿½ zobraziï¿½ vï¿½etky evidovanï¿½ ï¿½daje vrï¿½tane vï¿½etkï¿½ch
+ ï¿½dajov z listu vlastnï¿½ctva na ktorom je nehnuteï¿½nosï¿½ zapï¿½sanï¿½.
  */
 public class Operation1 {
 
     Treap katUzemieIdTreap;
     DataManager dataManager;
 
-    public Operation1(){
+    public Operation1(DataManager dataManager){
 
-        dataManager =  DataStateEntity.getDataManager();
+        this.dataManager =  dataManager;
 
         katUzemieIdTreap = dataManager.getListKatastralneUzemiePodlaId();
         //System.out.println(vypisNehnutelnostiPodlaKatUzemia("Zilina"));
@@ -61,7 +61,4 @@ public class Operation1 {
     }
 
 
-    public static void main(String[] args){
-        new Operation1();
-    }
 }

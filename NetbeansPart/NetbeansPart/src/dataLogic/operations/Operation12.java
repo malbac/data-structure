@@ -17,9 +17,9 @@ public class Operation12 {
     Treap katUzemieIdTreap;
     DataManager dataManager;
 
-    public Operation12(){
+    public Operation12(DataManager dataManager){
 
-        dataManager =  DataStateEntity.getDataManager();
+        this.dataManager =  dataManager;
 
         osobaRodCisloTreap = dataManager.getListOsobaPodlaRodneCislo();
         katUzemieIdTreap = dataManager.getListKatastralneUzemiePodlaId();
@@ -84,7 +84,4 @@ public class Operation12 {
     }
 
 
-    public static void main(String[] args){
-        new Operation12();
-    }
 }

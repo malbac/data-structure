@@ -20,9 +20,9 @@ public class Operation14 {
     Treap katUzemieNazovTreap;
     DataManager dataManager;
 
-    public Operation14(){
+    public Operation14(DataManager dataManager){
 
-        dataManager =  DataStateEntity.getDataManager();
+        this.dataManager =  dataManager;
 
         katUzemieNazovTreap = dataManager.getListKatastralneUzemiePodlaNazov();
         //System.out.println(vypisNehnutelnostiPodlaKatUzemia("Zilina"));
@@ -49,7 +49,4 @@ public class Operation14 {
     }
 
 
-    public static void main(String[] args){
-        new Operation14();
-    }
 }

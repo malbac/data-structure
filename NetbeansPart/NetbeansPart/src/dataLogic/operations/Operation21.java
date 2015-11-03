@@ -20,8 +20,8 @@ public class Operation21 {
 
     ////
 
-    public Operation21(){
-        dataManager =  DataStateEntity.getDataManager();
+    public Operation21(DataManager dataManager){
+        this.dataManager =  dataManager;
     }
 
     /**
@@ -52,8 +52,4 @@ public class Operation21 {
         }
     }
 
-
-    public static void main(String[] args){
-        Operation21 operation8 = new Operation21();
-    }
 }

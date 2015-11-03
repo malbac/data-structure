@@ -5,6 +5,7 @@ package GUI.insertDialog;/*
  */
 
 
+import data.DataManager;
 import dataLogic.OperationManager;
 
 /**
@@ -17,8 +18,8 @@ public class VlozPodiel extends javax.swing.JPanel {
      * Creates new form VlozVlastnika
      */
     OperationManager operationManager;
-    public VlozPodiel() {
-        operationManager = new OperationManager();
+    public VlozPodiel(DataManager dataManager) {
+        operationManager = new OperationManager(dataManager);
         initComponents();
     }
 
@@ -169,7 +170,7 @@ public class VlozPodiel extends javax.swing.JPanel {
                 .addComponent(jButtonVlozOsoba)
                 .addGap(18, 18, 18)
                 .addComponent(labelState)
-                .addGap(109, 109, 109))
+                .addGap(46, 46, 46))
         );
     }// </editor-fold>//GEN-END:initComponents
 

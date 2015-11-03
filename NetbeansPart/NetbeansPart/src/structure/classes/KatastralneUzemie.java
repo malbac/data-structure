@@ -34,16 +34,16 @@ public class KatastralneUzemie {
         return listNehnutelnost;
     }
 
-    public void addNehnutelnost(NehnutelnostSupisneCislo nehnutelnost){
-        listNehnutelnost.insert(nehnutelnost);
+    public void addNehnutelnost(Nehnutelnost nehnutelnost){
+        listNehnutelnost.insert(new NehnutelnostSupisneCislo(nehnutelnost));
     }
 
     public void removeNehnutelnost(NehnutelnostSupisneCislo nehnutelnost){
         listNehnutelnost.remove(nehnutelnost);
     }
 
-    public void addListVlastnictva(ListVlastnictvaId listVlastnictvaId){
-        listListovVlastnictva.insert(listVlastnictvaId);
+    public void addListVlastnictva(ListVlastnictva listVlastnictva){
+        listListovVlastnictva.insert(new ListVlastnictvaId(listVlastnictva));
     }
 
     public void removeListVlastnictva(ListVlastnictvaId listVlastnictvaId){

@@ -20,9 +20,9 @@ public class Operation13 {
     Treap katUzemieIdTreap;
     DataManager dataManager;
 
-    public Operation13() {
+    public Operation13(DataManager dataManager) {
 
-        dataManager = DataStateEntity.getDataManager();
+        this.dataManager = dataManager;
 
         osobaRodCisloTreap = dataManager.getListOsobaPodlaRodneCislo();
         katUzemieIdTreap = dataManager.getListKatastralneUzemiePodlaId();
@@ -95,7 +95,4 @@ public class Operation13 {
         return "Uspesne vymazane";
     }
 
-    public static void main(String[] args) {
-        new Operation13();
-    }
 }

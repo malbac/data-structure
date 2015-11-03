@@ -18,9 +18,9 @@ public class Operation18 {
     Treap osobaRodCisloTreap;
     DataManager dataManager;
 
-    public Operation18() {
+    public Operation18(DataManager dataManager) {
 
-        dataManager = DataStateEntity.getDataManager();
+        this.dataManager = dataManager;
 
         osobaRodCisloTreap = dataManager.getListOsobaPodlaRodneCislo();
         //System.out.println(vypisNehnutelnostiPodlaKatUzemia("Zilina"));
@@ -46,7 +46,4 @@ public class Operation18 {
     }
 
 
-    public static void main(String[] args) {
-        new Operation18();
-    }
 }

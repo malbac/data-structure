@@ -4,6 +4,7 @@ package GUI.insertDialog;/*
  * and open the template in the editor.
  */
 
+import data.DataManager;
 import dataLogic.OperationManager;
 
 /**
@@ -16,8 +17,8 @@ public class VlozNehnutelnostNaListVlastnictva extends javax.swing.JPanel {
      * Creates new form VlozVlastnika
      */
     OperationManager operationManager;
-    public VlozNehnutelnostNaListVlastnictva() {
-        operationManager = new OperationManager();
+    public VlozNehnutelnostNaListVlastnictva(DataManager dataManager) {
+        operationManager = new OperationManager(dataManager);
         initComponents();
     }
 

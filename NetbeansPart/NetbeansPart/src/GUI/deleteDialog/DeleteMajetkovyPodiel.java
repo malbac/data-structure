@@ -6,6 +6,7 @@ package GUI.deleteDialog;/*
 
 
 import GUI.insertDialog.*;
+import data.DataManager;
 import dataLogic.OperationManager;
 
 /**
@@ -18,8 +19,8 @@ public class DeleteMajetkovyPodiel extends javax.swing.JPanel {
      * Creates new form VlozVlastnika
      */
     OperationManager operationManager;
-    public DeleteMajetkovyPodiel() {
-        operationManager = new OperationManager();
+    public DeleteMajetkovyPodiel(DataManager dataManager) {
+        operationManager = new OperationManager(dataManager);
         initComponents();
     }
 

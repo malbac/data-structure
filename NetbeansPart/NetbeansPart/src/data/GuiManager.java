@@ -23,8 +23,8 @@ public class GuiManager {
 
     OperationManager operationManager;
 
-    public GuiManager(){
-    operationManager = new OperationManager();
+    public GuiManager(DataManager dataManager){
+    operationManager = new OperationManager(dataManager);
     }
 
     public String getOperation(String inputItem){

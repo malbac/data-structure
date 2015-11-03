@@ -18,8 +18,8 @@ public class Operation8 {
 
     ////
 
-    public Operation8() {
-        dataManager = DataStateEntity.getDataManager();
+    public Operation8(DataManager dataManager) {
+        this.dataManager = dataManager;
         listOsoba = dataManager.getListOsobaPodlaRodneCislo();
     }
 
@@ -60,8 +60,5 @@ public class Operation8 {
     }
 
 
-    public static void main(String[] args) {
-        Operation8 operation8 = new Operation8();
-        System.out.println(operation8.vypisNehnutelnostiMajitelaVKatUzemi("1111", 1));
-    }
+
 }

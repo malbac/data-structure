@@ -4,6 +4,7 @@ package GUI.insertDialog;/*
  * and open the template in the editor.
  */
 
+import data.DataManager;
 import dataLogic.OperationManager;
 
 /**
@@ -16,8 +17,8 @@ public class VlozKatastralnyUrad extends javax.swing.JPanel {
      * Creates new form VlozVlastnika
      */
     OperationManager operationManager;
-    public VlozKatastralnyUrad() {
-        operationManager = new OperationManager();
+    public VlozKatastralnyUrad(DataManager dataManager) {
+        operationManager = new OperationManager(dataManager);
         initComponents();
     }
 

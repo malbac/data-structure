@@ -6,6 +6,7 @@ package GUI.deleteDialog;/*
 
 
 import GUI.insertDialog.*;
+import data.DataManager;
 import dataLogic.OperationManager;
 
 /**
@@ -18,8 +19,8 @@ public class DeleteListVlastnictva extends javax.swing.JPanel {
      * Creates new form VlozVlastnika
      */
     OperationManager operationManager;
-    public DeleteListVlastnictva() {
-        operationManager = new OperationManager();
+    public DeleteListVlastnictva(DataManager dataManager) {
+        operationManager = new OperationManager(dataManager);
         initComponents();
     }
 
@@ -125,7 +126,7 @@ public class DeleteListVlastnictva extends javax.swing.JPanel {
         int idKatastralnehoUzemia = Integer.parseInt(TFKatastralneUzemie.getText());
 
         String result ="";
-        result = operationManager.getOperation19().odstranenieListuVlastnictva(idListVlastnictva,idKatastralnehoUzemia);
+        result = operationManager.getOperation19().odstranenieListuVlastnictva(idListVlastnictva, idKatastralnehoUzemia);
         labelState.setText(result);
     }//GEN-LAST:event_buttonVymazActionPerformed
 

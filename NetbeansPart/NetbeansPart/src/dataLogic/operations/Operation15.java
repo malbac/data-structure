@@ -21,8 +21,8 @@ public class Operation15 {
 
     ////
 
-    public Operation15(){
-        dataManager =  DataStateEntity.getDataManager();
+    public Operation15(DataManager dataManager){
+        this.dataManager =  dataManager;
         //new InsertDataObject(dataManager);
     }
 
@@ -57,7 +57,4 @@ public class Operation15 {
 
 
 
-    public static void main(String[] args){
-        Operation15 operation8 = new Operation15();
-    }
 }

@@ -29,13 +29,6 @@ public class ListVlastnictva {
         listNehnutelnost.remove(new NehnutelnostSupisneCislo(nehnutelnost));
     }
 
-    //    public void addPodielnikToListPodielnici(Podielnik podielnik){
-//        listPodielnici.insert(new (nehnutelnost));
-//    }
-//
-//    public void removePodielnikToListPodielnici(Podielnik podielnik){
-//        listPodielnici.remove(new NehnutelnostSupisneCislo(nehnutelnost));
-//    }
     public Treap getListNehnutelnost() {
         return listNehnutelnost;
     }

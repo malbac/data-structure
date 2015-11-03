@@ -19,9 +19,9 @@ public class Operation20 {
     Treap nehnutelnostSupCisloTreap;
     DataManager dataManager;
 
-    public Operation20(){
+    public Operation20(DataManager dataManager){
 
-        dataManager =  DataStateEntity.getDataManager();
+        this.dataManager =  dataManager;
 
         nehnutelnostSupCisloTreap = dataManager.getListNehnutelnostPodlaSupC();
         //System.out.println(vypisNehnutelnostiPodlaKatUzemia("Zilina"));
@@ -57,7 +57,4 @@ public class Operation20 {
     }
 
 
-    public static void main(String[] args){
-        new Operation20();
-    }
 }

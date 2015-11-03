@@ -20,8 +20,8 @@ public class Operation17 {
 
     ////
 
-    public Operation17(){
-        dataManager =  DataStateEntity.getDataManager();
+    public Operation17(DataManager dataManager){
+        this.dataManager =  dataManager;
     }
 
 
@@ -55,7 +55,4 @@ public class Operation17 {
 
 
 
-    public static void main(String[] args){
-        Operation17 operation8 = new Operation17();
-    }
 }

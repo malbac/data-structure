@@ -9,8 +9,8 @@ import structure.searchIndex.NehnutelnostAdresa;
 import structure.searchIndex.OsobaRodCislo;
 
 /**
- * Vyh¾adanie obyvate¾a pod¾a rodného èísla a výpis jeho trvalého pobytu (vypíšu sa
- * všetky informácie o nehnute¾nosti, ktorú obýva)
+ * Vyhï¿½adanie obyvateï¿½a podï¿½a rodnï¿½ho ï¿½ï¿½sla a vï¿½pis jeho trvalï¿½ho pobytu (vypï¿½u sa
+ * vï¿½etky informï¿½cie o nehnuteï¿½nosti, ktorï¿½ obï¿½va)
  */
 public class Operation2 {
 
@@ -19,9 +19,9 @@ public class Operation2 {
 
     DataManager dataManager;
 
-    public Operation2(){
+    public Operation2(DataManager dataManager){
 
-        dataManager =  DataStateEntity.getDataManager();
+        this.dataManager = dataManager;
 
         osobaRodCTreap = dataManager.getListOsobaPodlaRodneCislo();
         listNehnutelnostiPodlaAdresa = dataManager.getListNehnutelnostPodlaAdresa();
@@ -35,7 +35,7 @@ public class Operation2 {
 
     public String vyhladanieObyvatela(String rodneCislo){
         String result = "*********************************************************************************************************\n";
-              result += "****************************Vyh¾adanie obyvate¾a pod¾a rodného èísla*************************************\n" +
+              result += "****************************Vyhï¿½adanie obyvateï¿½a podï¿½a rodnï¿½ho ï¿½ï¿½sla*************************************\n" +
                         "         Rodne cislo: " + rodneCislo + "\n\n";
         OsobaRodCislo  osobaRodCislo;
         osobaRodCislo = (OsobaRodCislo) osobaRodCTreap.search(new OsobaRodCislo(new Osoba(rodneCislo, null, null)));
@@ -70,7 +70,4 @@ public class Operation2 {
     }
 
 
-    public static void main(String[] args){
-        new Operation2();
-    }
 }

@@ -5,6 +5,7 @@ package GUI.insertDialog;/*
  */
 
 
+import data.DataManager;
 import dataLogic.OperationManager;
 
 /**
@@ -17,8 +18,8 @@ public class VlozKatastralneUzemie extends javax.swing.JPanel {
      * Creates new form VlozVlastnika
      */
     OperationManager operationManager;
-    public VlozKatastralneUzemie() {
-        operationManager = new OperationManager();
+    public VlozKatastralneUzemie(DataManager dataManager) {
+        operationManager = new OperationManager(dataManager);
         initComponents();
     }
 

@@ -22,9 +22,9 @@ public class Operation4 {
     Treap katUzemieIdTreap;
     DataManager dataManager;
 
-    public Operation4(){
+    public Operation4(DataManager dataManager){
 
-        dataManager =  DataStateEntity.getDataManager();
+        this.dataManager =  dataManager;
 
         katUzemieIdTreap = dataManager.getListKatastralneUzemiePodlaId();
         //System.out.println(vypisNehnutelnostiPodlaKatUzemia("Zilina"));
@@ -64,7 +64,4 @@ public class Operation4 {
     }
 
 
-    public static void main(String[] args){
-        new Operation4();
-    }
 }

@@ -1,5 +1,6 @@
 package dataLogic;
 
+import data.DataManager;
 import dataLogic.operations.*;
 
 /**
@@ -50,36 +51,36 @@ public class OperationManager {
 
 
 
-    public OperationManager() {
-       operation1 = new  Operation1();
-       operation2 = new  Operation2();
-       operation3 = new  Operation3();
-       operation4 = new  Operation4();
-       operation5 = new  Operation5();
-       operation6 = new  Operation6();
-       operation7 = new  Operation7();
-       operation8 = new  Operation8();
-       operation9 = new  Operation9();
-        operation14 = new Operation14();
+    public OperationManager(DataManager dataManager) {
+       operation1 = new  Operation1(dataManager);
+       operation2 = new  Operation2(dataManager);
+       operation3 = new  Operation3(dataManager);
+       operation4 = new  Operation4(dataManager);
+       operation5 = new  Operation5(dataManager);
+       operation6 = new  Operation6(dataManager);
+       operation7 = new  Operation7(dataManager);
+       operation8 = new  Operation8(dataManager);
+       operation9 = new  Operation9(dataManager);
+        operation14 = new Operation14(dataManager);
 
         //insert operations
-        operation15 = new Operation15();
-        operation16 = new Operation16();
-        operation17 = new Operation17();
-        operation21 = new Operation21();
+        operation15 = new Operation15(dataManager);
+        operation16 = new Operation16(dataManager);
+        operation17 = new Operation17(dataManager);
+        operation21 = new Operation21(dataManager);
 
-        operation12 = new Operation12();
+        operation12 = new Operation12(dataManager);
         //delete operations
-        operation13 = new Operation13();
-        operation18 = new Operation18();
-        operation19 = new Operation19();
-        operation20 = new Operation20();
-        operation22 = new Operation22();
+        operation13 = new Operation13(dataManager);
+        operation18 = new Operation18(dataManager);
+        operation19 = new Operation19(dataManager);
+        operation20 = new Operation20(dataManager);
+        operation22 = new Operation22(dataManager);
 
 
         //change operations
-        operation10 = new Operation10();
-        operation11 = new Operation11();
+        operation10 = new Operation10(dataManager);
+        operation11 = new Operation11(dataManager);
         operationKatastralnyUrad= new OperationKatastralnyUrad();
     }
 //GETTERS

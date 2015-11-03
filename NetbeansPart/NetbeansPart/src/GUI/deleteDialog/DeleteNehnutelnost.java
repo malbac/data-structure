@@ -6,6 +6,7 @@ package GUI.deleteDialog;/*
 
 
 import GUI.insertDialog.*;
+import data.DataManager;
 import dataLogic.OperationManager;
 
 /**
@@ -18,8 +19,8 @@ public class DeleteNehnutelnost extends javax.swing.JPanel {
      * Creates new form VlozVlastnika
      */
     OperationManager operationManager;
-    public DeleteNehnutelnost() {
-        operationManager = new OperationManager();
+    public DeleteNehnutelnost(DataManager dataManager) {
+        operationManager = new OperationManager(dataManager);
         initComponents();
     }
 
@@ -150,7 +151,7 @@ public class DeleteNehnutelnost extends javax.swing.JPanel {
         int idKatastralnehoUzemia = Integer.parseInt(TFKatastralneUzemie.getText());
         
         String result ="";
-        result = operationManager.getOperation20().odstranenieNehnutelnostiZListuVlastnictva(idSupisneCislo,idListVlastnictva,idKatastralnehoUzemia);
+        result = operationManager.getOperation20().odstranenieNehnutelnostiZListuVlastnictva(idSupisneCislo, idListVlastnictva, idKatastralnehoUzemia);
         labelState.setText(result);        // TODO add your handling code here:
     }//GEN-LAST:event_buttonVymazActionPerformed
 

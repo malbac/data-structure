@@ -20,6 +20,10 @@ public class DataStateEntity {
 
     }
 
+    public static void removeDataManager(){
+        dataStateEntity = null;
+    }
+
     private static void initialize(){
         dataManager = new DataManager();
     }

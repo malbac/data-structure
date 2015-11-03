@@ -6,6 +6,7 @@ package GUI.updateDialog;/*
 
 
 import GUI.insertDialog.*;
+import data.DataManager;
 import dataLogic.OperationManager;
 
 /**
@@ -18,8 +19,8 @@ public class ZmenaTrvalehoPobytu extends javax.swing.JPanel {
      * Creates new form VlozVlastnika
      */
     OperationManager operationManager;
-    public ZmenaTrvalehoPobytu() {
-        operationManager = new OperationManager();
+    public ZmenaTrvalehoPobytu(DataManager dataManager) {
+        operationManager = new OperationManager(dataManager);
         initComponents();
     }
 

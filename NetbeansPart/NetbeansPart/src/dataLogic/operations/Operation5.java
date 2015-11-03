@@ -12,18 +12,18 @@ import structure.searchIndex.NehnutelnostSupisneCislo;
 /**
  * Created by Malbac on 23.10.2015.
  *
- * 5. Vyh¾adanie nehnute¾nosti pod¾a súpisného èísla a názvu katastrálneho územia.
- Po nájdení nehnute¾nosti je potrebné zobrazi všetky evidované údaje vrátane všetkıch
- údajov z listu vlastníctva na ktorom je nehnute¾nos zapísaná.
+ * 5. Vyhï¿½adanie nehnuteï¿½nosti podï¿½a sï¿½pisnï¿½ho ï¿½ï¿½sla a nï¿½zvu katastrï¿½lneho ï¿½zemia.
+ Po nï¿½jdenï¿½ nehnuteï¿½nosti je potrebnï¿½ zobraziï¿½ vï¿½etky evidovanï¿½ ï¿½daje vrï¿½tane vï¿½etkï¿½ch
+ ï¿½dajov z listu vlastnï¿½ctva na ktorom je nehnuteï¿½nosï¿½ zapï¿½sanï¿½.
  */
 public class Operation5 {
 
     Treap katUzemieNazovTreap;
     DataManager dataManager;
 
-    public Operation5(){
+    public Operation5(DataManager dataManager){
 
-        dataManager =  DataStateEntity.getDataManager();
+        this.dataManager =  dataManager;
 
         katUzemieNazovTreap = dataManager.getListKatastralneUzemiePodlaNazov();
         //System.out.println(vypisNehnutelnostiPodlaKatUzemia("Zilina"));
@@ -69,7 +69,4 @@ public class Operation5 {
     }
 
 
-    public static void main(String[] args){
-        new Operation5();
-    }
 }

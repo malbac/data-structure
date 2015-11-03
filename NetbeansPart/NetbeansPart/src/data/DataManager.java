@@ -1,5 +1,6 @@
 package data;
 
+import data.implementation.InOrderIterator;
 import data.implementation.treap.TNode;
 import data.implementation.treap.Treap;
 import structure.classes.*;
@@ -16,11 +17,9 @@ public class DataManager {
     private Treap listKatastralneUzemiePodlaNazov;
 
 
-
     private Treap listKatastralneUzemiePodlaId;
     private Treap listListVlastnictva;
     private Treap listNehnutelnostPodlaSupC;
-
 
 
     private Treap listNehnutelnostPodlaAdresa;
@@ -28,25 +27,21 @@ public class DataManager {
     private Treap listOsobaPodlaRodneCislo;
 
 
-
     private Treap listOsobaPodlaTrvalyPobyt;
-    private Treap listPodielnikovListV;
 
-    public DataManager(){
-       listKatastralnyUrad = new Treap();
-       listKatastralneUzemiePodlaNazov = new Treap();
+    public DataManager() {
+        listKatastralnyUrad = new Treap();
+        listKatastralneUzemiePodlaNazov = new Treap();
         listKatastralneUzemiePodlaId = new Treap();
-       listListVlastnictva = new Treap();
-       listNehnutelnostPodlaSupC = new Treap();
-       listNehnutelnostPodlaAdresa = new Treap();
-       listPodiel = new Treap();
-       listOsobaPodlaRodneCislo = new Treap();
+        listListVlastnictva = new Treap();
+        listNehnutelnostPodlaSupC = new Treap();
+        listNehnutelnostPodlaAdresa = new Treap();
+        listPodiel = new Treap();
+        listOsobaPodlaRodneCislo = new Treap();
         listOsobaPodlaTrvalyPobyt = new Treap();
-       listPodielnikovListV = new Treap();
 
         //new InsertDataObject(this);
     }
-
 
 
     public Treap getListKatastralnyUrad() {
@@ -73,9 +68,6 @@ public class DataManager {
         return listOsobaPodlaRodneCislo;
     }
 
-    public Treap getListPodielnikovListV() {
-        return listPodielnikovListV;
-    }
 
     public Treap getListKatastralneUzemiePodlaId() {
         return listKatastralneUzemiePodlaId;
@@ -91,67 +83,80 @@ public class DataManager {
 
     //=====INSERT PART==============
 
-    public boolean insertKatastralnyUrad(int idUradu){
+    public boolean insertKatastralnyUrad(int idUradu) {
         return listKatastralnyUrad.insert(new KatastralnyUradId(new KatastralnyUrad(idUradu)));
     }
 
-    public boolean insertKatastralneUzemie(int idUradu,int idKatastralneUzemie, String nazovKatastralnehoUzemia){
-        KatastralnyUradId katastralnyUradId = (KatastralnyUradId)listKatastralnyUrad.search(new KatastralnyUradId(new KatastralnyUrad(idUradu)));
+    public boolean insertKatastralneUzemie(int idUradu, int idKatastralneUzemie, String nazovKatastralnehoUzemia) {
+        KatastralnyUradId katastralnyUradId = (KatastralnyUradId) listKatastralnyUrad.search(new KatastralnyUradId(new KatastralnyUrad(idUradu)));
         KatastralnyUrad katastralnyUrad = katastralnyUradId.getDataReference();
-        KatastralneUzemie insertedKatastralneUzemie = new KatastralneUzemie(idKatastralneUzemie,katastralnyUrad,nazovKatastralnehoUzemia);
+        KatastralneUzemie insertedKatastralneUzemie = new KatastralneUzemie(idKatastralneUzemie, katastralnyUrad, nazovKatastralnehoUzemia);
         //====DIFFERENT LIST
         listKatastralneUzemiePodlaId.insert(new KatastralneUzemieId(insertedKatastralneUzemie));
         return listKatastralneUzemiePodlaNazov.insert(new KatastralneUzemieNazov(insertedKatastralneUzemie));
     }
 
-    public boolean insertListVlastnictva(int idListVlastnictva,String nazovKatastralnehoUzemie){
-        KatastralneUzemieNazov katastralneUzemieNazov = (KatastralneUzemieNazov) listKatastralneUzemiePodlaNazov.search(new KatastralneUzemieNazov(new KatastralneUzemie(0,null,nazovKatastralnehoUzemie)));
+    public boolean insertListVlastnictva(int idListVlastnictva, String nazovKatastralnehoUzemie) {
+        KatastralneUzemieNazov katastralneUzemieNazov = (KatastralneUzemieNazov) listKatastralneUzemiePodlaNazov.search(new KatastralneUzemieNazov(new KatastralneUzemie(0, null, nazovKatastralnehoUzemie)));
         KatastralneUzemie katastralneUzemie = katastralneUzemieNazov.getDataReference();
-        ListVlastnictva inserteListVlastnictva = new ListVlastnictva(idListVlastnictva,katastralneUzemie);
+        ListVlastnictva inserteListVlastnictva = new ListVlastnictva(idListVlastnictva, katastralneUzemie);
         //====DIFFERENT LIST
         insertToMainListVlastnictva(inserteListVlastnictva);
         insertToListInKatastraneUzemie(katastralneUzemie, inserteListVlastnictva);
         return true;
     }
 
-
-
-
-
-    public boolean insertNehnutelnost(int idSupisneCislo,int idListVlastnictva, String adresa){
-
-        ListVlastnictvaId ListVlastnictvaId = (ListVlastnictvaId)listListVlastnictva.search(new ListVlastnictvaId(new ListVlastnictva(idListVlastnictva,null)));
-        ListVlastnictva listVlastnictva = ListVlastnictvaId.getDataReference();
-
-
-        Nehnutelnost insertedNehnutelnost = new Nehnutelnost(idSupisneCislo,listVlastnictva,adresa);
-        //====DIFFERENT LIST
-        insertToMainListNehnutelnostPodlaSupisnehoCisla(insertedNehnutelnost);
-        insertToMainListNehnutelnostPodlaAdresa(insertedNehnutelnost);
-        insertNehnutelnostToListInListVlastnictva(ListVlastnictvaId, insertedNehnutelnost);
-        insertNehnutelnostToListInListKatastralneUzemie(ListVlastnictvaId, insertedNehnutelnost);
-        return true;
+    public boolean insertListVlastnictva(int idListVlastnictva, int idKatastralnehoUzemie) {
+        KatastralneUzemieId katastralneUzemieId = (KatastralneUzemieId) listKatastralneUzemiePodlaId.search(new KatastralneUzemieId(new KatastralneUzemie(idKatastralnehoUzemie,null,null)));
+        if(katastralneUzemieId!=null) {
+            KatastralneUzemie katastralneUzemie = katastralneUzemieId.getDataReference();
+            ListVlastnictva inserteListVlastnictva = new ListVlastnictva(idListVlastnictva, katastralneUzemie);
+            //====DIFFERENT LIST
+            insertToMainListVlastnictva(inserteListVlastnictva);
+            insertToListInKatastraneUzemie(katastralneUzemie, inserteListVlastnictva);
+            return true;
+        } else {
+            return false;
+        }
     }
 
 
+    public boolean insertNehnutelnost(int idSupisneCislo, int idListVlastnictva, String adresa) {
 
-    public boolean insertOsoba(String rodneCislo,String menoPriezvisko,String trvalyPobyt){
-        Osoba insetedOsoba = new Osoba(rodneCislo,menoPriezvisko,trvalyPobyt);
+        ListVlastnictvaId ListVlastnictvaId = (ListVlastnictvaId) listListVlastnictva.search(new ListVlastnictvaId(new ListVlastnictva(idListVlastnictva, null)));
+        if(ListVlastnictvaId!=null) {
+            ListVlastnictva listVlastnictva = ListVlastnictvaId.getDataReference();
+
+
+            Nehnutelnost insertedNehnutelnost = new Nehnutelnost(idSupisneCislo, listVlastnictva, adresa);
+            //====DIFFERENT LIST
+            insertToMainListNehnutelnostPodlaSupisnehoCisla(insertedNehnutelnost);
+            insertToMainListNehnutelnostPodlaAdresa(insertedNehnutelnost);
+            insertNehnutelnostToListInListVlastnictva(ListVlastnictvaId, insertedNehnutelnost);
+            insertNehnutelnostToListInListKatastralneUzemie(ListVlastnictvaId, insertedNehnutelnost);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    public boolean insertOsoba(String rodneCislo, String menoPriezvisko, String trvalyPobyt) {
+        Osoba insetedOsoba = new Osoba(rodneCislo, menoPriezvisko, trvalyPobyt);
         //====DIFFERENT LIST
         insertOsobaToMainListOsobaPodlaAdresa(insetedOsoba);
         return insertOsobaToMainListOsobaPodlaRodneCislo(insetedOsoba);
     }
 
 
-
-    public boolean insertPodiel(int idPodiel,String rodneCisloPodielnika,int supisneCisloNehnutelnosti, int velkostPodielu){
-        OsobaRodCislo osobaRodCislo = (OsobaRodCislo) listOsobaPodlaRodneCislo.search(new OsobaRodCislo(new Osoba(rodneCisloPodielnika,null,null)));
+    public boolean insertPodiel(int idPodiel, String rodneCisloPodielnika, int supisneCisloNehnutelnosti, int velkostPodielu) {
+        OsobaRodCislo osobaRodCislo = (OsobaRodCislo) listOsobaPodlaRodneCislo.search(new OsobaRodCislo(new Osoba(rodneCisloPodielnika, null, null)));
         Osoba majitel = osobaRodCislo.getDataReference();
 
-        NehnutelnostSupisneCislo nehnutelnostSupisneCislo = (NehnutelnostSupisneCislo) listNehnutelnostPodlaSupC.search(new NehnutelnostSupisneCislo(new Nehnutelnost(supisneCisloNehnutelnosti,null,null)));
+        NehnutelnostSupisneCislo nehnutelnostSupisneCislo = (NehnutelnostSupisneCislo) listNehnutelnostPodlaSupC.search(new NehnutelnostSupisneCislo(new Nehnutelnost(supisneCisloNehnutelnosti, null, null)));
         Nehnutelnost nehnutelnost = nehnutelnostSupisneCislo.getDataReference();
         //====NOVY PODIEL====
-        Podiel insertedPodiel = new Podiel(idPodiel,majitel,nehnutelnost,velkostPodielu);
+        Podiel insertedPodiel = new Podiel(idPodiel, majitel, nehnutelnost, velkostPodielu);
 
         //====DIFFERENT LIST
         insertPodielToMainListPodiel(insertedPodiel);
@@ -164,43 +169,60 @@ public class DataManager {
     }
 
 
-
-
     //=====REMOVE PART==============
-    public boolean removeKatastralnyUrad(int idUradu){
+    public boolean removeKatastralnyUrad(int idUradu) {
         listKatastralnyUrad.remove(new KatastralnyUradId(new KatastralnyUrad(idUradu)));
         return true;
     }
 
-    public boolean removeKatastralneUzemie(int idUradu,int idKatastralneUzemie, String nazovKatastralnehoUzemia){
-        KatastralnyUradId katastralnyUradId = (KatastralnyUradId)listKatastralnyUrad.search(new KatastralnyUradId(new KatastralnyUrad(idUradu)));
+    public boolean removeKatastralneUzemie(int idUradu, int idKatastralneUzemie, String nazovKatastralnehoUzemia) {
+        KatastralnyUradId katastralnyUradId = (KatastralnyUradId) listKatastralnyUrad.search(new KatastralnyUradId(new KatastralnyUrad(idUradu)));
         KatastralnyUrad katastralnyUrad = katastralnyUradId.getDataReference();
-        KatastralneUzemie insertedKatastralneUzemie = new KatastralneUzemie(idKatastralneUzemie,katastralnyUrad,nazovKatastralnehoUzemia);
+        KatastralneUzemie deletedKatastralneUzemie = new KatastralneUzemie(idKatastralneUzemie, katastralnyUrad, nazovKatastralnehoUzemia);
+        //====REMOVE BACK REFERENCE FROM LIST VLASTNICTVA
+        removeBackReferenceKatUzFromListVlastnictva(deletedKatastralneUzemie);
         //====DIFFERENT LIST
-        listKatastralneUzemiePodlaId.remove(new KatastralneUzemieId(insertedKatastralneUzemie));
-        return listKatastralneUzemiePodlaNazov.remove(new KatastralneUzemieNazov(insertedKatastralneUzemie));
+        listKatastralneUzemiePodlaId.remove(new KatastralneUzemieId(deletedKatastralneUzemie));
+        return listKatastralneUzemiePodlaNazov.remove(new KatastralneUzemieNazov(deletedKatastralneUzemie));
+
 
     }
 
-    public boolean removeListVlastnictva(int idListVlastnictva,String nazovKatastralnehoUzemie){
-        KatastralneUzemieNazov katastralneUzemieNazov = (KatastralneUzemieNazov) listKatastralneUzemiePodlaNazov.search(new KatastralneUzemieNazov(new KatastralneUzemie(0,null,nazovKatastralnehoUzemie)));
+    private void removeBackReferenceKatUzFromListVlastnictva(KatastralneUzemie deletedKatastralneUzemie) {
+        KatastralneUzemieId katastralneUzemieId = (KatastralneUzemieId) listKatastralneUzemiePodlaId.search(new KatastralneUzemieId(deletedKatastralneUzemie));
+        Treap listListovVlastnictva = katastralneUzemieId.getDataReference().getListListovVlastnictva();
+        TNode rootListListovTreap = listListovVlastnictva.getRoot();
+        InOrderIterator inOrderIterator = new InOrderIterator(rootListListovTreap);
+        // while
+        ListVlastnictvaId listVlastnictvaId;
+        ListVlastnictva listVlastnictva;
+        while (inOrderIterator.hasNext()) {
+            listVlastnictvaId = (ListVlastnictvaId) inOrderIterator.next();
+            listVlastnictva = listVlastnictvaId.getDataReference();
+            if (listVlastnictva.getKatastralneUzemie().equals(deletedKatastralneUzemie)) {//ak je to rovnaky objekt, nasiel som platny backreference
+                listVlastnictva.setKatastralneUzemie(null);
+            }
+        }
+    }
+
+    public boolean removeListVlastnictva(int idListVlastnictva, String nazovKatastralnehoUzemie) {
+        KatastralneUzemieNazov katastralneUzemieNazov = (KatastralneUzemieNazov) listKatastralneUzemiePodlaNazov.search(new KatastralneUzemieNazov(new KatastralneUzemie(0, null, nazovKatastralnehoUzemie)));
         KatastralneUzemie katastralneUzemie = katastralneUzemieNazov.getDataReference();
-        ListVlastnictva inserteListVlastnictva = new ListVlastnictva(idListVlastnictva,katastralneUzemie);
+        ListVlastnictva deletedListVlastnictva = new ListVlastnictva(idListVlastnictva, katastralneUzemie);
         //====DIFFERENT LIST
-        deleteFromMainListVlastnictva(inserteListVlastnictva);
-        deleteFromListInKatastraneUzemie(katastralneUzemie, inserteListVlastnictva);
+        deleteFromMainListVlastnictva(deletedListVlastnictva);
+        deleteFromListInKatastraneUzemie(katastralneUzemie, deletedListVlastnictva);
         return true;
     }
 
 
+    public boolean removeNehnutelnost(int idSupisneCislo, int idListVlastnictva, String adresa) {
 
-    public boolean removeNehnutelnost(int idSupisneCislo,int idListVlastnictva, String adresa){
-
-        ListVlastnictvaId ListVlastnictvaId = (ListVlastnictvaId)listListVlastnictva.search(new ListVlastnictvaId(new ListVlastnictva(idListVlastnictva,null)));
+        ListVlastnictvaId ListVlastnictvaId = (ListVlastnictvaId) listListVlastnictva.search(new ListVlastnictvaId(new ListVlastnictva(idListVlastnictva, null)));
         ListVlastnictva listVlastnictva = ListVlastnictvaId.getDataReference();
 
 
-        Nehnutelnost insertedNehnutelnost = new Nehnutelnost(idSupisneCislo,listVlastnictva,adresa);
+        Nehnutelnost insertedNehnutelnost = new Nehnutelnost(idSupisneCislo, listVlastnictva, adresa);
         //====DIFFERENT LIST
         removeFromMainListNehnutelnostPodlaSupisnehoCisla(insertedNehnutelnost);
         removeFromMainListNehnutelnostPodlaAdresa(insertedNehnutelnost);
@@ -209,21 +231,21 @@ public class DataManager {
         return true;
     }
 
-    public boolean removeOsoba(String rodneCislo,String menoPriezvisko,String trvalyPobyt){
-        Osoba insetedOsoba = new Osoba(rodneCislo,menoPriezvisko,trvalyPobyt);
+    public boolean removeOsoba(String rodneCislo, String menoPriezvisko, String trvalyPobyt) {
+        Osoba insetedOsoba = new Osoba(rodneCislo, menoPriezvisko, trvalyPobyt);
         //====DIFFERENT LIST
         removeOsobaFromMainListOsobaPodlaAdresa(insetedOsoba);
         return removeOsobaFromMainListOsobaPodlaRodneCislo(insetedOsoba);
     }
 
-    public boolean removePodiel(int idPodiel,String rodneCisloPodielnika,int supisneCisloNehnutelnosti, int velkostPodielu){
-        OsobaRodCislo osobaRodCislo = (OsobaRodCislo) listOsobaPodlaRodneCislo.search(new OsobaRodCislo(new Osoba(rodneCisloPodielnika,null,null)));
+    public boolean removePodiel(int idPodiel, String rodneCisloPodielnika, int supisneCisloNehnutelnosti, int velkostPodielu) {
+        OsobaRodCislo osobaRodCislo = (OsobaRodCislo) listOsobaPodlaRodneCislo.search(new OsobaRodCislo(new Osoba(rodneCisloPodielnika, null, null)));
         Osoba majitel = osobaRodCislo.getDataReference();
 
-        NehnutelnostSupisneCislo nehnutelnostSupisneCislo = (NehnutelnostSupisneCislo) listNehnutelnostPodlaSupC.search(new NehnutelnostSupisneCislo(new Nehnutelnost(supisneCisloNehnutelnosti,null,null)));
+        NehnutelnostSupisneCislo nehnutelnostSupisneCislo = (NehnutelnostSupisneCislo) listNehnutelnostPodlaSupC.search(new NehnutelnostSupisneCislo(new Nehnutelnost(supisneCisloNehnutelnosti, null, null)));
         Nehnutelnost nehnutelnost = nehnutelnostSupisneCislo.getDataReference();
         //====PODIEL  NA VYMAZANIE====
-        Podiel insertedPodiel = new Podiel(idPodiel,majitel,nehnutelnost,velkostPodielu);
+        Podiel insertedPodiel = new Podiel(idPodiel, majitel, nehnutelnost, velkostPodielu);
 
         //====DIFFERENT LIST
         removePodielFromMainListPodiel(insertedPodiel);
@@ -235,18 +257,20 @@ public class DataManager {
         return true;
     }
 
+
     //=====IMPLEMENTATION METHODS PART==============
     //-----LIST VLASTNICTVA -----------------------------
     private boolean insertToMainListVlastnictva(ListVlastnictva listVlastnictva) {
-       return listListVlastnictva.insert(new ListVlastnictvaId(listVlastnictva));
+        return listListVlastnictva.insert(new ListVlastnictvaId(listVlastnictva));
     }
 
-    private void insertToListInKatastraneUzemie(KatastralneUzemie katastralneUzemie,ListVlastnictva listVlastnictva) {
+    private void insertToListInKatastraneUzemie(KatastralneUzemie katastralneUzemie, ListVlastnictva listVlastnictva) {
         KatastralneUzemieNazov localKUN = (KatastralneUzemieNazov) listKatastralneUzemiePodlaNazov.search(new KatastralneUzemieNazov(katastralneUzemie));
-        localKUN.getDataReference().addListVlastnictva(new ListVlastnictvaId(listVlastnictva));
+        localKUN.getDataReference().addListVlastnictva(listVlastnictva);
     }
+
     //---------------------REMOVE-PART------------------------------
-    private void deleteFromListInKatastraneUzemie(KatastralneUzemie katastralneUzemie,ListVlastnictva listVlastnictva) {
+    private void deleteFromListInKatastraneUzemie(KatastralneUzemie katastralneUzemie, ListVlastnictva listVlastnictva) {
         KatastralneUzemieNazov localKUN = (KatastralneUzemieNazov) listKatastralneUzemiePodlaNazov.search(new KatastralneUzemieNazov(katastralneUzemie));
         localKUN.getDataReference().removeListVlastnictva(new ListVlastnictvaId(listVlastnictva));
     }
@@ -269,7 +293,7 @@ public class DataManager {
     }
 
     private void insertNehnutelnostToListInListKatastralneUzemie(ListVlastnictvaId listVlastnictvaId, Nehnutelnost insertedNehnutelnost) {
-        listVlastnictvaId.getDataReference().getKatastralneUzemie().addNehnutelnost(new NehnutelnostSupisneCislo(insertedNehnutelnost));
+        listVlastnictvaId.getDataReference().getKatastralneUzemie().addNehnutelnost(insertedNehnutelnost);
     }
 
     //---------------------REMOVE-PART------------------------------
@@ -297,6 +321,7 @@ public class DataManager {
     private boolean insertOsobaToMainListOsobaPodlaRodneCislo(Osoba insetedOsoba) {
         return listOsobaPodlaRodneCislo.insert(new OsobaRodCislo(insetedOsoba));
     }
+
     //---------------------REMOVE-PART------------------------------
     private boolean removeOsobaFromMainListOsobaPodlaAdresa(Osoba insetedOsoba) {
         return listOsobaPodlaTrvalyPobyt.remove(new OsobaTrvalyPobyt(insetedOsoba));
@@ -319,6 +344,7 @@ public class DataManager {
     private boolean insertPodielToMainListPodiel(Podiel insertedPodiel) {
         return listPodiel.insert(new PodielId(insertedPodiel));
     }
+
     //---------------------REMOVE-PART------------------------------
     private void removePodielFromListInNehnutelnost(Podiel insertedPodiel, Nehnutelnost nehnutelnost) {
         nehnutelnost.removeToListPodiely(insertedPodiel);
@@ -336,9 +362,9 @@ public class DataManager {
     private void updatePodiely(Nehnutelnost nehnutelnost) {
         LinkedList<Podiel> localPodiely = nehnutelnost.getListPodiely();
         int pocetPodielov = localPodiely.size();
-        int podiel = 100/pocetPodielov;
+        int podiel = 100 / pocetPodielov;
 
-        for(int i = 0;i< pocetPodielov;i++){
+        for (int i = 0; i < pocetPodielov; i++) {
             localPodiely.get(i).setPodiel(podiel);
         }
 
@@ -346,80 +372,79 @@ public class DataManager {
 
     //**********Vypisy*//***////////////////
 
-    public String vypisListVlastnictva(){
+    public String vypisListVlastnictva() {
         String result = "*******************************************************\n";
-               result += "Vypis Listov Vlastnictva\n\nIdList , IdKatUzemie\n\n";
-        LinkedList<TNode> list=  getListListVlastnictva().inorderTraversal();
+        result += "Vypis Listov Vlastnictva\n\nIdList , IdKatUzemie\n\n";
+        LinkedList<TNode> list = getListListVlastnictva().inorderTraversal();
         ListVlastnictva local;
-        for(int i=0;i<list.size();i++){
-            local = ((ListVlastnictvaId)list.get(i)).getDataReference();
-            result += local.getIdListVlastnictva()  +  "  ," + local.getKatastralneUzemie().getIdKatastralneUzemie() + "\n";
+        for (int i = 0; i < list.size(); i++) {
+            local = ((ListVlastnictvaId) list.get(i)).getDataReference();
+            result += local.getIdListVlastnictva() + "  ," + local.getKatastralneUzemie().getIdKatastralneUzemie() + "\n";
         }
         return result;
     }
 
-    public String vypisKatastralnychUzemi(){
+    public String vypisKatastralnychUzemi() {
         String result = "*******************************************************\n";
-               result += "Vypis KatUzemi\n" +
-                       "nazov\n";
-        LinkedList<TNode> list=  getListKatastralneUzemiePodlaNazov().inorderTraversal();
+        result += "Vypis KatUzemi\n" +
+                "nazov , idKatUzemia\n";
+        LinkedList<TNode> list = getListKatastralneUzemiePodlaNazov().inorderTraversal();
         KatastralneUzemie local;
-        for(int i=0;i<list.size();i++){
-            local = ((KatastralneUzemieNazov)list.get(i)).getDataReference();
-            result += local.getNazovKatastralnehoUzemia() + ", " + local.getIdKatastralneUzemie()+"\n";
+        for (int i = 0; i < list.size(); i++) {
+            local = ((KatastralneUzemieNazov) list.get(i)).getDataReference();
+            result += local.getNazovKatastralnehoUzemia() + ", " + local.getIdKatastralneUzemie() + "\n";
         }
         return result;
     }
 
-    public String vypisOsob(){
+    public String vypisOsob() {
         String result = "String result = \"*******************************************************\n";
-               result += "Vypis \nOsob, rodne cislo\n\n";
-        LinkedList<TNode> list=  getListOsobaPodlaRodneCislo().inorderTraversal();
+        result += "Vypis \nOsob, rodne cislo, trvaly pobyt, sup cislo trv. pobytu\n\n";
+        LinkedList<TNode> list = getListOsobaPodlaRodneCislo().inorderTraversal();
         Osoba local;
-        for(int i=0;i<list.size();i++){
-            local = ((OsobaRodCislo)list.get(i)).getDataReference();
-            result += local.getMenoPriezvisko() +",  "+ local.getRodneCislo()+"\n";
+        for (int i = 0; i < list.size(); i++) {
+            local = ((OsobaRodCislo) list.get(i)).getDataReference();
+            result += local.getMenoPriezvisko() + ",  " + local.getRodneCislo() + ", " + local.getTrvalyPobyt() + "\n";
         }
         return result;
     }
 
-    public String vypisNehnutelnosti(){
+    public String vypisNehnutelnosti() {
         String result = "*******************************************************\n";
-         result += "Vypis nehnutelnosti\nSupcislo, get adresa\n";
-        LinkedList<TNode> list=  getListNehnutelnostPodlaSupC().inorderTraversal();
+        result += "Vypis nehnutelnosti\nSupcislo, get adresa, list vlastnictva, kat uzemie\n";
+        LinkedList<TNode> list = getListNehnutelnostPodlaSupC().inorderTraversal();
         Nehnutelnost local;
-        for(int i=0;i<list.size();i++){
-            local = ((NehnutelnostSupisneCislo)list.get(i)).getDataReference();
-            result += local.getIdSupisneCislo() + ", " + local.getAdresa() + "\n";
+        for (int i = 0; i < list.size(); i++) {
+            local = ((NehnutelnostSupisneCislo) list.get(i)).getDataReference();
+            result += local.getIdSupisneCislo() + ", " + local.getAdresa() + ", " + local.getListVlastnictva().getIdListVlastnictva() + ", " + local.getListVlastnictva().getKatastralneUzemie().getNazovKatastralnehoUzemia() + "\n";
         }
         return result;
     }
 
-    public String vypisKatastralnychUradov(){
+    public String vypisKatastralnychUradov() {
         String result = "*******************************************************\n";
-               result += "Vypis Katastralne urady\n\n";
-        LinkedList<TNode> list=  getListKatastralnyUrad().inorderTraversal();
+        result += "Vypis Katastralne urady\n\n";
+        LinkedList<TNode> list = getListKatastralnyUrad().inorderTraversal();
         KatastralnyUrad local;
-        for(int i=0;i<list.size();i++){
-            local = ((KatastralnyUradId)list.get(i)).getDataReference();
+        for (int i = 0; i < list.size(); i++) {
+            local = ((KatastralnyUradId) list.get(i)).getDataReference();
             result += local.getId_uradu() + "\n";
         }
         return result;
     }
 
-    public String vypisPodielov(){
+    public String vypisPodielov() {
         String result = "*******************************************************\n";
         result += "Vypis podiely\n" +
                 "idPodiel, majitel, supisCislo,velkost Podielu\n";
-        LinkedList<TNode> list=  getListPodiel().inorderTraversal();
+        LinkedList<TNode> list = getListPodiel().inorderTraversal();
         Podiel local;
-        for(int i=0;i<list.size();i++){
-            local = ((PodielId)list.get(i)).getDataReference();
-            result += local.getId_podiel() + ", " + local.getMajitel().getMenoPriezvisko() +", "+ local.getNehnutelnost().getIdSupisneCislo() + ", " +  local.getPodiel() + "\n";
+        for (int i = 0; i < list.size(); i++) {
+            local = ((PodielId) list.get(i)).getDataReference();
+            result += local.getId_podiel() + ", " + local.getMajitel().getMenoPriezvisko() + ", " + local.getNehnutelnost().getIdSupisneCislo() + ", " + local.getPodiel() + "\n";
         }
         return result;
     }
-
 
 
 }

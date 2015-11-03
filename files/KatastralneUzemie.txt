@@ -1,2 +1,11 @@
-1,1,Bytca
-1,2,Zilina
+0,9,Banská
+0,4,Dubnica 
+0,6,Holíè
+0,2,Lipany
+0,0,Nemšová
+0,10,Poltár
+0,7,Senec
+0,1,Snina
+0,8,Spišská 
+0,3,Strážske
+0,5,Štúrov

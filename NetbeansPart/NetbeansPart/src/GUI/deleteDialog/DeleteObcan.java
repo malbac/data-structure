@@ -6,6 +6,7 @@ package GUI.deleteDialog;/*
 
 
 import GUI.insertDialog.*;
+import data.DataManager;
 import dataLogic.OperationManager;
 
 /**
@@ -18,8 +19,8 @@ public class DeleteObcan extends javax.swing.JPanel {
      * Creates new form VlozVlastnika
      */
     OperationManager operationManager;
-    public DeleteObcan() {
-        operationManager = new OperationManager();
+    public DeleteObcan(DataManager dataManager) {
+        operationManager = new OperationManager(dataManager);
         initComponents();
     }
 
